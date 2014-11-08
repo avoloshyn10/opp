@@ -38,6 +38,12 @@ for result in results["results"]["bindings"]:
       <""" + result["link"]["value"] + """> dbpedia-owl:abstract ?desc
     }
       """)
+    
+    #select * where {
+    #<http://dbpedia.org/resource/Panzer_35(t)>
+    #?s ?p
+    #}
+    
     try:
       data = sparql.query().convert()
       for l in data["results"]["bindings"]:
