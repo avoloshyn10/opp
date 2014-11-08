@@ -9,3 +9,7 @@ Optional sistemul va pune la dispozitie o interfata publica pentru a completa sa
 Implementation concerns (informal):
 - folosim direct entry-urile dbpedia, sau o copie a informatiilor?
 - rdf-ul dbpedia sau propriul rdf pentru adaugarea de informatii suplimentare inexistente pe dbpedia? Probabil doar dbpedia pt inceput, apoi propriul rdf in versiunea 2
+- 
+
+sudo easy_install RDFLib
+sudo easy_install SPARQLWrapper
