@@ -14,3 +14,6 @@ Implementation concerns (informal):
 Packages:
 sudo easy_install RDFLib
 sudo easy_install SPARQLWrapper
+
+Introductory presentation at:
+http://www.slideshare.net/nottorp/opp-archi
