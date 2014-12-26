@@ -1,0 +1,3577 @@
+Finland 40 ItK/36 Air Defence
+Finland 37 PstK/36 Anti Tank
+Finland 50 PstK/38 Anti Tank
+Finland 75 PstK/40 Anti Tank
+Finland StuG IIIG Anti Tank
+Finland 105 H/37 Artillery
+Finland 150 H/40 Artillery
+Finland 76,2 K/02 Artillery
+Finland BT-42 Anti Tank
+Finland Jaakari Infantry
+Finland Suojeluskunta Infantry
+Finland Jalkavaki Infantry
+Finland Pioneeri Infantry
+Finland Ratsuvaki Infantry
+Finland BAF-C Recon
+Finland BT-7 Tank
+Finland 6ton Tank
+Finland Pz IVJ Tank
+Finland T-23 Ground Transport
+Finland Hevonen Ground Transport
+Finland MT Fighter Aircraft
+Finland BW Fighter Aircraft
+Finland FR Fighter Aircraft
+Finland JK Tactical Bomber
+Finland FE Air Transport
+France M16 Flak
+France 25mm mle34 Anti Tank
+France 90mm mle40 Air Defence
+France M10 Anti Tank
+France 105mm C mle35 Artillery
+France 155mm L mle17F Artillery
+France 75mm C mle97 Artillery
+France M7 Artillery
+France Abri Fortification
+France Fortification Fortification
+France 37 Chasseurs a Cheval Infantry
+France 37 Chasseurs a Pied Infantry
+France 37 Sapeurs Infantry
+France 37 Infanterie Infantry
+France 43 Infanterie Infantry
+France M8 Recon
+France AMD 178 Recon
+France Dunkerque BB Cruiser
+France Richelieu BB Cruiser
+France Suffren CA Cruiser
+France La Galissonniere LC Cruiser
+France Le Fantasque DD Destroyer
+France Char B1bis Tank
+France H39 Tank
+France M5A1 Recon
+France M4A2 Tank
+France M4A1(76)W Tank
+France R35 Tank
+France R40 Tank
+France S35 Tank
+France AGR2 Ground Transport
+France M3A1 Ground Transport
+France MCG Ground Transport
+France Attelage Ground Transport
+France D.520C.1 Fighter Aircraft
+France MS.406C.1 Fighter Aircraft
+France Po.633B.2 Tactical Bomber
+France Po.650 Air Transport
+Germany 2 Flak38 Flak
+Germany 2 Flakvierling38 Flak
+Germany 3.7 PaK36 Anti Tank
+Germany 3.7 FlaK36 Air Defence
+Germany 3.7cm FlaK Möbelwagen Air Defence
+Germany 8.8 FlaK18 Air Defence
+Germany FlaKPz V Coelian Air Defence
+Germany FlaKPz 38(t) Air Defence
+Germany FlakPz IV Ostwind Air Defence
+Germany SdKfz 7/1 Air Defence
+Germany SdKfz 6/2 Air Defence
+Germany SdKfz 10/4 Air Defence
+Germany FlaKPz IV Wirbelwind Air Defence
+Germany 5 PaK38 Anti Tank
+Germany 7.5 PaK40 Anti Tank
+Germany 8.8 FlaK36 Anti Tank
+Germany 8.8 PaK41/43 Anti Tank
+Germany Ferdinand Anti Tank
+Germany Hetzer Anti Tank
+Germany Jagdpanther Anti Tank
+Germany JgdPz IV/48 Anti Tank
+Germany JgdPz IV/70A Anti Tank
+Germany Jagdtiger Anti Tank
+Germany Marder IIIH Anti Tank
+Germany Nashorn Anti Tank
+Germany JgdPz I Anti Tank
+Germany StuG IIIF Anti Tank
+Germany StuG IIIG Anti Tank
+Germany 10.5 leFH18 Artillery
+Germany 15 sFH18 Artillery
+Germany 17 K18 Artillery
+Germany 7.5 leFK18 Artillery
+Germany Grille Ausf. M Artillery
+Germany SdKfz 165 Hummel Artillery
+Germany 15 NbWf41 Artillery
+Germany Wurfrahmen Artillery
+United Kingdom 3.7inch Air Defence
+Germany sIG IB Artillery
+Germany sIG IIB Artillery
+Germany StuG IIIB Anti Tank
+Germany StuH 42 Artillery
+Germany SdKfz 124 Wespe Artillery
+Germany Stuetzpunkt Fortification
+Germany Festung Fortification
+Germany SS Infanterie Infantry
+Germany Kavallerie Infantry
+Germany Sturmpioniere Infantry
+Germany Brückenpioniere Infantry
+Germany Landwehr Infantry
+Germany Gebirgsjäger Infantry
+Germany Fallschirmjäger Infantry
+Germany Infanterie Infantry
+Germany Volkssturm Infantry
+Germany Psw 222 Recon
+Germany Psw 231(8) Recon
+Germany Psw 233 Recon
+Germany Psw 234/1 Recon
+Germany Psw 234/2 Recon
+Germany Psw 234/3 Recon
+Germany Psw 234/4 Recon
+Germany Bismarck BB Cruiser
+Germany Scharnhorst BB Cruiser
+Germany Hipper CA Cruiser
+Germany Konigsberg CL Cruiser
+Germany Graf Zeppelin CVL Aircraft Carrier
+Germany Zerstorer 1934 DD Destroyer
+Germany Pz VIII Maus Tank
+Germany Pz VA Panther Tank
+Germany Pz VD Panther Tank
+Germany Pz VG Panther Tank
+Germany Panther II Tank
+Germany Pz 35(t) Tank
+Germany Pz 38(t)A Tank
+Germany Pz 38(t)F Tank
+Germany Pz IA Tank
+Germany Pz IB Tank
+Germany Pz IIA Tank
+Germany Pz IIF Tank
+Germany Pz IIIE Tank
+Germany Pz IIIG Tank
+Germany Pz IIIJ Tank
+Germany Pz IIIL Tank
+Germany Pz IIIH Tank
+Germany Pz IIIN Tank
+Germany Pz IVD Tank
+Germany Pz IVF2 Tank
+Germany Pz IVG Tank
+Germany Pz IVH Tank
+Germany Pz IVJ Tank
+Germany Pz VI Tiger Tank
+Germany Pz VIB Tiger II Tank
+Germany SdKfz 250/1 Recon
+Germany SdKfz 251/1 Ground Transport
+Germany Opel Blitz Ground Transport
+Germany Pferdewagen Ground Transport
+Germany Me-109E-3 Fighter Aircraft
+Germany Me-109G-2 Fighter Aircraft
+Germany Me-109K-4 Fighter Aircraft
+Germany Bf 110C-4 Fighter Aircraft
+Germany Do-335 Fighter Aircraft
+Germany Fw-190A-3 Fighter Aircraft
+Germany Fw-190D-9 Fighter Aircraft
+Germany He-162A-2 Fighter Aircraft
+Germany Ta-152H Fighter Aircraft
+Germany Me-262A-1 Fighter Aircraft
+Germany Bf 110D-2 Tactical Bomber
+Germany Fw-190F-3 Tactical Bomber
+Germany Fw-190G-2 Tactical Bomber
+Germany Hs-129B-2 Tactical Bomber
+Germany Ju-87B-1 Tactical Bomber
+Germany Ju-87D-1 Tactical Bomber
+Germany Ju-87G-1 Tactical Bomber
+Germany Ju 52/3mg5e Air Transport
+Hungary 50mm 38M Anti Tank
+Hungary 75mm 97/38M Anti Tank
+Hungary 105mm 37M Artillery
+Hungary 75mm 15M Artillery
+Hungary StuG IIIG Anti Tank
+Allied Yugoslavia Pesadija Infantry
+Norway 12cm m/32 Artillery
+Hungary Huszar Infantry
+Hungary Honved Infantry
+Hungary 39M Csaba Recon
+Hungary 35M Ansaldo Tank
+Hungary T-38 Tank
+Hungary Pz IVH Tank
+Hungary 40M Turan Tank
+Hungary 41M Turan Tank
+Hungary 38M Ford Ground Transport
+Hungary Szeker Ground Transport
+Hungary Bf 109F-4/B Tactical Bomber
+Hungary Bf 109G-10 Fighter Aircraft
+Hungary Ju 87D-1 Tactical Bomber
+Hungary Ju 52/3m Air Transport
+Italy 20mm 20/65 Flak
+Italy 20mm 20/65 Camion Flak
+Italy 47mm 47/32 Anti Tank
+Italy Sem 47/32 L40 Anti Tank
+Italy Sem 75/32 M41 Anti Tank
+Italy Sem 90/53 M41 Anti Tank
+Italy 100mm 100/17 Artillery
+Italy 149mm 149/13 Artillery
+Italy 75mm 75/27 Artillery
+Italy Sem 105/25 M43 Artillery
+Italy Sem 75/18 M41 Artillery
+Italy Ridotto Fortification
+Italy Fortificazione Fortification
+Italy 40 Alpini Infantry
+Italy 40 Bersaglieri Infantry
+Italy 40 Genio Guastatori Infantry
+Italy 40 Fanteria Infantry
+Italy AB-41 Recon
+Italy Littorio BB Cruiser
+Italy Zara CA Cruiser
+Italy Di Giussano CL Cruiser
+Italy L6/40 Tank
+Italy M13/40 Tank
+Italy M14/41 Tank
+Italy M15/42 Tank
+Italy P26/40 Tank
+Italy F626 Ground Transport
+Italy Carro Ground Transport
+Italy G.55/1 Fighter Aircraft
+Italy MC.200 serie I Fighter Aircraft
+Italy MC.202 serie VI Fighter Aircraft
+Italy MC.205 serie III Fighter Aircraft
+Italy Re.2000 Fighter Aircraft
+Italy Re.2005 Fighter Aircraft
+Italy Ba.65bis Tactical Bomber
+Italy Ca.310 Tactical Bomber
+Italy SM.81 Air Transport
+Nationalist Spain 20mm M.32 Flak
+Nationalist Spain 37mm M.36 Anti Tank
+Nationalist Spain 75mm M.40 Anti Tank
+Nationalist Spain 47mm M.35 Anti Tank
+Nationalist Spain StuG IIIG Anti Tank
+Nationalist Spain 149mm 149/13 Artillery
+Nationalist Spain 65mm 65/15 Artillery
+Allied Yugoslavia Stuart V Tank
+Allied Yugoslavia T-34/85 Tank
+Nationalist Spain Legion Infantry
+Nationalist Spain Milicia Infantry
+Nationalist Spain Infanteria Infantry
+Nationalist Spain Pz I con Breda Tank
+Nationalist Spain Pz IB Tank
+Nationalist Spain Pz IIIJ Tank
+Nationalist Spain F621 Ground Transport
+Nationalist Spain Caballos Ground Transport
+Nationalist Spain CR.32 Fighter Aircraft
+Nationalist Spain Ju 52/3m Air Transport
+Norway 75mm m/01 Pv Anti Tank
+Norway 7,5cm m/01 Artillery
+Allied Yugoslavia 43 Partizani Infantry
+Norway Gladiator IIA Fighter Aircraft
+Norway Vernepliktige Infantry
+Norway Vogn Ground Transport
+Poland 76,2mm wz.42 Anti Tank
+Poland 37mm wz.36 Anti Tank
+Poland 105mm A wz.13 Artillery
+Poland 87,6mm H wz.40 Artillery
+Poland 75mm A wz.97 Artillery
+Croatia 20mm M.39 Flak
+France 40 Marins Infantry
+Poland 39 Kawaleria Infantry
+Poland 38 Pionierzy Infantry
+Poland 43 SP Piechota Infantry
+Poland 38 Piechota Infantry
+Poland 39 Piechota Infantry
+Poland Staghound I Recon
+Poland 7TP Tank
+Poland Cromwell IV Tank
+Poland Sherman IIA Tank
+Poland R35 Tank
+Poland TKS Tank
+Poland PF-621L Ground Transport
+Poland Zaprzeg Ground Transport
+Poland P.11c (4 km) Fighter Aircraft
+Poland PZL.23B Karas Tactical Bomber
+Poland F.VII Air Transport
+Republican Spain 37mm PTP.30 Anti Tank
+Republican Spain 155mm 155/14 Artillery
+Republican Spain 75mm 75/28 Artillery
+Belgium 75mm mle31 Air Defence
+All Countries Motorcycles Ground Transport
+Republican Spain Internacional Infantry
+Republican Spain Milicia Popular Infantry
+Republican Spain Infanteria Infantry
+Republican Spain BA-6 Recon
+Republican Spain BT-5 Tank
+Republican Spain T-26 Tank
+Republican Spain Chevrolet Ground Transport
+Republican Spain Caballos Ground Transport
+Republican Spain I-16-10 Fighter Aircraft
+Republican Spain DC-2 Air Transport
+Romania 20mm M30 Flak
+Romania 75mm M40 Anti Tank
+Romania 47mm M35 Anti Tank
+Romania Maresal Anti Tank
+Romania TAs Anti Tank
+Romania 100mm M14/34 Artillery
+Romania 75mm M97 Artillery
+All Countries Heavy Art Bunker Fortification
+Poland P.7a Fighter Aircraft
+Romania 40 Cavalerie Infantry
+Romania 40 Infanterie Infantry
+Romania T-38 Tank
+Romania T-4G Tank
+Romania R-2 Tank
+Romania R-35 Tank
+Romania RN Ground Transport
+Romania Atelaj Ground Transport
+Romania Bf-109G-4 Fighter Aircraft
+Romania IAR-80A Fighter Aircraft
+Romania P-24e Fighter Aircraft
+Romania IAR-81A Tactical Bomber
+Romania Ju-52/3m Air Transport
+United Kingdom 20mm Flak
+United Kingdom 40mm I Air Defence
+United Kingdom 40mm Portee Air Defence
+United Kingdom 17pdr Anti Tank
+United Kingdom 2pdr Anti Tank
+United Kingdom 6pdr II Anti Tank
+United Kingdom Achilles Anti Tank
+United Kingdom Wolverine Anti Tank
+United Kingdom 25pdr Artillery
+United Kingdom 13pdr Artillery
+United Kingdom 5.5inch Artillery
+United Kingdom 7.2inch I Artillery
+United Kingdom Bishop Artillery
+United Kingdom Sexton Artillery
+All Countries Bunker Fortification
+All Countries Fortification Fortification
+United Kingdom 40 Engineers Infantry
+United Kingdom 40 Commando Infantry
+United Kingdom 40 Bridging Infantry
+United Kingdom 40 Ghurka Infantry
+United Kingdom 40 Home Guard Infantry
+United Kingdom 40 Indian Infantry Infantry
+United Kingdom 41 Parachute Infantry Infantry
+United Kingdom 41 Infantry Infantry
+United Kingdom 40 Royal Marines Infantry
+United Kingdom AEC I Recon
+United Kingdom AEC II Recon
+United Kingdom AEC III Recon
+United Kingdom Daimler II Recon
+United Kingdom Humber II Recon
+United Kingdom Humber IV Recon
+United Kingdom Scout Recon
+United Kingdom Staghound I Recon
+United Kingdom Renown BC Cruiser
+United Kingdom King George V BB Cruiser
+United Kingdom County CA Cruiser
+United Kingdom Leander CL Cruiser
+United Kingdom Illustrious CV Aircraft Carrier
+United Kingdom Tribal DD Destroyer
+United Kingdom Centurion Tank
+United Kingdom Challenger Tank
+United Kingdom Churchill III Tank
+United Kingdom Churchill II CS Tank
+United Kingdom Comet Tank
+United Kingdom Cromwell VI Artillery
+United Kingdom Cromwell VII Tank
+United Kingdom Cruiser IV Tank
+United Kingdom Crusader I Tank
+United Kingdom Crusader II Tank
+United Kingdom Crusader III Tank
+United Kingdom Grant I Tank
+United Kingdom Stuart I Tank
+United Kingdom Sherman III Tank
+United Kingdom Stuart V Tank
+United Kingdom Matilda II Tank
+United Kingdom Firefly VC Tank
+United Kingdom Valentine III Tank
+United Kingdom Valentine XI Tank
+United Kingdom Lt IV Tank
+United Kingdom OY Ground Transport
+United Kingdom Carrier Ground Transport
+Czechoslovakia Doprava Naval Transport
+United Kingdom Hurricane I Fighter Aircraft
+Russia M9 Ground Transport
+United Kingdom Spitfire IA Fighter Aircraft
+United Kingdom Spitfire IX Fighter Aircraft
+United Kingdom Spitfire VB Fighter Aircraft
+United Kingdom Spitfire XII Fighter Aircraft
+United Kingdom Spitfire XIVE Fighter Aircraft
+United Kingdom Beaufighter TF.X Tactical Bomber
+United Kingdom Hurricane IIC Tactical Bomber
+United Kingdom Hurricane IVD Tactical Bomber
+United Kingdom Mosquito FB.VI Tactical Bomber
+United Kingdom Tempest V Tactical Bomber
+United Kingdom Typhoon IB Tactical Bomber
+United Kingdom Dakota Air Transport
+USA 3inch M5 Air Defence
+USA 90mm M1A1 Air Defence
+USA M15A1 Air Defence
+USA M16 Flak
+USA 3inch M5 Anti Tank
+USA 37mm M3 Anti Tank
+USA 57mm M1 Anti Tank
+USA M10 Anti Tank
+USA M18 Anti Tank
+USA M3 GMC Anti Tank
+USA M36 Anti Tank
+USA 105mm How M2 Artillery
+USA 155mm How M1 Artillery
+USA 75mm How M8 AB Artillery
+USA 8inch Gun M1 Artillery
+USA M12 Artillery
+USA M4(105) Tank
+USA M7 Artillery
+USA M8 Artillery
+USA T19 HMC Artillery
+USA Strongpoint Fortification
+USA Fortification Fortification
+USA 42 Combat Engineer Infantry
+USA 42 Bridging Infantry
+USA 42 USMC Infantry
+USA 40 National Guard Infantry
+USA 43 Parachute Infantry Infantry
+USA 42 Ranger Infantry
+USA 40 Infantry Infantry
+USA M20 Recon
+USA M24 Recon
+USA M8 Recon
+USA M3A1 Recon
+USA New Orleans CA Cruiser
+USA Iowa BB Cruiser
+USA Brooklyn CL Cruiser
+USA Essex CV Aircraft Carrier
+USA Yorktown CV Aircraft Carrier
+USA Fletcher DD Destroyer
+USA M2A4 Tank
+USA M3A1 Tank
+USA M5A1 Recon
+USA M26 Tank
+USA M29 Tank
+USA M4A1 Tank
+USA M4A1(76)W Tank
+USA M4A3 Tank
+USA M4A3E2 Tank
+USA M4A3(76)W HVSS Tank
+Czechoslovakia B.534-IV Fighter Aircraft
+USA GMC 2.5t Ground Transport
+USA M3 Ground Transport
+Finland Kuljetusalus Naval Transport
+USA F4U-1A Corsair Fighter Aircraft
+USA P-38F Fighter Aircraft
+USA P-38J Fighter Aircraft
+USA P-38L Fighter Aircraft
+USA P-40E-1 Fighter Aircraft
+USA P-47C-5 Fighter Aircraft
+USA P-47D-25 Fighter Aircraft
+USA P-47N-20 Fighter Aircraft
+USA P-51B Fighter Aircraft
+USA P-51D-5 Fighter Aircraft
+USA P-51H-5 Fighter Aircraft
+USA P-80A Fighter Aircraft
+USA A-20B Tactical Bomber
+USA A-26B Tactical Bomber
+USA B-25D Tactical Bomber
+USA B-25H Tactical Bomber
+USA B-25J Tactical Bomber
+USA B-26B Tactical Bomber
+USA A-24B Tactical Bomber
+USA A-36 Tactical Bomber
+USA C-47 Air Transport
+Russia GAZ/25 Flak
+Russia 37mm ZP-39 Air Defence
+Russia 76.2mm ZP-38 Air Defence
+Russia 45mm PTP-37 Anti Tank
+Russia 76,2mm PP-27 Anti Tank
+Russia ISU-122 Anti Tank
+Russia ISU-152 Anti Tank
+Russia SU-100 Anti Tank
+Russia SU-152 Anti Tank
+Russia SU-76M Anti Tank
+Russia SU-85 Anti Tank
+Russia 122mm M-30 Artillery
+Russia 152mm ML-20 Artillery
+Russia 76,2mm F-22 Artillery
+Czechoslovakia Inzenyr Infantry
+Czechoslovakia 4,7cm vz39 Anti Tank
+Russia BM-13-16 Artillery
+Russia BM-31-12 Artillery
+Russia SU-122 Anti Tank
+Czechoslovakia 4cm vz36 Air Defence
+Czechoslovakia Sprezeni Ground Transport
+Russia D.O.T. Fortification
+Russia Fort Fortification
+Russia 41 Kavaleria Infantry
+Russia 41 Saperno-Shturmovoi Infantry
+Russia 41 Opolchenye Infantry
+Russia 38 Sapernii Infantry
+Russia 43 Kavaleria Infantry
+Russia 42 Gvardeskaya Infantry
+Russia 41 Morskaya Pehota Infantry
+Russia 41 Parashutisti Infantry
+Russia 41 Strelkovy Infantry
+Russia BA-10 Recon
+Russia BA-64 Recon
+Russia Krasnij Krim CL Cruiser
+Russia Marat BB Cruiser
+Russia Kirov CA Cruiser
+Russia Storozhevoi DD Destroyer
+Russia BT-5 Tank
+Russia BT-7/37 Tank
+Russia IS-2 Tank
+Russia IS-3 Tank
+Russia KV-1/39 Tank
+Russia KV-1/40 Tank
+Russia KV-1/42 Tank
+Russia KV-2 Tank
+Russia KV-85 Tank
+Russia T-26/38 Tank
+Russia T-34/40 Tank
+Russia T-34/41 Tank
+Russia T-43 Tank
+Russia T-34/43 Tank
+Russia T-34-85 Tank
+Russia T-60 Tank
+Russia T-70 Tank
+Russia ZiS-5 Ground Transport
+Russia Tyaga Ground Transport
+Russia Yak-1 M-105P Fighter Aircraft
+Russia Yak-9 Fighter Aircraft
+Russia La-5FN Fighter Aircraft
+Russia La-7 Fighter Aircraft
+Russia La-9 Fighter Aircraft
+Russia LaGG-3 Fighter Aircraft
+Russia Yak-3 Fighter Aircraft
+Russia MiG-3 Fighter Aircraft
+Russia I-16-29 Fighter Aircraft
+Russia Yak-7A Fighter Aircraft
+Russia P-39Q Fighter Aircraft
+Russia Il-10 Tactical Bomber
+Russia Il-2 Tactical Bomber
+Russia Il-2 KSS Tactical Bomber
+Russia Li-2 Air Transport
+France Transport Naval Transport
+Germany Transportschiffe Naval Transport
+Italy Transporto Naval Transport
+United Kingdom Transport Naval Transport
+USA Transport Naval Transport
+Russia Transport Naval Transport
+United Kingdom Lt VI Tank
+Italy Soldati DD Destroyer
+France 41 FFL Infanterie Infantry
+Italy Aquila CVL Aircraft Carrier
+Germany Me-109B-2 Fighter Aircraft
+Czechoslovakia 2cm vz35 Flak
+Czechoslovakia 3,7cm vz37 Anti Tank
+Czechoslovakia 10,5cm K vz35 Artillery
+Czechoslovakia 15cm H vz25 Artillery
+Czechoslovakia 8cm K vz30 Artillery
+All Countries Recon Plane Tactical Bomber
+Romania P-37B Tactical Bomber
+Czechoslovakia Pechota Infantry
+Czechoslovakia LT vz35 Tank
+Czechoslovakia LT vz38 Tank
+Czechoslovakia RN Ground Transport
+USA 43 Infantry Infantry
+Nationalist Spain Transporte Naval Transport
+Norway Sotransport Naval Transport
+Poland Transport Naval Transport
+Republican Spain Transporte Naval Transport
+Romania Transport Naval Transport
+Czechoslovakia F-VII Air Transport
+Norway Oxford I Air Transport
+Czechoslovakia OA vz30 Recon
+Russia 203mm BR-4 Artillery
+Poland SamPanc wz.34-I Recon
+Norway Hjulryttere Recon
+Romania AB Recon
+Romania TB Recon
+France 25mm mle38 Flak
+France H35 Tank
+Germany Krad Schüzte Infantry
+Germany 8.8 FlaK36 Air Defence
+Netherlands 120mm M11 Artillery
+France 75mm mle32 Air Defence
+France 47mm mle37 Anti Tank
+Yugoslavia 150mm M.36 Artillery
+Romania 150mm M34 Artillery
+France 155mm C mle17 Artillery
+France Char D1B Tank
+France Char D2 Tank
+All Countries Halftrack Ground Transport
+Bulgaria Inginero Sapiori Infantry
+France Hawk 75A-2 Fighter Aircraft
+Greece Ippikon Infantry
+Germany 7.5 PaK97/38 Anti Tank
+Germany Marder II Anti Tank
+Portugal Camiao Ground Transport
+Germany StuG IV Anti Tank
+All Countries AT Bunker Fortification
+Germany 21 M18 Artillery
+Germany 21 NbWf42 Artillery
+Germany 30 NbWf42 Artillery
+Germany 4/1 Maultier Artillery
+Germany Panzergrenadiere Infantry
+Germany Luftwaffen Infantry
+Germany SS Panzergrenadiere Infantry
+Germany Hitlerjugend Infantry
+Germany Brandenburger Infantry
+Italy 42 Arditi Infantry
+Romania 40 Pionieri Infantry
+Belgium Sapeurs Infantry
+United Kingdom Skua Tactical Bomber
+Germany Aufklärer Infantry
+Norway Ingenjorer Infantry
+Germany Pz IVF1 Tank
+Germany Me-109F-4 Fighter Aircraft
+Germany Me-110G-4 Tactical Bomber
+Hungary 40/43M Zrinyi Anti Tank
+Italy 75mm 75/46 Air Defence
+All Countries Tractor Ground Transport
+Italy 210mm 210/22 Artillery
+Italy Sem 149/40 M43 Artillery
+Italy 41 Paracadutisti Infantry
+United Kingdom Archer Anti Tank
+United Kingdom 18pdr Artillery
+Allied Yugoslavia 75mm Artillery
+United Kingdom 4.5inch Artillery
+Belgium 155mm C mle17 Artillery
+United Kingdom Daimler I CS Recon
+Norway Lastbil Ground Transport
+United Kingdom Staghound III Recon
+Russia 43 Gvardeiskaya Infantry
+United Kingdom Centaur I Tank
+United Kingdom Centaur IV CS Tank
+United Kingdom Churchill I Tank
+United Kingdom Churchill II Tank
+Russia 120mm PM-38 Artillery
+Yugoslavia Inzenjerija Infantry
+United Kingdom Churchill V CS Tank
+United Kingdom Churchill VII Tank
+United Kingdom Churchill VIII Tank
+France 37 Chasseurs Colonial Infantry
+Portugal Engenharia Infantry
+All Countries 75mm IG Anti Tank
+Allied Yugoslavia 37mm Anti Tank
+Yugoslavia Me 109E-3a Fighter Aircraft
+Allied Yugoslavia 20mm Flak
+United Kingdom Cruiser I Tank
+United Kingdom Cruiser IIA Tank
+United Kingdom Cruiser III Tank
+Denmark Ford V8 Ground Transport
+Greece 105mm M19 Artillery
+Denmark Hussarer Infantry
+Allied Yugoslavia 105mm Artillery
+Allied Yugoslavia IMAD Ground Transport
+United Kingdom Valentine VIII Tank
+Denmark 105mm FK30 Artillery
+United Kingdom Spitfire IIA Fighter Aircraft
+Allied Yugoslavia AEC III Recon
+USA 90mm M2 Flak
+Poland PZL.37B Los Tactical Bomber
+Republican Spain I-15 M-25 Fighter Aircraft
+All Countries Railgun Artillery
+France 105mm C mle35 Artillery
+France 43 Tirailleurs Infantry
+USA M43 Artillery
+Romania 75mm M36 Air Defence
+USA T30 HMC Artillery
+USA M3 Tank
+Portugal Cavalaria Infantry
+Allied Yugoslavia Konjska zaprega Ground Transport
+USA M3A3 Tank
+Portugal 11,4cm M 917 Artillery
+Greece Gladiator IIA Fighter Aircraft
+USA M4A3E2(76)W Tank
+Russia 85mm ZP-39 Air Defence
+Russia 152mm M-09/30 Artillery
+Russia BM-8-36 Artillery
+Russia 39 Voiska NKVD Infantry
+Russia 43 Strelkovy Infantry
+Russia FAI M Recon
+Russia T-38 Tank
+Russia BT-7A Tank
+Russia BT-7M Tank
+Russia IS-1 Tank
+Italy 65mm 65/17 AT Anti Tank
+Russia KV-1S/42 Tank
+Russia 100mm BS-3 Artillery
+Belgium T-13B3 Anti Tank
+Russia OT-34 Tank
+Germany 7.5 leIG18 PaK Anti Tank
+Russia T-44-100 Tank
+Russia T-44-85 Tank
+Russia 57mm ZiS-2 Anti Tank
+Russia Yak-1B Fighter Aircraft
+Russia Yak-7B M-105PF Fighter Aircraft
+Russia Yak-9D Fighter Aircraft
+United Kingdom Matilda I Tank
+Italy AB-40 Recon
+United Kingdom Blenheim I Tactical Bomber
+Turkey Muhendis Infantry
+Germany Grille Ausf. H Artillery
+Russia P-63A Fighter Aircraft
+Poland TK3 Recon
+Norway 75mm m/32 Air Defence
+Germany FlakPz IV Kugelblitz Air Defence
+Germany 43 Fallschirmjäger Infantry
+Republican Spain 20mm M.23 Flak
+Germany 43 Infanterie Infantry
+United Kingdom 43 Infantry Infantry
+Hungary Ca.135bis Tactical Bomber
+USA 75mm Gun M1897A4 Artillery
+Croatia L3/35 Tank
+France AMC 34 Tank
+Italy 37mm 37/45 Anti Tank
+United Kingdom Tetrarch Tank
+Italy 40 Cavalleria Infantry
+Germany Jäger Infantry
+France 37 Gendarmes Infantry
+France 37 Legionnaire Infantry
+Poland 155mm H wz.17 Artillery
+Poland 40mm wz.36 Air Defence
+Poland SamPanc wz.29 Recon
+Germany Do-17Z-1 Tactical Bomber
+Germany SdKfz 250/9 Recon
+Germany SdKfz 250/10 Recon
+USA M13 Flak
+Italy 40 MVSN Infantry
+Denmark Pionerer Infantry
+United Kingdom Crocodile Tank
+Finland T-26S Tank
+France 37 Tirailleurs Infantry
+Hungary Rohamutasz Infantry
+Greece Michanikon Infantry
+Nationalist Spain Ingenieria Infantry
+Nationalist Spain Infanteria de Navarra Infantry
+Nationalist Spain Azul Infanteria Infantry
+Republican Spain Guardia Asalto Infantry
+Republican Spain Dinamiteros Infantry
+Germany 7.5 LG40 Artillery
+Sweden 40mm m/36 Air Defence
+Italy 40 Bersaglieri in motocicletta Infantry
+Sweden 37mm m/38 Anti Tank
+Poland Spitfire IIA Fighter Aircraft
+Germany He-111H-3 Tactical Bomber
+Sweden 7,5cm Kan m/02 Artillery
+Sweden 10,5cm Haub m/40 Artillery
+France 37 Pontonniers Infantry
+Sweden 15cm Haub m/39 Artillery
+Sweden Infanteri Infantry
+Sweden Jagare Infantry
+Sweden Kavalleri Infantry
+Sweden Pionjarer Infantry
+Sweden Hemvarn Infantry
+Sweden Pbil m/40 Recon
+Sweden Pbil m/31 Recon
+Sweden Strv m/37 Tank
+Sweden Strv m/40K Tank
+Sweden Strv m/42 Tank
+Sweden J 8B Fighter Aircraft
+Sweden J 20 Fighter Aircraft
+Sweden J 22A Fighter Aircraft
+Hungary CR.42bis Fighter Aircraft
+Sweden B 17 Tactical Bomber
+Sweden Hast Ground Transport
+Sweden Lbil m/39 Ground Transport
+Sweden Transport Naval Transport
+Sweden TP 5 Air Transport
+Hungary 37mm 36M Anti Tank
+Germany 21 K38 Artillery
+Germany Fw 200C-3 Level Bomber
+Sweden Sverige B Cruiser
+Italy Attilio Regolo CL Cruiser
+Greece 40mm M36 Air Defence
+Greece 37mm M35 Anti Tank
+Greece 75mm M04 Artillery
+Greece 155mm M17 Artillery
+Greece NC-27 Tank
+Greece Pezikon Infantry
+Greece Orino Pezikon Infantry
+Greece Euzonoi Infantry
+Greece P.24G Fighter Aircraft
+Greece Metagogiko Naval Transport
+Greece Hansa-Lloyd 2.5t Ground Transport
+Greece Ippilaton Ground Transport
+Greece Anson Transport Air Transport
+Finland MS Fighter Aircraft
+Finland BL Tactical Bomber
+Yugoslavia 15mm M.38 Flak
+Yugoslavia 37mm M.39 Anti Tank
+Yugoslavia 75mm M.28 Artillery
+Yugoslavia Pesadija Infantry
+Yugoslavia Konjica Infantry
+Germany 12 GrW42 Artillery
+Yugoslavia R-35 Tank
+Yugoslavia IK-2 Fighter Aircraft
+Yugoslavia Brodski Prevoz Naval Transport
+Yugoslavia Konjska zaprega Ground Transport
+Yugoslavia IMAD Ground Transport
+Yugoslavia AF.39 Air Transport
+Romania 40 Vanatori de Munte Infantry
+Greece Blenheim I Tactical Bomber
+Bulgaria 20mm D/65 Flak
+Bulgaria 37mm D/39 Anti Tank
+Bulgaria 75mm D/27 Artillery
+Bulgaria 105mm D/35 Artillery
+Bulgaria Pehota Infantry
+Bulgaria Kavaleria Infantry
+Bulgaria M-222 Recon
+Bulgaria Reno Tank
+Bulgaria B-534 Dogan Fighter Aircraft
+Bulgaria Karutca Ground Transport
+Bulgaria Blitz 3t Ground Transport
+Bulgaria Transport Naval Transport
+Bulgaria Ju-52/3m Sowa Air Transport
+Finland GL Fighter Aircraft
+Slovakia 20mm vz36 Flak
+Belgium 40mm mle36 Air Defence
+Belgium 47mm mle31 Anti Tank
+Belgium 75mm C mle04 Artillery
+Belgium 105mm L mle13 Artillery
+Belgium Infanterie Infantry
+Belgium Cavalerie Infantry
+Belgium Milice Infantry
+Belgium T-15 Tank
+Belgium ACG-1 Tank
+Netherlands G.Ib Fighter Aircraft
+Russia 38 Kazaki Infantry
+Slovakia Jazdectvo Infantry
+Belgium Attelage Ground Transport
+Belgium FN Ground Transport
+Belgium SM-73 Air Transport
+Belgium Transport Naval Transport
+Netherlands 40mm M36 Air Defence
+Netherlands 75mm M34 Air Defence
+Netherlands 75mm M03 Artillery
+Netherlands Infanterie Infantry
+Finland 44 Jalkavaki Infantry
+Netherlands D.XXIII Fighter Aircraft
+Netherlands T.V Level Bomber
+Netherlands Paard en Wagen Ground Transport
+Netherlands Trado II Ground Transport
+Russia 41 Motociklisti Infantry
+France 37 Motocyclistes Infantry
+Netherlands F.VII Air Transport
+Netherlands Zee Vervoer Naval Transport
+Turkey 40mm M.36 Air Defence
+Turkey 37mm M.35 Anti Tank
+Turkey 75mm M.03/10 Artillery
+Turkey 105mm M.16 Artillery
+Turkey Piyade Infantry
+Turkey Suvari Infantry
+Turkey Daglari Infantry
+Turkey Humber II Recon
+Turkey Lt VIb Tank
+Turkey T-26 Tank
+Turkey P.24A Fighter Aircraft
+Turkey MS-406 Fighter Aircraft
+Turkey Hurricane IA Fighter Aircraft
+Turkey Blenheim I Tactical Bomber
+Turkey Yuk vagonu Ground Transport
+Turkey ZiS-5 Ground Transport
+All Countries Gunboat G Cruiser
+All Countries MTB Destroyer
+Turkey Deniz Tasima Naval Transport
+Turkey Anson I Air Transport
+Norway Dragoner Infantry
+Czechoslovakia B.71 Tactical Bomber
+Italy 41 Albanesi Infantry
+Italy 40 Libici Infantry
+Belgium Gladiator I Fighter Aircraft
+Russia 41 Partisani Infantry
+Sweden 40 Stridsgrupp Infantry
+France 40 Resistance Infantry
+Greece EDES Infantry
+Portugal 2cm M 938 Flak
+Portugal 3,7cm HK Anti Tank
+Portugal 7,5cm M 904 Artillery
+Portugal Infantaria Infantry
+Nationalist Spain Caballeria Infantry
+Portugal Gladiator IIA Fighter Aircraft
+Portugal Transporte a Cavalo Ground Transport
+Netherlands 47mm M35 Anti Tank
+Netherlands Genie Infantry
+Portugal C-47 Air Transport
+Portugal Transporte Naval Transport
+Denmark 20mm M35 Flak
+Denmark 75mm FK02 Artillery
+Italy 105mm 105/28 Artillery
+Denmark Infanteri Infantry
+Denmark IIIJ Fighter Aircraft
+Denmark Hestevogn Ground Transport
+United Kingdom Mosquito PR.XVI Tactical Bomber
+USA 40mm M1 Air Defence
+Denmark IIIS Air Transport
+Denmark Soetransport Naval Transport
+Netherlands de Ruyter CL Cruiser
+All Countries Torpedo Boat TB Destroyer
+Netherlands Mariniers Infantry
+Netherlands Huzaren Infantry
+Russia 76,2mm ZiS-3 Anti Tank
+Slovakia Inzinieri Infantry
+Slovakia 105mm K vz35 Artillery
+Slovakia Pechota Infantry
+Slovakia 47mm vz36 Anti Tank
+Allied Yugoslavia Morski Prijevoz Naval Transport
+Slovakia 75mm H vz15 Artillery
+Allied Yugoslavia Partizani Infantry
+Slovakia 150mm H vz25 Artillery
+United Kingdom Battle I Tactical Bomber
+Slovakia Zaprah Ground Transport
+Slovakia RN Ground Transport
+Yugoslavia Hurricane I Fighter Aircraft
+Slovakia 88mm vz37 Air Defence
+Netherlands M38 Landsverk Recon
+Russia 38 Gornostrelky Infantry
+France AMC P16 Recon
+United Kingdom 25pdr AT Anti Tank
+All Countries Mines Fortification
+France FT17 Tank
+Germany Ju-87C-1 Tactical Bomber
+Russia I-153 Fighter Aircraft
+Hungary 150mm 14M Artillery
+Romania R-1 Recon
+All Countries Ocean SS Submarine
+France 75mm C mle97/35 AC Anti Tank
+Bulgaria T-11 Tank
+Hungary Hegyivadasz Infantry
+Slovakia Bk.534 Fighter Aircraft
+United Kingdom Gladiator IIA Fighter Aircraft
+Hungary 80mm 29/38M Air Defence
+Yugoslavia Cetnici Infantry
+Belgium CR.42 Fighter Aircraft
+Yugoslavia 105mm M.15/26 Artillery
+Belgium Chasseurs Ardennais Infantry
+Slovakia OA vz30 Recon
+Slovakia Marder 38T H Anti Tank
+Slovakia LT vz35 Tank
+Belgium Fox VIR Tactical Bomber
+Italy G.50 Fighter Aircraft
+Yugoslavia Blenheim I Ikarus Tactical Bomber
+Germany Me 410A-1 Fighter Aircraft
+Germany He-51C Fighter Aircraft
+Russia 25mm ZP-40 Flak
+France Bre.693AB.2 Tactical Bomber
+Russia M3A3 Tank
+All Countries Light Coastal Battery Fortification
+Hungary Tenger Szallitas Naval Transport
+Russia Valentine IX Tank
+Hungary 40mm 36M Air Defence
+Slovakia Doprava Naval Transport
+USA F-4 Tactical Bomber
+France Po.63.11A.3 Tactical Bomber
+All Countries Bicycles Ground Transport
+Slovakia LT vz38 Tank
+Slovakia C-445 Air Transport
+Croatia 75mm M.28 Artillery
+Croatia 37mm M.39 Anti Tank
+Croatia Domobrani Infantry
+Netherlands 150mm M13 Artillery
+Croatia Ustase Infantry
+Croatia 100mm M.14/19 Artillery
+Yugoslavia Brdska Pesadija Infantry
+Croatia Ca.310 Tactical Bomber
+Croatia Bf 109E-7 Fighter Aircraft
+Croatia Zaprega Ground Transport
+Croatia IMAD Ground Transport
+Croatia F.VII Air Transport
+Croatia Morski Prijevoz Naval Transport
+Italy M11/39 Tank
+Italy 40 Genio Infantry
+Croatia Inzenjerija Infantry
+Hungary 40M Nimrod Air Defence
+Slovakia Hlinkova Garda Infantry
+Russia Pe-2 Tactical Bomber
+Russia T-28 Tank
+Italy CR.42 Fighter Aircraft
+Italy L3/35 Tank
+Bulgaria B-71 Jerav Tactical Bomber
+Republican Spain SB 2M-100A Tactical Bomber
+Russia SB 2M-100 Tactical Bomber
+All Countries Radar Bunker Fortification
+All Countries Mines Submarine
+Italy Ro.37 Tactical Bomber
+Germany Ju-88A-4 Tactical Bomber
+USA P-35A Fighter Aircraft
+Germany Sturmpanzer IV Anti Tank
+Italy SM.79 Tactical Bomber
+United Kingdom Swordfish III Tactical Bomber
+United Kingdom Tempest V Fighter Aircraft
+Russia Pe-2B Tactical Bomber
+USA F4F-4 Wildcat Fighter Aircraft
+USA TBD-1 Devastator Tactical Bomber
+Germany Fw-189 Uhu Tactical Bomber
+USA 43 USMC Infantry
+Italy L3/35 FL Tank
+All Countries AA Cruiser Air Defence
+All Countries Area AD Air Defence
+All Countries Naval Gun Artillery
+All Countries Barrage Balloon Tactical Bomber
+All Countries Skis Ground Transport
+All Countries Jeep Ground Transport
+All Countries Mules Ground Transport
+All Countries Motorboat Naval Transport
+All Countries Minelayer Naval Transport
+All Countries Heavy Coastal Battery Fortification
+All Countries Pontoon Bridge Fortification
+All Countries Minesweeper Destroyer
+All Countries Frigate Destroyer
+All Countries Coastal SS Submarine
+All Countries Medium SS Submarine
+Belgium 7,65mm mle17 Flak
+Belgium Camion de MG Flak
+Belgium 76,2mm de 76 Anti Tank
+Belgium T-13B1 Anti Tank
+Belgium 75mm M mle34 Artillery
+Belgium 120mm L mle31 Artillery
+Belgium 150mm C mle13 Artillery
+Belgium 155mm L mle17 Artillery
+Belgium 152mm C mle17 Artillery
+Belgium 220mm C mle16 Artillery
+Belgium Legere Infantry
+Belgium Cadre Infantry
+Belgium Garnison Infantry
+Belgium Chasseurs Infantry
+Belgium Motocyclistes Infantry
+Belgium 91Y Recon
+Belgium Reconnaissance Recon
+Belgium FT-18 Tank
+Belgium Hurricane I Fighter Aircraft
+Belgium R-31 Tactical Bomber
+Belgium Battle I Tactical Bomber
+Belgium VCL B Ground Transport
+Bulgaria 88mm D/53 Air Defence
+Bulgaria 75mm D/36 Anti Tank
+Bulgaria 70mm D/11 Anti Tank
+Bulgaria 75mm D/16 Artillery
+Bulgaria 150mm D/28 Artillery
+Bulgaria 120mm D/15 Artillery
+Bulgaria 150mm D/13 Artillery
+Bulgaria Parashutna Drujina Infantry
+Bulgaria Granichari Infantry
+Bulgaria MG Anti Tank
+Bulgaria Gvardia Infantry
+Bulgaria Ansaldo-Fiat Tank
+Bulgaria Hotchkiss Tank
+Bulgaria T-IV Tank
+Bulgaria P-24B Yastreb Fighter Aircraft
+Bulgaria D-520 Fighter Aircraft
+Bulgaria Av-135 Lyastovica Fighter Aircraft
+Bulgaria Bf 109E-4 Strela Fighter Aircraft
+Bulgaria Bf 109G-2 Strela Fighter Aircraft
+Bulgaria PZL 43A Chayka Tactical Bomber
+Bulgaria Do 17Ka-1 Uragan Tactical Bomber
+Bulgaria MB-200 Buhal Level Bomber
+Bulgaria Ju 87D-5 Shchuka Tactical Bomber
+Allied Yugoslavia 76.2mm Air Defence
+Allied Yugoslavia 47mm Anti Tank
+Allied Yugoslavia 81mm Artillery
+Allied Yugoslavia 100mm Artillery
+Allied Yugoslavia Inzenjerija Infantry
+Allied Yugoslavia Titova Garda Infantry
+Allied Yugoslavia L3/35 Tank
+Allied Yugoslavia Konjica Recon
+Allied Yugoslavia AB-41 Recon
+Allied Yugoslavia Spitfire VB tropical Fighter Aircraft
+Allied Yugoslavia Hurricane IVRP Tactical Bomber
+Allied Yugoslavia Mazge Ground Transport
+Croatia 65mm M.06 Anti Tank
+Croatia 100mm M.16/19 Artillery
+Croatia 105mm M.15/26 Artillery
+Croatia 150mm M.36 Artillery
+Croatia 81mm M.31/38 Artillery
+Croatia Gradjanska Vojska Infantry
+Croatia Konjanistvo Infantry
+Croatia Padobranstvo Infantry
+Croatia Planinsko Pjesastvo Infantry
+Croatia Vojne Krajine Infantry
+Croatia Vratar Infantry
+Croatia Izvidjacki Dvokotac Recon
+Croatia SPW Recon
+Croatia G.50bis Fighter Aircraft
+Croatia TK3 Tank
+Croatia Bre.19.8 Tactical Bomber
+Croatia Pz IIIN Tank
+Croatia Po.25A.2 Tactical Bomber
+Croatia Pz IVF Tank
+Croatia MS.406C.1 Fighter Aircraft
+Croatia Do 17Z-2 Tactical Bomber
+Croatia Bf 109G-10 Fighter Aircraft
+Croatia Znaim CL Cruiser
+Czechoslovakia 8cm vz22/24 Air Defence
+Czechoslovakia 10cm H vz30 Artillery
+Czechoslovakia 7cm H vz08 Artillery
+Czechoslovakia Horska Pechota Infantry
+Czechoslovakia MG Anti Tank
+Czechoslovakia Jizda Infantry
+Czechoslovakia Pohranicni Pechota Infantry
+Czechoslovakia OA vz27 Recon
+Czechoslovakia Ta vz33 Tank
+Czechoslovakia LT vz34 Tank
+Czechoslovakia Bk.534 Fighter Aircraft
+Czechoslovakia MB.200 Level Bomber
+Czechoslovakia T-IV Ground Transport
+Denmark 75mm M32 Air Defence
+Denmark 37mm FfK M37 Anti Tank
+Denmark 20mm M35 Anti Tank
+Denmark 150mm FH17 Artillery
+Denmark Livgarden Infantry
+Denmark Cykelspejdere Recon
+Denmark IIJ Fighter Aircraft
+Denmark Pv M39 Recon
+Denmark IIIR Tactical Bomber
+Denmark Herulf Trolle B Cruiser
+Denmark Havmanden SS Submarine
+Finland 7,62 ItKk/31 Flak
+Finland 20 ItK/39 Flak
+Finland ItPsv/38 Air Defence
+Finland 75 ItK/29 Air Defence
+Finland 88 ItK/37 Air Defence
+Finland 25 PstK/34 Anti Tank
+Finland 45 PstK/38 Anti Tank
+Finland 75 PstK/97-38 Anti Tank
+Finland 81 Krh/36 Artillery
+Finland 120 Krh/40 Artillery
+Sweden Arttrakt m/40 Ground Transport
+Germany Pz IVC Tank
+Finland 76,2 K/36 Artillery
+Finland 76,2 RK/27 Artillery
+Finland 84 K/18 Artillery
+Finland 105 K/34 Artillery
+Germany 7.5 leIG18 Artillery
+Finland 114 H/18 Artillery
+Finland 122 H/09-10 Artillery
+Russia 82mm BM-37 AB Artillery
+Finland 152 H/09-30 Artillery
+Finland 152 H/15-17 Artillery
+Finland 203 H/17 Artillery
+Finland 44 Jaakari Infantry
+Finland MG Anti Tank
+Denmark Glenten TB Destroyer
+Finland Rajavartio-osasto Infantry
+Finland Sissi Infantry
+Finland Kevyt Osasto Recon
+Finland BAB-B Recon
+Finland T-37A Tank
+Finland T-34/85 Tank
+Finland CUw Fighter Aircraft
+Hungary Ejtoernyos Infantry
+Finland BU Fighter Aircraft
+Finland HC Fighter Aircraft
+Finland FA Fighter Aircraft
+Finland MY Tactical Bomber
+Russia 85mm ZP-39 Flak
+Finland SB Level Bomber
+Finland FK Tactical Bomber
+Finland DN Level Bomber
+Finland Ilmarinen CA Cruiser
+Finland Vetehinen SS Submarine
+France 8mm mle14 Flak
+France 20mm mle39 Flak
+France 75mm mle13/34 Portee Air Defence
+France 40mm mle36 Air Defence
+France 47mm 15TCC Portee Anti Tank
+France 57mm mle41 Anti Tank
+France C-47 Air Transport
+France 65mm M mle06 Artillery
+France 75mm M mle28 Artillery
+France 105mm L mle13 Artillery
+France 105mm M mle28 Artillery
+France 105mm L mle36 Artillery
+France 220mm L mle17 Artillery
+France 87.6mm C mle40 Artillery
+France 81mm mle39 Artillery
+France 155mm C mle28 Artillery
+France 155mm C mle41 Artillery
+France 75mm M mle27 Artillery
+France 37 Mtr Infanterie Anti Tank
+France 37 Chasseurs Alpins Infantry
+France 37 Garnison Infantry
+France 37 Dragons Portes Infantry
+France 31 Infanterie Infantry
+France 37 Spahis Infantry
+France 43 Chocs Infantry
+France AMD 50AM Recon
+France AMD 80AM Recon
+France AMR 35 Recon
+France M3A1 Recon
+France FCM 36 Tank
+France Crusader II Tank
+France Centaur III Tank
+France P.38F Fighter Aircraft
+France P.47D Fighter Aircraft
+France Spitfire IX Fighter Aircraft
+France D.510C.1 Fighter Aircraft
+France VG.33C.1 Fighter Aircraft
+Poland CR.714 Fighter Aircraft
+France MB.151C.1 Fighter Aircraft
+France MB.155C.1 Fighter Aircraft
+France Po.631C.3 Fighter Aircraft
+France Lat.298A Tactical Bomber
+France B.26B Tactical Bomber
+France Martin 167A.3 Tactical Bomber
+France MB.210BN.5 Level Bomber
+France LeO.451B.4 Tactical Bomber
+France Am.143BN.5 Level Bomber
+France DB.7B.3 Tactical Bomber
+France Am.354B.4 Tactical Bomber
+France LN.401 Tactical Bomber
+France MB.174A.3 Tactical Bomber
+France F.222.2BN.5 Level Bomber
+France Jaguar DD Destroyer
+France Duguay-Trouin LC Cruiser
+France Emile Bertin LC Cruiser
+France Algerie CA Cruiser
+France Bearn CVL Aircraft Carrier
+France Redoutable SS Submarine
+Germany 3.7 FlaK43 Air Defence
+Germany 5 FlaK41 Air Defence
+Germany SdKfz 251/21 Air Defence
+Germany 4.7 PaK36(t) Anti Tank
+Germany 7.62 PaK36(r) Anti Tank
+Germany SdKfz 251/22 Anti Tank
+Germany SdKfz 251/16 Anti Tank
+Germany JgdPz II PzSelb Anti Tank
+Germany FJ 8 GrW42k Artillery
+Germany Marder IIIM Anti Tank
+Germany StuG 851(i) Anti Tank
+Germany 10 NbWf35 Artillery
+Germany 7.5 leFK16nA Artillery
+Germany 7.5 GebG36 Artillery
+Germany 10 GebH16 Artillery
+Germany 10.5 K18 Artillery
+Germany 15 sIG33 Artillery
+Germany 15 K39 Artillery
+Germany 28/32 NbWf41 Artillery
+Germany 7.92mm FG 42 Anti Tank
+Germany FJ Sturmpioniere Infantry
+Germany SS Polizei Infantry
+Germany MG 34 Anti Tank
+Germany Volksgrenadiere Infantry
+All Countries Freiwilligen Infantry
+Germany Kriegsmarine Infantry
+Germany 39 SS Kavallerie Infantry
+Germany SS Gebirgsjäger Infantry
+Germany 45 Kriegsmarine Infantry
+Germany 43 Fusiliere Recon
+Germany Kfz 13 Recon
+Germany Psw 221 Recon
+Germany Psw 231(6) Recon
+Germany SdKfz 250/8 Recon
+Germany Psw 204(f) Recon
+Germany AufPz 38(t) Recon
+Germany Pz IIL Luchs Recon
+Germany Psw 203(i) Recon
+Germany Pz IID Tank
+Germany Pz II(F) Tank
+Germany Pz III(F) Tank
+Germany Pz 735(f) Tank
+Germany Pz 731(f) Tank
+Germany Pz 739(f) Tank
+Germany Pz 747(r) Tank
+Germany Pz IIIG Tauchfahig Tank
+Germany Pz IVD Tauchfahig Tank
+Germany Pz 737(i) Tank
+Germany Fw-190A-8 Fighter Aircraft
+Germany Me-109G-6 Fighter Aircraft
+Germany Me-109G-10 Fighter Aircraft
+Germany He-219 Fighter Aircraft
+Germany Me-262A-1b  Fighter Aircraft
+Germany He-112B-2 Fighter Aircraft
+Germany Me 410B-1 Tactical Bomber
+Germany Ju 86D-1 Level Bomber
+Germany Me 262A-2a Tactical Bomber
+Germany Ar 234B-2 Tactical Bomber
+Germany Hs 123A-1 Tactical Bomber
+Germany He 115A-1 Level Bomber
+Germany Hs 129B-3/Wa Tactical Bomber
+Germany Hs 129B-1 Tactical Bomber
+Germany Do 217E-1 Level Bomber
+Germany He 177A-5/R2 Level Bomber
+Germany Zerstorer 1936A DD Destroyer
+Germany Emden CL Cruiser
+Germany Lutzow BC Cruiser
+Germany Deutschland B Cruiser
+Germany U-7 SS Submarine
+Germany U-69 SS Submarine
+Germany U-37 SS Submarine
+Greece 7.92mm M26 Flak
+Greece 20mm M37 Flak
+Greece 88mm M18 Air Defence
+Greece 81mm M27/31 Artillery
+Greece 65mm M06 Artillery
+Greece 105mm M27 Artillery
+Greece MG Anti Tank
+Greece Pezikon Ochyroseon Infantry
+Greece Omas Anagnoriseos Recon
+Greece L3/35 Tank
+Greece MB.151 Fighter Aircraft
+Greece Po.633B.2 Grec Tactical Bomber
+Greece Battle I Tactical Bomber
+Greece Bre.XIX B.2 Tactical Bomber
+Greece Georgios DD Destroyer
+Greece Ellis CL Cruiser
+Greece Averof C Cruiser
+Greece Hs.126K-6 Tactical Bomber
+Greece Glafkos SS Submarine
+Hungary 8mm 31M Flak
+Hungary 40mm 40M Anti Tank
+Hungary 75mm 40M Anti Tank
+Hungary JgdPz 38(t) Anti Tank
+Hungary 81mm 36M Artillery
+Hungary 76,5mm 5/8M Artillery
+Hungary 76,5mm 18M Artillery
+Hungary 100mm 14M Artillery
+Hungary 150mm 31M Artillery
+Hungary 105mm 31M Artillery
+Hungary 210mm 40M Artillery
+Hungary Gpu Anti Tank
+Hungary Hatarvadasz Infantry
+Hungary 41M Ansaldo Recon
+Hungary H35 Tank
+Hungary 38M Toldi I Tank
+Hungary 38M Toldi IIA Tank
+Hungary Pz IIIM Tank
+Hungary Pz IVF Tank
+Hungary CR.32ter Fighter Aircraft
+Hungary Heja II Fighter Aircraft
+Hungary Bf 109G-2 Fighter Aircraft
+Hungary Bf 109G-6 Fighter Aircraft
+Hungary Bf 109G-4 Fighter Aircraft
+Hungary Me-210Ca-1 Tactical Bomber
+Hungary Ju 87D-5 Tactical Bomber
+Hungary Ju 86K-2m Level Bomber
+Hungary Fw 190F-8 Tactical Bomber
+Italy 75mm 75/39 Air Defence
+Italy 75mm 75/46 Camion Air Defence
+Italy 90mm 90/53 Air Defence
+Italy 90mm 90/53 Camion Air Defence
+Italy M15/42 Contraerea Flak
+Italy 75mm 75/39 Anti Tank
+Italy 75mm 75/46 Camion Flak
+Italy 90mm 90/53 Camion Flak
+Republican Spain 105mm 105/11 Artillery
+Italy Sem 75/18 M40 Anti Tank
+Italy Sem 75/18 M42 Anti Tank
+Italy Sem 75/34 M42 Anti Tank
+Italy Sem 75/34 M43 Anti Tank
+Italy Sem 75/46 M43 Anti Tank
+Italy Sem 105/25 M43 Anti Tank
+Italy 81mm 81/14 Artillery
+Italy 65mm 65/17 Artillery
+Italy 70mm 70/15 Artillery
+Italy 75mm 75/18 Artillery
+Italy 75mm 75/13 Artillery
+Italy 105mm 105/11 Artillery
+Italy 149mm 149/28 Artillery
+Italy 149mm 149/40 Artillery
+Italy 152mm 152/45 Artillery
+Italy 42 Difesa Costiera Infantry
+Italy 40 San Marco Infantry
+Italy RSI Guardia Nazionale Infantry
+Italy RSI Fanteria Infantry
+Italy RSI Brigate Nera Infantry
+Italy Partigiani Infantry
+Italy AB-43 Recon
+Italy AB-611 Recon
+Italy AB IZ Recon
+Italy AB Lince Recon
+Italy L5/30 Tank
+Italy L3/33 Tank
+Italy L3/38 Tank
+Italy M10/35 Tank
+Italy M20/35 Tank
+Italy CR.32 Fighter Aircraft
+Italy Ro.57bis Tactical Bomber
+Italy Re.2001CN Tactical Bomber
+Italy Re.2002 Tactical Bomber
+Italy Ju-87B-1 Tactical Bomber
+Italy Ba.88 Tactical Bomber
+Italy SM.81 Level Bomber
+Italy SM.84 Tactical Bomber
+Italy Ca.135Mod Tactical Bomber
+Italy Z.1007bis Tactical Bomber
+Italy BR.20 Level Bomber
+All Countries Armoured Train Artillery
+Italy P.108B Level Bomber
+Italy AS37 Ground Transport
+Italy Navigatori DD Destroyer
+Italy Di Savoia CL Cruiser
+Italy Garibaldi CL Cruiser
+Italy Trento CA Cruiser
+Italy Andrea Doria BB Cruiser
+Italy Legionarii SS Submarine
+Nationalist Spain 7.92mm M.17 Flak
+Nationalist Spain 37mm M.34 Air Defence
+Nationalist Spain 40mm M.33 Anti Tank
+Nationalist Spain 65mm M.13 Anti Tank
+Nationalist Spain 70mm 70/15 Artillery
+Nationalist Spain 75mm 75/28 Artillery
+Nationalist Spain 105mm 105/28 Artillery
+Nationalist Spain MG Anti Tank
+Nationalist Spain Morroqui Caballeria Infantry
+Nationalist Spain Motoristas Infantry
+Nationalist Spain Bilbao Recon
+Nationalist Spain UNL 35 Recon
+Nationalist Spain He 51B-1 Fighter Aircraft
+Nationalist Spain Bf 109B-2 Fighter Aircraft
+Nationalist Spain Ro.37bis Tactical Bomber
+Nationalist Spain Bf 109E-3 Fighter Aircraft
+Nationalist Spain G.50 Fighter Aircraft
+Nationalist Spain Sm.79 Tactical Bomber
+Nationalist Spain He 111B-1 Tactical Bomber
+Nationalist Spain Ba.65 Tactical Bomber
+Nationalist Spain Ca.310 Tactical Bomber
+Nationalist Spain Ceuta DD Destroyer
+Nationalist Spain Navarra CL Cruiser
+All Countries Coast Defence Ship B Cruiser
+Nationalist Spain Canarias CA Cruiser
+All Countries Battleship B Cruiser
+Nationalist Spain General Mola SS Submarine
+Netherlands 7,92mm M17 Flak
+Netherlands 20mm M29 Flak
+Netherlands 57mm M94 Anti Tank
+Netherlands 81mm M29 Artillery
+Netherlands 105mm M27 Artillery
+Netherlands 120mm M78 Artillery
+Netherlands 152mm M17 Artillery
+Netherlands MG Anti Tank
+Netherlands Jagers Infantry
+Netherlands Grenswacht Infantry
+Netherlands Grenadiers Infantry
+Italy 32 MG Fanteria Anti Tank
+Netherlands M36 Landsverk Recon
+Netherlands M39 DAF Recon
+Netherlands LT M1936b Tank
+Netherlands FK.51 Tactical Bomber
+Netherlands D.XVII Fighter Aircraft
+Netherlands C.VE Tactical Bomber
+Netherlands C.X Tactical Bomber
+Netherlands T.VIIIw Level Bomber
+Netherlands DB-8A-3N Tactical Bomber
+Netherlands Admiralen DD Destroyer
+Netherlands Sumatra CL Cruiser
+Netherlands Tromp CL Cruiser
+Netherlands O SS Submarine
+Netherlands K SS Submarine
+Norway 40mm m/36 Air Defence
+Poland 9TP Tank
+Norway 8cm m/35 Artillery
+Norway 7,5cm m/11-24 Artillery
+Norway MG Anti Tank
+Norway Skyttelag Infantry
+Norway Milorg Infantry
+Norway Politi Infantry
+Norway H75A-6 Fighter Aircraft
+Norway C.VD Tactical Bomber
+Norway Sleipner TB Destroyer
+Norway Norge B Cruiser
+Norway B1 SS Submarine
+Poland 7,92mm wz.08 Flak
+Poland 75mm wz.36 Air Defence
+Poland 75mm wz.14 Air Defence
+Poland M16 Flak
+Poland 57mm wz.41 Anti Tank
+Poland Wolverine Anti Tank
+Poland 65mm AG wz.06 Artillery
+Poland 75mm A wz.02/26 Artillery
+Poland 100mm H wz.14/19 Artillery
+Poland 120mm H wz.09/31 Artillery
+Poland 220mm M wz.32 Artillery
+Poland Sexton Artillery
+Poland 182,8mm H wz.43 Artillery
+Poland 37 Obrona Narodowa Infantry
+Poland 38 KOP Gorska Infantry
+Poland 38 Ckm Piechota Anti Tank
+Poland 38 KOP Infantry
+Poland 39 Marszowy Infantry
+Poland 39 Piechota Gorska Infantry
+Poland 43 SP Pionierzy Infantry
+Poland 43 Piechota Infantry
+Poland 41 Pionierzy Infantry
+Poland 44 Piechota AK Infantry
+Poland Crusader AA II Flak
+Poland SamPanc wz.28 Recon
+Poland SamPanc wz.34-II Recon
+Poland 38 Zwiadowcy Rowerowi Recon
+Poland Greyhound Recon
+Poland Stuart I Tank
+Poland FT-17 Tank
+Poland TKS FK wz.38 Anti Tank
+Poland Vickers E dw Tank
+Poland Spitfire IX Fighter Aircraft
+Poland Mustang III Fighter Aircraft
+Poland Hurricane IA Fighter Aircraft
+Poland Mosquito FB.VI Tactical Bomber
+Poland C2P Ground Transport
+Poland Carrier Ground Transport
+Poland C-47 Air Transport
+Poland Wicher DD Destroyer
+Poland Orzel SS Submarine
+Portugal 7,7mm M 917 Flak
+Portugal 7,5cm M 931 Air Defence
+Portugal 15,2cm M 918 Artillery
+Portugal Cacadores Infantry
+Portugal Infantaria em Bicicleta Recon
+Portugal CCL Carden Lloyd Tank
+Portugal MS-233 Fighter Aircraft
+Portugal Spitfire VB Fighter Aircraft
+Portugal Blenheim IV Tactical Bomber
+Portugal Duoro DD Destroyer
+Portugal Delfim SS Submarine
+Norway 10,5cm m/04 Artillery
+Allied Yugoslavia Guiseppe Garibaldi Infantry
+Hungary Kerekpar Recon
+All Countries Barbed Wire Infantry
+All Countries AT Hinders Fortification
+All Countries Roadblock Fortification
+All Countries Factory Fortification
+All Countries Patrol Boat Destroyer
+All Countries Auxiliary Cruiser Cruiser
+All Countries Monitor BM Cruiser
+Republican Spain 7.92mm M.17 Flak
+Republican Spain 40mm M.30 Air Defence
+Republican Spain 76.2mm M.31 Air Defence
+Republican Spain 45mm PTP.32 Anti Tank
+Republican Spain 70mm 70/16 Artillery
+Republican Spain 76.2mm 76/40 Artillery
+Republican Spain 107mm 107/38 Artillery
+Republican Spain 114mm 114/13 Artillery
+Republican Spain 152mm 152/32 Artillery
+Republican Spain Guardia Republicana Infantry
+Republican Spain Caballeria Infantry
+Republican Spain FAI Recon
+Republican Spain Bilbao Recon
+Republican Spain UNL 35 Recon
+Republican Spain FT-17 Tank
+Republican Spain I-152 Fighter Aircraft
+Republican Spain I-16-5 Fighter Aircraft
+Republican Spain D.371 Fighter Aircraft
+Republican Spain Bre.19B.2 Tactical Bomber
+Republican Spain R-Z Tactical Bomber
+Republican Spain Po.540M.5 Level Bomber
+Republican Spain A.101 Tactical Bomber
+All Countries Fleet Gunboat G Cruiser
+Allied Yugoslavia Il-2 KSS Tactical Bomber
+Republican Spain Mendez Nunez LC Cruiser
+Poland MS.406 Fighter Aircraft
+Republican Spain B-1 SS Submarine
+Republican Spain C-1 SS Submarine
+Germany 10.5 LG42 Artillery
+Germany StuIG 33B Artillery
+Nationalist Spain L3/35 Tank
+Nationalist Spain T-26 Tank
+Nationalist Spain Morroqui Infantry
+Nationalist Spain IZ Recon
+Portugal Po-25A Tactical Bomber
+Portugal Hurricane IIC Tactical Bomber
+Romania 7.92mm M17 Flak
+Romania 25mm M39 Flak
+Romania 88mm M36 Air Defence
+Romania 37mm M36 Anti Tank
+Romania 47mm M18 Anti Tank
+Romania 75mm M97/38 Anti Tank
+Romania 75mm M43 Anti Tank
+Romania TACAM R-2 Anti Tank
+Romania TACAM T-60 Anti Tank
+Romania 81mm M35 Artillery
+Romania 120mm M42 Artillery
+Romania 75mm M15 Artillery
+Romania 105mm M13 Artillery
+Romania 100mm M16 Artillery
+Romania 40 Graniceri Infantry
+Romania Partizani Infantry
+Romania 40 Mtr Infanterie Anti Tank
+Romania 40 Puscasi Marini Infantry
+Romania 43 Parasutisti Infantry
+Romania 40 Jandarmi Infantry
+Romania OA-30 Recon
+Romania AB-41 Recon
+Romania FT-17 Tank
+Romania T-3N Tank
+Romania T-4F Tank
+Hungary 43M Turan Tank
+Czechoslovakia 10cm H vz14/19 Artillery
+Romania IAR-80 Fighter Aircraft
+Romania IAR-80B Fighter Aircraft
+Romania IAR-80C Fighter Aircraft
+Romania Bf-109E-3a Fighter Aircraft
+Czechoslovakia S.328 Tactical Bomber
+Romania He-112B-0 Fighter Aircraft
+Romania IAR-37 Tactical Bomber
+Romania IAR-81 Tactical Bomber
+Romania S-79B Tactical Bomber
+Romania MB-210 Level Bomber
+Romania He-111E-3 Level Bomber
+Romania Po-633 Tactical Bomber
+Romania UE Ground Transport
+Romania SPW Ground Transport
+Romania Ferdinand DD Destroyer
+Romania Delfinul SS Submarine
+Slovakia 84mm vz22 Air Defence
+Slovakia 37mm vz37 Anti Tank
+Slovakia 50mm vz38 Anti Tank
+Slovakia 75mm vz40 Anti Tank
+Slovakia 100mm H vz14/19 Artillery
+Slovakia 105mm H vz18 Artillery
+Slovakia Horska Pechota Infantry
+Slovakia MG Anti Tank
+Slovakia Motocyklisti Infantry
+Slovakia Bicyklisti Recon
+Slovakia LT vz34 Tank
+Slovakia T vz33 Tank
+Slovakia LT vz40 Tank
+Slovakia LT 2C Tank
+Slovakia T 3N Tank
+Slovakia Bf-109E-7 Fighter Aircraft
+Slovakia B.534-IV Fighter Aircraft
+Slovakia Ju-87D-3 Tactical Bomber
+Slovakia He-111P-1 Level Bomber
+Slovakia Sm.84bis Tactical Bomber
+Slovakia S.328 Tactical Bomber
+Sweden 20mm m/40 Flak
+Sweden 7,5cm m/37 Air Defence
+Allied Yugoslavia Yak-1B Fighter Aircraft
+Sweden 20mm m/40 Anti Tank
+Sweden 57mm m/43 Anti Tank
+Sweden Sav m/43 Anti Tank
+Sweden Pvkv m/43 Anti Tank
+Sweden 7,5cm Kan m/02-33 Artillery
+Sweden 10,5cm Haub m/10 Artillery
+Sweden 10,5cm Kan m/34 Artillery
+Sweden 12cm Grk m/41 Artillery
+Sweden 15cm Haub m/06 Artillery
+Sweden 43 Infanteri Infantry
+Sweden 43 Jagare Infantry
+Sweden Cykelkavalleri Recon
+Bulgaria Bicikl Pehota Recon
+Nationalist Spain Azul Asaltos Infantry
+Sweden Strv m/39 Tank
+Sweden Strv m/41 Tank
+Sweden J 9 Fighter Aircraft
+Sweden J 11 Fighter Aircraft
+Nationalist Spain Azul Rec Recon
+Sweden J 26 Fighter Aircraft
+Sweden B 16 Tactical Bomber
+Sweden B 3 Level Bomber
+Sweden B 5 Tactical Bomber
+Sweden B 18 Tactical Bomber
+Sweden Kp-bil m/42 Ground Transport
+Sweden Wrangel DD Destroyer
+Sweden Goteborg DD Destroyer
+Sweden Fylgia CL Cruiser
+Sweden Gotland CL Cruiser
+Sweden Aran CA Cruiser
+Sweden Delfinen SS Submarine
+Sweden U1 SS Submarine
+Turkey 7.92mm M.39 Flak
+Turkey 75mm M.32 Air Defence
+Turkey 77mm M.16 Artillery
+Turkey 120mm M.04 Artillery
+Turkey 150mm M.13 Artillery
+Turkey Yedek Asker Infantry
+Turkey Bisiklet Arama Recon
+Turkey Pz IIIJ Tank
+Turkey Pz IVG Tank
+Turkey P-40C Fighter Aircraft
+Turkey Fw-190A-3 Fighter Aircraft
+Turkey Spitfire VB Fighter Aircraft
+Turkey Hurricane IIC Tactical Bomber
+Turkey Battle I Tactical Bomber
+Turkey B-10 Tactical Bomber
+Turkey B-24D Level Bomber
+Turkey T6 Ground Transport
+Turkey Tinaztepe DD Destroyer
+Turkey Yavuz BC Cruiser
+Turkey Medidjieh C Cruiser
+Turkey Ay SS Submarine
+United Kingdom 3inch Air Defence
+United Kingdom Crusader AA I Air Defence
+United Kingdom Crusader AA II Flak
+United Kingdom 6pdr IV Anti Tank
+United Kingdom 6pdr Deacon Anti Tank
+United Kingdom 3inch Artillery
+United Kingdom 4.2inch Artillery
+United Kingdom 3.7inch AB Artillery
+United Kingdom 75mm I AB Artillery
+United Kingdom 6inch Artillery
+United Kingdom 7.2inch IV Artillery
+United Kingdom 8inch Artillery
+United Kingdom 9.2inch Artillery
+United Kingdom 44 Royal Marines Infantry
+United Kingdom 40 Arab Legion Infantry
+United Kingdom 40 Colonial Infantry Infantry
+United Kingdom 40 MMG Anti Tank
+United Kingdom Marmon-Herrington II Recon
+United Kingdom Marmon-Herrington III Recon
+United Kingdom Staghound II CS Recon
+United Kingdom Rolls Royce I Recon
+United Kingdom Valentine I Tank
+United Kingdom Matilda III CS Tank
+United Kingdom Covenanter III Tank
+United Kingdom Crusader II CS Tank
+United Kingdom Covenanter III CS Tank
+United Kingdom Churchill AVRE Tank
+United Kingdom Churchill VI Tank
+United Kingdom Cromwell IV Tank
+United Kingdom Firefly IIC Tank
+United Kingdom Sherman IIA Tank
+United Kingdom Sherman V Tank
+United Kingdom Fulmar I Fighter Aircraft
+United Kingdom Martlet I Fighter Aircraft
+United Kingdom Meteor I Fighter Aircraft
+United Kingdom Defiant I Fighter Aircraft
+United Kingdom Albacore Tactical Bomber
+United Kingdom Beaufort I Tactical Bomber
+United Kingdom Mosquito NF.II Tactical Bomber
+United Kingdom Blenheim IV Tactical Bomber
+United Kingdom Barracuda III Tactical Bomber
+United Kingdom Hudson I Tactical Bomber
+United Kingdom Mosquito B.IV Tactical Bomber
+United Kingdom Nomad I Tactical Bomber
+United Kingdom Whirlwind IA Tactical Bomber
+United Kingdom Halifax I Level Bomber
+United Kingdom Lancaster I Level Bomber
+All Countries Level Bomber Level Bomber
+United Kingdom Horse Ground Transport
+Poland PZL.50A Jastrzab Fighter Aircraft
+United Kingdom L DD Destroyer
+United Kingdom Crown Colony CL Cruiser
+United Kingdom Town CL Cruiser
+United Kingdom Dido CL Cruiser
+United Kingdom Cathedral CA Cruiser
+United Kingdom Admiral BC Cruiser
+United Kingdom Revenge BB Cruiser
+United Kingdom Queen Elizabeth BB Cruiser
+United Kingdom Furious CV Aircraft Carrier
+United Kingdom Hermes CVL Aircraft Carrier
+United Kingdom S SS Submarine
+USA .50 M51 Flak
+USA 37mm M1A2 Air Defence
+USA M19 Air Defence
+USA M36B2 Anti Tank
+USA 81mm Mortar M1 Artillery
+USA 4.2inch Mortar M30 Artillery
+USA 75mm How M1A1 Artillery
+USA 75mm RCL M20 AB Artillery
+Turkey BA-3 Recon
+USA 105mm How M3 AB Artillery
+USA 155mm How M1918A3 Artillery
+USA 155mm Gun M1A1 Artillery
+USA 155mm Gun M1918M1 Artillery
+USA M40 Artillery
+USA 240mm How M1 Artillery
+USA 8inch How M1 Artillery
+USA 42 Mountain Infantry
+USA M3A1 Tank
+USA M5 Tank
+USA M4 Tank
+USA M4A3(75)W Tank
+USA M4A3(76)W Tank
+USA M4A4 Tank
+USA M4A6 Tank
+USA M22 Tank
+Italy 43 Alpini Infantry
+USA LVT(A)4 Tank
+USA F6F-5 Hellcat Fighter Aircraft
+USA F4U-4 Corsair Fighter Aircraft
+USA P-39D-2 Fighter Aircraft
+USA P-40C Fighter Aircraft
+Russia TB-7 Level Bomber
+USA P-40N-1 Fighter Aircraft
+USA A-20G Tactical Bomber
+USA P-61A-1 Tactical Bomber
+USA TBF-1 Avenger Tactical Bomber
+USA PBY-5 Catalina Level Bomber
+USA PV-1 Ventura Level Bomber
+USA B-17G Level Bomber
+USA B-24D Level Bomber
+USA B-29 Level Bomber
+Czechoslovakia 15cm H vz37 Artillery
+USA Horse Ground Transport
+USA Mohan DD Destroyer
+USA Cleveland CL Cruiser
+USA Atlanta CL Cruiser
+USA Omaha CL Cruiser
+USA Portland CA Cruiser
+USA Penascola CA Cruiser
+USA Alaska BC Cruiser
+USA Washington BB Cruiser
+USA Maryland BB Cruiser
+USA Nevada BB Cruiser
+USA Commencement Bay CVE Aircraft Carrier
+USA Gato SS Submarine
+Russia Maxim 4M Flak
+Russia GAZ/Maxim 4M Flak
+Russia 37mm PTP-30 Anti Tank
+Russia 45mm PTP-42 Anti Tank
+Russia 57mm M1 Anti Tank
+Russia ZiS-30 Anti Tank
+Russia 76,2mm F-22 Anti Tank
+Russia 76,2mm M-02/30 Anti Tank
+Russia 100mm BS-3 Anti Tank
+Russia 76,2mm PP-27 Artillery
+Russia 76,2mm M-02/30 Artillery
+Russia 76,2mm ZiS-3 Artillery
+Russia 76,2mm E-2 Artillery
+Russia 107mm M-10/30 Artillery
+Russia 122mm M-10/30 Artillery
+Russia 122mm A-19 Artillery
+Russia 152mm M-10 Artillery
+Russia 152mm D-1 Artillery
+Russia 152mm BR-2 Artillery
+Russia 210mm BR-17 Artillery
+Russia 280mm BR-5 Artillery
+Russia BM-8-24 Artillery
+Russia 82mm BM-37 Artillery
+Russia 107mm PBHM-38 Artillery
+Russia 160mm MT-13 Artillery
+Russia 41 Shtraf Infantry
+Russia 41 Pogranichnik Infantry
+Russia 42 PPSh Pehota Infantry
+Russia 38 Pulemetny Anti Tank
+Russia 42 Specnaz Infantry
+Russia Carrier Recon
+Russia M5A1 Recon
+Russia KV-8 Tank
+Russia M4A2 Tank
+Russia M4A2(76)W Tank
+Russia M3A1 Tank
+Russia Churchill III Tank
+Russia Matilda II Tank
+Russia OT-133 Tank
+Russia T-26/31 Tank
+Russia T-27 Tank
+Russia T-35/39 Tank
+Russia T-37A Recon
+Russia T-40 Recon
+Russia I-15 M-25 Fighter Aircraft
+Russia I-16-10 Fighter Aircraft
+Russia P-39N Fighter Aircraft
+Russia P-40K Fighter Aircraft
+Russia Hurricane IIB Fighter Aircraft
+Russia Pe-3bis Fighter Aircraft
+Russia A-20B Tactical Bomber
+Russia B-25D Tactical Bomber
+Russia Ar-2 Tactical Bomber
+Russia TB-1 Level Bomber
+Russia Tu-2S Tactical Bomber
+Russia Su-2 Tactical Bomber
+Russia DB-3TP Tactical Bomber
+Russia DB-3F Level Bomber
+Russia T-20 Ground Transport
+Russia Leningrad DD Destroyer
+Russia Novik DD Destroyer
+Russia Sts SS Submarine
+Russia S SS Submarine
+Russia C SS Submarine
+Yugoslavia 7.92mm M.14 Flak
+Yugoslavia 20mm M.39 Flak
+Yugoslavia 76.5mm M.05/32 Air Defence
+Yugoslavia 80mm M.36 Air Defence
+Yugoslavia 37mm M.17 Anti Tank
+Yugoslavia 47mm M.36 Anti Tank
+Yugoslavia T-32 Anti Tank
+Yugoslavia 81mm M.31/38 Artillery
+Yugoslavia 65mm M.06 Artillery
+Yugoslavia 100mm M.14/19 Artillery
+Yugoslavia 100mm M.16/19 Artillery
+Yugoslavia 105mm M.36 Artillery
+Yugoslavia 120mm M.11 Artillery
+Yugoslavia 150mm M.14 Artillery
+Yugoslavia 155mm M.17 Artillery
+Yugoslavia MG Anti Tank
+Yugoslavia Kraljevska Garda Infantry
+Yugoslavia Cetnicka Konjica Infantry
+Yugoslavia Biciklisticka Izvidnica Recon
+Yugoslavia FT-17 Tank
+Yugoslavia NC-27 Tank
+Yugoslavia IK-3 Fighter Aircraft
+Yugoslavia Yugoslav Fury II Fighter Aircraft
+Yugoslavia Ca.310 Tactical Bomber
+Yugoslavia SM-79K Level Bomber
+Yugoslavia Do-17Kb-1 Tactical Bomber
+Yugoslavia Bre.19.8 FAK Tactical Bomber
+Yugoslavia Dubrovnik DD Destroyer
+Yugoslavia Dalmacija CL Cruiser
+Yugoslavia Hrabri Class Submarine
+Nationalist Spain 155mm 155/13 Artillery
+Nationalist Spain Guardia Civil Infantry
+Nationalist Spain SM.81 Level Bomber
+Nationalist Spain Ju 52/3m Level Bomber
+Germany 12.8 FlaK40 Air Defence
+Germany 2.8 lePaK41 Anti Tank
+Germany Ju 52/3mg4e Level Bomber
+Germany He 111B-1 Tactical Bomber
+Poland Spitfire VC Tactical Bomber
+Sweden Ksp Anti Tank
+Turkey MG Anti Tank
+Allied Yugoslavia MG Anti Tank
+Republican Spain MG Anti Tank
+Portugal MG Anti Tank
+Yugoslavia Granicari Infantry
+United Kingdom 4.5inch Artillery
+Netherlands Motorrijder Infantry
+All Countries HQ Fortification
+All Countries Heavy AT Bunker Fortification
+All Countries Light Art Bunker Fortification
+Germany Psw 221 PaK 41 Recon
+Poland Battle I Tactical Bomber
+France Spitfire VB Fighter Aircraft
+France B.25D Tactical Bomber
+Poland Hurricane IIC Tactical Bomber
+France P.39Q Fighter Aircraft
+Poland Valentine VIII Tank
+Poland Sherman III Tank
+Poland Valentine III Tank
+Poland 182,8mm H wz.41 Artillery
+Poland Sherman V Tank
+Poland Carrier Recon
+United Kingdom Kittyhawk IA Tactical Bomber
+United Kingdom Tomahawk IIB Fighter Aircraft
+Germany Marder I Anti Tank
+Germany JgdPz 38(t) Anti Tank
+United Kingdom Carrier Recon
+Italy 43 Fanteria Infantry
+Italy 43 Bersaglieri Infantry
+Italy P26/43 Tank
+Italy 40 Fanteria da Montagna Infantry
+Slovakia 150mm H vz37 Artillery
+Greece MCG-5 Ground Transport
+Turkey 75mm M.29 Artillery
+Portugal 7,5cm M 940 Artillery
+All Countries 105mm How M2 Artillery
+All Countries 10,5 leFH18 Artillery
+All Countries Entrenchment Fortification
+Turkey 150mm M.33 Artillery
+Germany 15 sFH37(t) Artillery
+Greece 85mm M25 Artillery
+Greece 75mm M19 Artillery
+Italy 90mm 90/53 Anti Tank
+Hungary 44M Zrinyi Anti Tank
+Greece Carrier Recon
+Croatia 76.5mm M.05/32 Air Defence
+All Countries Infantry Infantry
+United Kingdom 44 Infantry Infantry
+Croatia Legija Infantry
+USA 42 Cavalry Infantry
+Germany 12.8 PaK44 Anti Tank
+Czechoslovakia 7,5cm H vz15 Artillery
+United Kingdom Valentine DD Tank
+United Kingdom 4.5inch Air Defence
+France 37mm mle16 Anti Tank
+France 39 Infanterie de l'Air Infantry
+USA M4A1 DD Tank
+Romania 155mm M17 Artillery
+Italy 155mm 155/14 Artillery
+Greece 47mm M36 Anti Tank
+Hungary Csendor Infantry
+Belgium Pontonniers Infantry
+Bulgaria Mostovi Drujini Infantry
+Allied Yugoslavia Mostovna Inzenjerija Infantry
+Croatia Mostovna Inzenjerija Infantry
+Czechoslovakia Mostni Zeniste Infantry
+Denmark Broingenioerer Infantry
+Finland Tienraivaaja Infantry
+Greece Michanikoi Infantry
+Hungary Utasz Infantry
+Nationalist Spain Pontoneros Infantry
+Netherlands Pontoniers Infantry
+Norway Broingeniorer Infantry
+Poland 38 Saperzy Infantry
+Portugal Engenharia de Pontes Infantry
+Republican Spain Pontoneros Infantry
+Romania 40 Pontonieri Infantry
+Slovakia Zenisti Infantry
+Sweden Broingenjorer Infantry
+Turkey Handassa Infantry
+Yugoslavia Mostovna Inzenjerija Infantry
+Bulgaria 105mm D/52 Artillery
+Allied Yugoslavia Ju-52/3m Air Transport
+Finland T-20 Ground Transport
+USA 43 Armored Infantry Infantry
+Italy 75mm 75/32 Artillery
+Nationalist Spain 50mm M.38 Anti Tank
+Nationalist Spain 75mm M.18 Anti Tank
+Nationalist Spain 150mm 150/28 Artillery
+United Kingdom 43 Parachute Engineers Infantry
+USA 43 Airborne Engineers Infantry
+Bulgaria T-III Anti Tank
+Slovakia 43 Piechota Infantry
+All Countries Partisans Infantry
+Poland 94mm wz.38 Air Defence
+Netherlands 57mm M41 Anti Tank
+Netherlands 37mm M29 Anti Tank
+Netherlands 75mm M34 Artillery
+Netherlands 105mm M32 Artillery
+Netherlands 87,6mm M40 Artillery
+Netherlands Infanterie Infantry
+Netherlands KNIL Infanterie Infantry
+Netherlands KNIL Landstorm Infantry
+Netherlands Stadswacht Infantry
+Netherlands 44 Infanterie Infantry
+Netherlands White Recon
+Netherlands Marmon-Herrington III Recon
+Netherlands Humber IV Recon
+Netherlands Overwalwagen Recon
+Netherlands CTLS Tank
+Netherlands M3A1 Tank
+Netherlands Muilezels Ground Transport
+Netherlands Utility B Ground Transport
+Netherlands Carrier Ground Transport
+Netherlands CW-21b Fighter Aircraft
+Netherlands B-339D Fighter Aircraft
+Netherlands Kittyhawk IV Tactical Bomber
+Netherlands H75A-7 Fighter Aircraft
+Netherlands Spitfire VB Fighter Aircraft
+Netherlands Spitfire IX Fighter Aircraft
+Netherlands Spitfire XIVE Fighter Aircraft
+Netherlands Martin 139WH-2 Level Bomber
+Netherlands Hurricane IIA Fighter Aircraft
+Netherlands Mitchell II Tactical Bomber
+Netherlands Do.24K-2 Level Bomber
+Netherlands Hudson I Tactical Bomber
+United Kingdom Catalina III Level Bomber
+All Countries M17 Flak
+All Countries 76,2mm ZP-38 Air Defence
+All Countries 37mm ZP-39 Air Defence
+All Countries Armoured Train Flak
+All Countries SU-85 Anti Tank
+All Countries ISU-122 Anti Tank
+All Countries SU-76M Anti Tank
+All Countries ISU-152 Anti Tank
+All Countries 47mm 47/32 Anti Tank
+All Countries Armoured Train Anti Tank
+All Countries 76,2mm ZiS-3 Artillery
+All Countries 122mm M-30 Artillery
+All Countries 152mm ML-20 Artillery
+All Countries Naval support DD Artillery
+All Countries Naval support LC Artillery
+All Countries 75mm 75/27 Artillery
+All Countries 60pdr Artillery
+All Countries Tribal Infantry
+All Countries Commando Infantry
+All Countries Nomads Infantry
+All Countries Piechota Infantry
+All Countries Saperzy Mostowi Infantry
+All Countries Saperzy Infantry
+All Countries Dubats Infantry
+All Countries Refugees Infantry
+All Countries Snipers Infantry
+All Countries BA-64 Recon
+All Countries Scouts Recon
+All Countries T-34/43 Tank
+All Countries T-34/85 Tank
+All Countries T-70 Tank
+All Countries IS-1 Tank
+All Countries IS-2 Tank
+All Countries M13/40 Tank
+All Countries R35 Tank
+All Countries Camels Ground Transport
+All Countries Elephants Ground Transport
+All Countries Fortified caves Fortification
+All Countries MG tank turrets Fortification
+All Countries Light tank turrets Fortification
+All Countries Medium tank turrets Fortification
+All Countries Torpedo battery Cruiser
+All Countries Super-Heavy Coastal Battery Fortification
+All Countries Outpost Fortification
+All Countries Destroyer DD Destroyer
+All Countries Light Cruiser CL Cruiser
+All Countries UDT Submarine
+All Countries Surfaced SS Submarine
+All Countries Surfaced SS Submarine
+All Countries Surfaced SS Submarine
+All Countries Coastal mines Submarine
+All Countries Seaplane tender AV Aircraft Carrier
+All Countries Dirt Field Fortification
+Germany klFWg Ground Transport
+Germany sFWg Ground Transport
+Germany H830B Ground Transport
+Germany leZgkw 3t Ground Transport
+Germany RSO Ground Transport
+Germany mZgkw 8t Ground Transport
+Germany sZgkw 12t Ground Transport
+Germany Radfahrer Ground Transport
+Germany Blitz 1t Ground Transport
+Germany Protze Ground Transport
+Germany SturmTiger Anti Tank
+Germany 7,62 FK296(r) Artillery
+Germany 12,2 leFH396(r) Artillery
+Germany 10 leFH14/19(t) Artillery
+Germany 15,5 sFH414(f) Artillery
+Germany 10,5 K332(f) Artillery
+Germany 10,5 leFH16 Artillery
+Germany 15 sFH13 Artillery
+Germany 15,2 sFH443(r) Artillery
+Germany 35 Infanterie Infantry
+Germany Bf 109C-1 Fighter Aircraft
+Germany Ar 65E-1 Fighter Aircraft
+Germany Hs 126B-1 Tactical Bomber
+Romania 40 Garda Infantry
+Romania 43 Infanterie Infantry
+Romania 41 Rezervisti Infantry
+Romania 43 Garda Infantry
+Romania 43 Vanatori de Munte Infantry
+Romania VdC R-35 Tank
+Romania Ju-87D-5 Tactical Bomber
+Romania Ju-88A-4 Tactical Bomber
+Russia 38 Strelkovy Infantry
+Russia 39 Novobranets Infantry
+All Countries Internacional Infantry
+All Countries SMG Piechota Infantry
+USA DIE Infantaria Infantry
+All Countries Drifting mines Submarine
+Belgium 20mm mle23 Flak
+Belgium 47mm mle89 Anti Tank
+Belgium 57mm mle41 Anti Tank
+Belgium 87,6mm C mle40 Artillery
+Belgium 70mm M mle06 Artillery
+Belgium Force Publique Infantry
+Belgium Cavalerie Colonial Infantry
+Belgium Infanterie Infantry
+Belgium Genie Infantry
+Belgium 44 Infanterie Infantry
+Belgium Fuselier Infantry
+Belgium White Recon
+Belgium Daimler II Recon
+Belgium Carrier Recon
+Belgium Carrier Ground Transport
+Belgium R-38 Fighter Aircraft
+Belgium Spitfire IIA Fighter Aircraft
+Belgium Spitfire VB Fighter Aircraft
+Belgium Spitfire IX Fighter Aircraft
+Belgium Spitfire XIVE Fighter Aircraft
+Belgium Tempest V Tactical Bomber
+Belgium C-47 Air Transport
+Bulgaria 44 Pehota Infantry
+All Countries P-39Q Fighter Aircraft
+All Countries P-39N Fighter Aircraft
+Netherlands P-51D Fighter Aircraft
+All Countries YaK-1 Fighter Aircraft
+All Countries YaK-9D Fighter Aircraft
+All Countries Pe-2 Tactical Bomber
+All Countries Il-2 Tactical Bomber
+Norway 20mm m/23 Flak
+Norway 57mm m/41 Anti Tank
+Norway 37mm m/38 Anti Tank
+Norway 12cm m/09 Artillery
+Norway 8,67cm m/40 Artillery
+Norway Grensejeger Infantry
+Norway Garden Infantry
+Norway Infanteri Infantry
+Norway 44 Infanteri Infantry
+Norway Carrier Recon
+Norway Carrier Ground Transport
+Norway Cletrac Ground Transport
+Norway Hurricane IIB Fighter Aircraft
+Norway Spitfire IIA Fighter Aircraft
+Norway Spitfire VB Fighter Aircraft
+Norway Spitfire IX Fighter Aircraft
+Norway M.F.11 Hover Tactical Bomber
+Norway He-115A-2 Level Bomber
+Norway Catalina III Level Bomber
+Norway Mosquito FB.VI Tactical Bomber
+Norway C-47 Air Transport
+Norway Bath DD Destroyer
+Bulgaria 44 Granichari Infantry
+Romania Blenheim I Tactical Bomber
+Romania Hs-129B-2 Tactical Bomber
+Turkey 40mm M.36 Anti Tank
+Turkey 75mm M.15 Artillery
+Turkey 81mm M.36 Artillery
+Turkey 100mm M.16 Artillery
+Turkey 114mm M.18 Artillery
+Turkey 122mm M.10/30 Artillery
+Turkey Bishop Artillery
+Turkey 44 Yedek Asker Infantry
+Turkey 44 Daglari Infantry
+Turkey 44 Piyade Infantry
+Turkey FT17 Tank
+Turkey R35 Tank
+Turkey Stuart V Tank
+Turkey Valentine III Tank
+Turkey Sherman III Tank
+Turkey P-40D Fighter Aircraft
+Turkey Bre-19B-2 Tactical Bomber
+Turkey Blenheim IV Tactical Bomber
+Turkey Beaufort Tactical Bomber
+Turkey Baltimore V Tactical Bomber
+Turkey Light horse Ground Transport
+Turkey Ford A Ground Transport
+Turkey Heavy horse Ground Transport
+Turkey G1200 Ground Transport
+Turkey Mules Ground Transport
+Germany Maulesel Ground Transport
+Poland M3 GMC Anti Tank
+Poland 25mm wz.34 Anti Tank
+Poland 105mm A wz.29 Artillery
+Poland 107mm M wz.35 Artillery
+Poland Scout Recon
+Poland Humber II Recon
+Poland Vickers E jw Tank
+Poland Challenger Tank
+Poland Grant I Tank
+Poland R40 Tank
+Poland Lekki zaprzeg Ground Transport
+Poland Ciezki zaprzeg Ground Transport
+Poland PZInz 302 Ground Transport
+Poland PF-618 Ground Transport
+Poland C4P Ground Transport
+Poland C7P Ground Transport
+Poland Rowery Ground Transport
+Poland UE Ground Transport
+Poland AGR2 Ground Transport
+Poland Carrier Ground Transport
+Poland C8 Ground Transport
+Poland Matador Ground Transport
+Poland CX22 Ground Transport
+Poland Hurricane IIB Fighter Aircraft
+Poland Mosquito NF.II Tactical Bomber
+Poland Beaufighter IIF Tactical Bomber
+Poland Lublin R-XIIID Tactical Bomber
+Poland Lancaster I Level Bomber
+Norway Lett vogn Ground Transport
+Norway Hester Ground Transport
+Norway Matador Ground Transport
+Norway Carrier Ground Transport
+All Countries Radarcruiser CL Cruiser
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Entrenched Infantry
+All Countries Field hospital Fortification
+Romania Atelaj usor Ground Transport
+Romania H901 Ground Transport
+Romania 93T Ground Transport
+Romania Atelaj greu Ground Transport
+Romania F3 Ground Transport
+Romania 6STP6L Ground Transport
+Romania T6 Ground Transport
+Romania Biciclete Ground Transport
+Romania Magari Ground Transport
+Romania 105mm M36 Artillery
+Romania 50mm M38 Anti Tank
+Romania 45mm M32 Anti Tank
+Romania 75mm M39 Artillery
+Romania 76.2mm M36 Artillery
+Romania 122mm M10/30 Artillery
+Romania 37mm M36 Air Defence
+Russia Leogkaya tyaga Ground Transport
+Russia GAZ-64 Ground Transport
+Russia GAZ-AA Ground Transport
+Russia STZ-5 Ground Transport
+Russia US-6 Ground Transport
+Russia S-2 Ground Transport
+Russia Tyazholaya tyaga Ground Transport
+Russia Voroshilovets Ground Transport
+Russia Viuchny transport Ground Transport
+Russia SU-76i Anti Tank
+Russia R-Z Tactical Bomber
+United Kingdom 2pdr Air Defence
+United Kingdom 3pdr Anti Tank
+United Kingdom 40 Scots Infantry Infantry
+United Kingdom 43 Scots Infantry Infantry
+United Kingdom 37 Regulars Infantry
+United Kingdom 40 Infantry Infantry
+Allied Yugoslavia 37 Colonial Infantry Infantry
+United Kingdom 40 Crown Volunteers Infantry
+United Kingdom Medium IIA Tank
+United Kingdom Fury I Fighter Aircraft
+United Kingdom Gauntlet II Fighter Aircraft
+United Kingdom Bulldog IIA Fighter Aircraft
+United Kingdom Hurricane IIA Fighter Aircraft
+United Kingdom Spitfire F.21 Fighter Aircraft
+United Kingdom Firefly I Fighter Aircraft
+United Kingdom Hind I Tactical Bomber
+United Kingdom Baltimore IIIA Tactical Bomber
+United Kingdom Ventura I Level Bomber
+United Kingdom Boston II Tactical Bomber
+United Kingdom Maryland II Tactical Bomber
+United Kingdom Marauder III Tactical Bomber
+United Kingdom Anson I Tactical Bomber
+United Kingdom A DD Destroyer
+United Kingdom Light horse Ground Transport
+United Kingdom C8 Ground Transport
+United Kingdom Carrier Ground Transport
+United Kingdom MW 15cwt Ground Transport
+United Kingdom Matador Ground Transport
+United Kingdom Pioneer Ground Transport
+United Kingdom CX22 Ground Transport
+Italy 88mm 88/56 Air Defence
+Italy 8mm modello 37 Flak
+Italy 75mm 75/46 Anti Tank
+Italy 105mm 105/28 Artillery
+Italy 149mm 149/35 Artillery
+Italy 32 Ascari Infantry
+Italy 32 Ascari Cavalleria Infantry
+Italy 32 MVSN Infantry
+Italy 42 AS Fanteria Infantry
+Italy 40 Carabinieri Infantry
+Italy 41 Guarnigione Infantry
+Italy P30/43bis Tank
+Italy Ca.111 Level Bomber
+Italy Cavallo leggero Ground Transport
+Italy TL37 Ground Transport
+Italy Dovunque Ground Transport
+Italy P4-100 Ground Transport
+Italy Tipo 61 Ground Transport
+Italy 3RO Ground Transport
+Italy Cavallo pesante Ground Transport
+Italy TM40 Ground Transport
+Italy Biciclette Ground Transport
+Italy Muli da soma Ground Transport
+Sweden 8mm Dbl m/36 Flak
+Sweden 10,5cm m/42 Air Defence
+Sweden 10,5cm Kan m/17 Artillery
+Sweden 15,2cm Kan m/37 Artillery
+Sweden 43 Militarpolis Infantry
+Sweden J 21 Fighter Aircraft
+Sweden B 4 Tactical Bomber
+Sweden S 6 Tactical Bomber
+Sweden T 2 Tactical Bomber
+Sweden Latt hast Ground Transport
+Sweden Tung hast Ground Transport
+Sweden Tdgb m/39 Ground Transport
+Sweden Lbil m/42 Ground Transport
+Sweden Tdgb m/40 Ground Transport
+Sweden Arttrakt m/28 Ground Transport
+Sweden Cyklar Ground Transport
+All Countries Recon Balloon Tactical Bomber
+United Kingdom 43 Indian Infantry Infantry
+United Kingdom 43 Ghurka Infantry
+Sweden Pansarinfanteri Infantry
+Finland Kevyt hevonen Ground Transport
+Finland Raskas hevonen Ground Transport
+Finland T-6 Ground Transport
+Finland Ford A Ground Transport
+Finland Polkupyorat Ground Transport
+Finland 105 K/29 Artillery
+Finland 152 H/37 Artillery
+Finland BL Tactical Bomber
+Hungary 76.5mm 5/8M Air Defence
+Hungary 88mm 37M Air Defence
+Hungary 47mm 36M Anti Tank
+Hungary 45M Arpad Anti Tank
+Hungary 150mm 43M Artillery
+Hungary 35 Honved Infantry
+Hungary 44 Honved Infantry
+Hungary Gepkocsizo lovesz Infantry
+Hungary 44 Gepkocsizo lovesz Infantry
+Hungary 44 Huszar Infantry
+Hungary 44 Hatarvadasz Infantry
+Hungary Polgarorseg Infantry
+Hungary Felderito huszar Recon
+Hungary 44 Kerekpar Recon
+Hungary 45M Tas Tank
+Hungary WM 21B Solyom Tactical Bomber
+Hungary Fw 189A-1 Tactical Bomber
+Hungary Ju 88A-4 Tactical Bomber
+Hungary Konnyu szeker Ground Transport
+Hungary 38M G-5 Ground Transport
+Hungary 37M Hansa-Lloyd Ground Transport
+Hungary 38M Botond A Ground Transport
+Hungary 28M Pavesi Ground Transport
+Hungary KV-40 Ground Transport
+Hungary 32M Breda Ground Transport
+Hungary Oszverek Ground Transport
+Hungary Nehez szeker Ground Transport
+Hungary Kerekparos Ground Transport
+Germany 2 Flak38 LKW Flak
+Germany 3,7 Flak36 LKW Air Defence
+Germany leZgkw 1t Ground Transport
+Russia 2G8T Ground Transport
+Denmark Nimbus Anti Tank
+Denmark MG Anti Tank
+Denmark Politi-infanteri Infantry
+Denmark 43 Infanteri Infantry
+Denmark 43 Livgarden Infantry
+Denmark H.M.II Tactical Bomber
+Denmark B.17A Tactical Bomber
+Denmark G1200 Ground Transport
+Denmark Thames Ground Transport
+Denmark Kornbech Ground Transport
+Denmark Lbil m/42 Ground Transport
+Germany 38 Grenzschutz Infantry
+Yugoslavia Zandarmerija Infantry
+Yugoslavia Straza Infantry
+Yugoslavia BT-7M Tank
+Yugoslavia Laka konjska zaprega Ground Transport
+Yugoslavia Teska konjska zaprega Ground Transport
+Yugoslavia VTZ Ground Transport
+Yugoslavia Traktor Ground Transport
+Yugoslavia OM36 Ground Transport
+Yugoslavia Mazge Ground Transport
+Croatia 80mm M.36 Air Defence
+Croatia Laka konjska Ground Transport
+Croatia VTZ Ground Transport
+Croatia Tractor Ground Transport
+Croatia Teska konjska Ground Transport
+Croatia Prijevoz mazgama Ground Transport
+Czechoslovakia 4cm vz36 Anti Tank
+Czechoslovakia 5,7cm vz41 Anti Tank
+Czechoslovakia 7,62cm vz42 Anti Tank
+Czechoslovakia 10cm M vz35 Artillery
+Czechoslovakia 8,76cm H vz40 Artillery
+Czechoslovakia Motopechota Infantry
+Czechoslovakia Pechota Infantry
+Czechoslovakia Pechota Infantry
+Czechoslovakia SOS Infantry
+Czechoslovakia Carrier Recon
+Czechoslovakia Humber IV Recon
+Czechoslovakia Cromwell IV Tank
+Czechoslovakia Stuart VI Tank
+Czechoslovakia Firefly IIC Tank
+Czechoslovakia ST vz39 Tank
+Czechoslovakia Lehke sprezeni Ground Transport
+Czechoslovakia C8 Ground Transport
+Czechoslovakia LN Ground Transport
+Czechoslovakia Carrier Ground Transport
+Czechoslovakia MW 15cwt Ground Transport
+Czechoslovakia 30cwt Ground Transport
+Czechoslovakia Carrier Ground Transport
+Czechoslovakia T-III Ground Transport
+Czechoslovakia Tezke sprezeni Ground Transport
+Czechoslovakia Hurricane IA Fighter Aircraft
+Czechoslovakia Hurricane IIB Fighter Aircraft
+Czechoslovakia Spitfire VB Fighter Aircraft
+Czechoslovakia Spitfire IX Fighter Aircraft
+Czechoslovakia B.35 Fighter Aircraft
+Czechoslovakia A.100 Tactical Bomber
+Czechoslovakia Liberator IIIA Level Bomber
+Czechoslovakia C-47 Air Transport
+Russia 76,2mm M-09 Artillery
+Czechoslovakia Muly Ground Transport
+Czechoslovakia Hawk 75A-2 Fighter Aircraft
+Czechoslovakia D.520 Fighter Aircraft
+USA .50 M2 AB Flak
+Czechoslovakia Cykliste Recon
+Germany 2 Flak30 Flak
+Finland TD-14 Ground Transport
+Bulgaria 75mm D/46 Anti Tank
+Bulgaria 50mm D/60 Anti Tank
+Bulgaria 105mm D/22 Artillery
+Bulgaria 77mm D/23 Artillery
+Bulgaria Milicija Infantry
+Bulgaria Bf 109G-6 Strela Fighter Aircraft
+Bulgaria S-328 Vrana Tactical Bomber
+Bulgaria Light horse Ground Transport
+Bulgaria S-440B Ground Transport
+Bulgaria S-640 Ground Transport
+Bulgaria P4-100 Ground Transport
+Bulgaria Maultier Ground Transport
+Bulgaria KM-11 Ground Transport
+Bulgaria Heavy horse Ground Transport
+Poland Pociag pancerny Artillery
+Russia Bronepoezd Artillery
+Germany Panzerzug Artillery
+Hungary Pancelvonat Artillery
+Czechoslovakia Obrneny vlak Artillery
+Slovakia Obrneny vlak Artillery
+All Countries Field HQ Infantry
+Germany klKKrad Ground Transport
+Germany DFS 230A-1 Air Transport
+Germany Me 323D-1 Air Transport
+Czechoslovakia 10cm H vz16/19 Artillery
+All Countries 1st Btn Transvestite Brigade Infantry
+France M3 GMC Anti Tank
+France M8 Artillery
+France 43 Legionnaire Infantry
+France CMD 178 Recon
+France Marmon-Herrington III Recon
+France P-63C-5 Tactical Bomber
+France Spitfire IIA Fighter Aircraft
+France Blenheim IV Tactical Bomber
+France Baltimore V Tactical Bomber
+France Boston IIIA Tactical Bomber
+France Halifax II Level Bomber
+France UE Ground Transport
+France Attelage legere Ground Transport
+France Attelage lourd Ground Transport
+France GMC 2.5t Ground Transport
+France Mack 7.5t Ground Transport
+France Carrier Ground Transport
+France Carrier Ground Transport
+France M3A1 Ground Transport
+France Jeep Ground Transport
+France P107 Ground Transport
+France OY Ground Transport
+France S20TL Ground Transport
+France M2TZ Ground Transport
+France S35 Ground Transport
+France FTARH Ground Transport
+France 37L Ground Transport
+France Mules Ground Transport
+France MW 15cwt Ground Transport
+France T214 Ground Transport
+France P19 Ground Transport
+France 41 Garde Infantry
+France 44 Infanterie Alpine Infantry
+France 43 Infanterie Mecanisee Infantry
+France 44 FFI Infantry
+France 37 GRDI Recon
+France AMD 178 MG Recon
+France Valentine V Tank
+France 43 Sapeurs Infantry
+France Bicyclette Ground Transport
+United Kingdom 60pdr Artillery
+France 44 Infanterie Mecanisee Infantry
+USA T48 GMC Anti Tank
+USA 75mm Gun M1897A1 Artillery
+USA 43 Mountain Infantry
+USA 39 Infantry Infantry
+USA 42 Infantry Infantry
+USA M1917 Tank
+USA M1 Tank
+USA M2A2 Tank
+USA M2A1 Tank
+USA P-26B Fighter Aircraft
+USA P-36A Fighter Aircraft
+USA P-12E Fighter Aircraft
+USA F3F-3 Fighter Aircraft
+USA A-25A Tactical Bomber
+USA B-10B Level Bomber
+USA B-18A Level Bomber
+USA T4M-1 Tactical Bomber
+USA A-17A Tactical Bomber
+USA B-17E Level Bomber
+Nationalist Spain Churruca DD Destroyer
+Nationalist Spain Almirante Cervera CL Cruiser
+Nationalist Spain Espana BB Cruiser
+Nationalist Spain Mendez Nunez LC Cruiser
+Nationalist Spain B-1 SS Submarine
+Nationalist Spain C-1 SS Submarine
+Republican Spain Jaime I BB Cruiser
+Republican Spain Libertad CL Cruiser
+Republican Spain Churruca DD Destroyer
+Italy Ca.101 Tactical Bomber
+Italy CR.20bis Fighter Aircraft
+Italy Ro.1 Tactical Bomber
+United Kingdom Wellington IC Level Bomber
+Germany Me 163B-1a Fighter Aircraft
+All Countries V-waffe Fortification
+Finland K-7 Ground Transport
+Finland Sisu Ground Transport
+All Countries Fort Fortification
+USA 57mm AB Anti Tank
+USA 37mm M3 AB Anti Tank
+USA GP AB Recon
+USA GP Ground Transport
+USA GP AB Ground Transport
+USA Chevrolet 1.5t Ground Transport
+USA M2 Ground Transport
+USA Mack 7.5t Ground Transport
+USA M1 Ground Transport
+USA M4 Ground Transport
+Sweden Tre Kronor CL Cruiser
+All Countries Motor pool Naval Transport
+All Countries Motor pool Naval Transport
+All Countries Motor pool Naval Transport
+United Kingdom 6pdr III AB Anti Tank
+United Kingdom Bren AB Flak
+United Kingdom Jeep AB Recon
+United Kingdom Jeep AB Ground Transport
+United Kingdom 42 ME Infantry Infantry
+United Kingdom 43 Motor Infantry Infantry
+Germany 42 Pzgrenadiere (mot) Infantry
+USA Light horse Ground Transport
+USA Heavy horse Ground Transport
+USA Dodge T9 Ground Transport
+USA Dodge T214 Ground Transport
+USA Dodge 3t Ground Transport
+USA Dodge T223 Ground Transport
+Portugal 44 Infantaria Infantry
+Portugal Milicia Infantry
+Portugal Guardia Infantry
+Portugal Fury II Fighter Aircraft
+Portugal P-39D Fighter Aircraft
+Portugal Ju-86 Level Bomber
+Portugal Ju-52 Tactical Bomber
+United Kingdom Horsa II Air Transport
+United Kingdom Hamilcar Air Transport
+Germany Raubtier TB Destroyer
+Germany T22 DD Destroyer
+USA CG-4A Air Transport
+USA C-54 Air Transport
+Russia 12,7mm DShK-38 AB Flak
+Russia 45mm PTP-37 AB Anti Tank
+Russia 76,2mm E-2 AB Artillery
+Russia A-7 Air Transport
+Russia G-2 Air Transport
+Poland Wellington IV Level Bomber
+Germany Bf 109T-1 Fighter Aircraft
+Germany Fi 167A-0 Tactical Bomber
+Germany Ar 196A-3 Tactical Bomber
+Germany BV 155A-1 Fighter Aircraft
+Germany Ju 87E-1 Tactical Bomber
+Italy Re.2001OR Tactical Bomber
+Portugal Berliet Recon
+Portugal Auto Ground Transport
+Portugal Light truck Ground Transport
+Portugal Light horse Ground Transport
+Portugal Heavy horse Ground Transport
+Portugal T4 Ground Transport
+Russia BA-6 Recon
+Portugal Muli Ground Transport
+Germany Leichte Schiffe Destroyer
+Germany Schwere Schiffe Cruiser
+Germany Flugzeugtrager Aircraft Carrier
+Germany Unterseeboot Submarine
+Germany M1 AM Destroyer
+Germany S30 PT Destroyer
+Germany U-2501 SS Submarine
+Nationalist Spain Caballos Ligero Ground Transport
+Nationalist Spain Caballos Pesado Ground Transport
+Nationalist Spain T166 Ground Transport
+Nationalist Spain NAG Ground Transport
+Nationalist Spain Tractor Ground Transport
+Nationalist Spain 23U Ground Transport
+Nationalist Spain Peugeot 402 Ground Transport
+Nationalist Spain Mulas Ground Transport
+Nationalist Spain Chevrolet con Breda Flak
+Nationalist Spain 81mm M.36 Artillery
+Nationalist Spain 40 Infanteria Infantry
+Nationalist Spain 44 Infanteria Infantry
+Nationalist Spain 40 Ingenieria Infantry
+Nationalist Spain I-16-10 Fighter Aircraft
+Nationalist Spain I-15 M-25 Fighter Aircraft
+Nationalist Spain Bf 109G-4 Fighter Aircraft
+Nationalist Spain Bf 109F-4 Fighter Aircraft
+Nationalist Spain Fw 190A-3 Fighter Aircraft
+Nationalist Spain He 70D Tactical Bomber
+Yugoslavia RV Ground Transport
+Republican Spain Landesa Tank
+Republican Spain Infanteria de Marina Infantry
+Republican Spain Caballos Ligero Ground Transport
+Republican Spain Caballos Pesado Ground Transport
+Republican Spain Tractor Ground Transport
+Republican Spain Ford A Ground Transport
+Republican Spain Komintern Ground Transport
+Republican Spain ZiS-5 Ground Transport
+Republican Spain Mulas Ground Transport
+Republican Spain T-1 TB Destroyer
+Nationalist Spain T-1 TB Destroyer
+Nationalist Spain Barco ligero Destroyer
+Nationalist Spain Navio Cruiser
+Nationalist Spain Submarino Submarine
+Republican Spain Barco ligero Destroyer
+Republican Spain Navio Cruiser
+Republican Spain Submarino Submarine
+Portugal 4cm M 940 Air Defence
+USA Light vessel Destroyer
+USA Capital ship Cruiser
+USA Carrier Aircraft Carrier
+USA Submarine Submarine
+Sweden Latt skepp Destroyer
+Sweden Artilleriskepp Cruiser
+Russia G-5 PT Destroyer
+Sweden Ubat Submarine
+Nationalist Spain Javier Quirogo PT Destroyer
+Russia Fugas AM Destroyer
+Russia Shtorm TB Destroyer
+Russia Leogkoye sudno Destroyer
+Russia Tyazholoye sudno Cruiser
+Russia Podvodnaya lodka Submarine
+Greece 37mm M36 Air Defence
+Greece 13.2mm M29 Flak
+Greece 40mm M36 Anti Tank
+Greece 57mm M41 Anti Tank
+Greece 87.6mm M40 Artillery
+Greece 41 Pezikon Infantry
+Greece 44 Pezikon Infantry
+Greece 41 Michanikon Infantry
+Greece ELAS Infantry
+Greece Scout Recon
+Greece Humber IV Recon
+Romania Hurricane IA Fighter Aircraft
+Greece Hurricane IA tropical Fighter Aircraft
+Greece Spitfire VB tropical Fighter Aircraft
+Greece BH-33E-SHS Fighter Aircraft
+Greece Hurricane IIC Tactical Bomber
+Greece Baltimore IV Tactical Bomber
+Greece Po.25A2 Grec Tactical Bomber
+Romania 40 Cercetasi Cav Recon
+Greece C-47 Air Transport
+Greece Elafri Ippilaton Ground Transport
+Greece G5 Ground Transport
+Greece LG 65/3 Ground Transport
+Greece F618 Ground Transport
+Greece Vari Ippilaton Ground Transport
+Greece P4-100 Ground Transport
+Greece LG 68 Ground Transport
+Greece Podelato Ground Transport
+Greece Emionikon Ground Transport
+Greece MW 15cwt Ground Transport
+Greece Carrier Ground Transport
+Greece Carrier Ground Transport
+Greece OYD Ground Transport
+Greece T1 PT Destroyer
+Greece Aspis TB Destroyer
+Greece Katadromikon Destroyer
+Greece Thorikton Cruiser
+Greece Ipovrichion Submarine
+Nationalist Spain 105mm 105/11 Artillery
+Russia BA-20 Recon
+Russia BA-27M Recon
+Belgium MG Anti Tank
+Belgium Attelage leger Ground Transport
+Belgium Utility B Ground Transport
+Belgium 91Y Ground Transport
+Belgium GMC 1,5t Ground Transport
+Belgium Attelage lourd Ground Transport
+Belgium FN-Kegresse Ground Transport
+Belgium FN-63 Ground Transport
+Belgium Bicyclette Ground Transport
+Belgium Carrier Ground Transport
+Belgium MW 15cwt Ground Transport
+Belgium OYD Ground Transport
+Republican Spain G-5 PT Destroyer
+Allied Yugoslavia 45mm Anti Tank
+Allied Yugoslavia 76.2mm Artillery
+Allied Yugoslavia MS.406C.1 Fighter Aircraft
+Allied Yugoslavia Laka konjska zaprega Ground Transport
+Allied Yugoslavia VTZ Ground Transport
+Allied Yugoslavia Dovunque Ground Transport
+Slovakia Bf-109G-6 Fighter Aircraft
+Slovakia A.100 Tactical Bomber
+Slovakia Lahke zaprah Ground Transport
+Slovakia T-57 Ground Transport
+Slovakia RV Ground Transport
+Slovakia 6STP6L Ground Transport
+Slovakia T-4 Ground Transport
+Slovakia Tazke zaprah Ground Transport
+Slovakia Cyklisti Ground Transport
+Slovakia Muly Ground Transport
+Netherlands Trado III Ground Transport
+Netherlands Lichte paard Ground Transport
+Netherlands Zware paard Ground Transport
+Netherlands T-18 Ground Transport
+Netherlands Fietsen Ground Transport
+Netherlands Carrier Recon
+Netherlands MW 15cwt Ground Transport
+All Countries Stuart I (beute) Tank
+Netherlands Carrier Ground Transport
+Netherlands 30cwt Ground Transport
+Greece ELAS Ippikon Infantry
+Greece Ieros Lochos Infantry
+All Countries Distrutti Fortification
+All Countries Destroyed Fortification
+All Countries Destroyed Fortification
+All Countries Zerstorte Fortification
+All Countries Detruit Fortification
+All Countries Podbitye Fortification
+Sweden T4 PT Destroyer
+Sweden Arholma AM Destroyer
+Netherlands TM 4 PT Destroyer
+Netherlands Jacob van Amstel AM Destroyer
+Netherlands Z 3 TB Destroyer
+Netherlands Brinio G Cruiser
+Denmark Soloven AM Destroyer
+Norway Nordkap AM Destroyer
+Norway Snogg TB Destroyer
+Portugal Light ship Destroyer
+Norway Uredd SS Submarine
+USA PT-20 PT Destroyer
+USA Raven AM Destroyer
+USA Sargo SS Submarine
+USA S-1 SS Submarine
+United Kingdom MTB PT Destroyer
+United Kingdom Halcyon AM Destroyer
+United Kingdom H SS Submarine
+United Kingdom T SS Submarine
+Poland S-1 PT Destroyer
+Poland Jaskolka AM Destroyer
+Poland Dragon CL Cruiser
+Finland MTV-4 PT Destroyer
+Finland Rautu AM Destroyer
+Finland Uusimaa G Cruiser
+Croatia T-1 TB Destroyer
+Yugoslavia Velebit PT Destroyer
+Yugoslavia Malinska AM Destroyer
+Yugoslavia T-1 TB Destroyer
+Yugoslavia Zmaj AV Aircraft Carrier
+Greece Criti DD Destroyer
+All Countries Field HQ Infantry
+Bulgaria 1 PT Destroyer
+Bulgaria Derzki TB Destroyer
+Turkey Dogan PT Destroyer
+Turkey Karak AM Destroyer
+Turkey Peyk-i-Sevket TB Destroyer
+Romania Vijelia PT Destroyer
+Romania Capitan Dumitrescu AM Destroyer
+Romania Sborul TB Destroyer
+Italy MAS 423 PT Destroyer
+Italy RD AM Destroyer
+France VTB 3 PT Destroyer
+France Elan AM Destroyer
+France La Melpomene TB Destroyer
+France Sirene SS Submarine
+Allied Yugoslavia Cer TB Destroyer
+Romania 40 Pionieri de Munte Infantry
+Germany 38 Gebirgspioniere Infantry
+Italy 40 Genio Alpini Infantry
+USA 43 Mountain Engineers Infantry
+Russia 38 Gornosaperny Infantry
+Italy Nave leggera Destroyer
+Italy Nave da battaglia Cruiser
+Italy Portaerei Aircraft Carrier
+Italy Sottomarino Submarine
+Italy Cagni SS Submarine
+Italy H 1 SS Submarine
+Bulgaria Light ship Destroyer
+Denmark Latt skib Destroyer
+Denmark Kustforsvarskib Cruiser
+Denmark Undervattensbat Submarine
+France Bateau leger Destroyer
+France Batiment de Ligne Cruiser
+France Sous-marin Submarine
+France Porte-avion Aircraft Carrier
+France Bretagne BB Cruiser
+Croatia Laki brod Destroyer
+Croatia Krstarica Cruiser
+Yugoslavia Laki brod Destroyer
+Yugoslavia Krstarica Cruiser
+Yugoslavia Nosac hidroaviona Aircraft Carrier
+Yugoslavia Podmornica Submarine
+Allied Yugoslavia Laki brod Destroyer
+Netherlands Licht schip Destroyer
+Netherlands Kruiser Cruiser
+Netherlands Onderzeeboot Submarine
+Norway Lett skip Destroyer
+Norway Panserskip Cruiser
+Norway Ubat Submarine
+Poland Lekka jednostka Destroyer
+Poland Krazownik Cruiser
+Poland Lodz podwodna Submarine
+Portugal Submarine Submarine
+Romania Nava usoara Destroyer
+Romania Submarin Submarine
+Finland Kevyt alus Destroyer
+Finland Tykkivene Cruiser
+Finland Sukellusvene Submarine
+Turkey Light ship Destroyer
+Turkey Heavy ship Cruiser
+Turkey Submarine Submarine
+United Kingdom Light vessel Destroyer
+United Kingdom Capital ship Cruiser
+United Kingdom Carrier Aircraft Carrier
+United Kingdom Submarine Submarine
+Turkey 57mm Portee Anti Tank
+Russia M15 Air Defence
+Russia M16 Flak
+Russia YaG-10/76,2mm Air Defence
+All Countries Moored Cruiser
+Poland Firefly VC Tank
+Poland 20mm wz.30 Flak
+Hungary 40M Nimrod Flak
+All Countries Civilian truck Ground Transport
+All Countries Civilian truck Ground Transport
+All Countries Civilan truck Ground Transport
+All Countries Sand banks Cruiser
+All Countries Field HQ Infantry
+All Countries Field HQ Infantry
+Sweden 43 Kavalleri Infantry
+Sweden 43 Cykelkavalleri Recon
+Netherlands Utility B Ground Transport
+Netherlands TBS30 Ground Transport
+Netherlands Jeep Ground Transport
+Netherlands TBS45 Ground Transport
+Netherlands Maple Leaf Ground Transport
+Yugoslavia 70mm M.26 Anti Tank
+Allied Yugoslavia 70mm Anti Tank
+All Countries Communists Infantry
+Netherlands 75mm M03/26 Artillery
+Finland IT Tactical Bomber
+Allied Yugoslavia Konjica Infantry
+Netherlands Soerabaja B Cruiser
+Bulgaria Planinska Pehota Infantry
+Bulgaria 44 Planinska Pehota Infantry
+Bulgaria Mule Ground Transport
+Bulgaria 100mm D/24 Artillery
+Bulgaria 75mm D/22 Artillery
+Finland Sukset Ground Transport
+All Countries SS Infanterie Infantry
+All Countries SS Schutzen Infantry
+All Countries SS Gebirgsjager Infantry
+Finland 75 K/17 Artillery
+Slovakia 100mm H vz16/19 Artillery
+Croatia Malinska AM Destroyer
+Bulgaria Motopehota Infantry
+Bulgaria 44 Motopehota Infantry
+Czechoslovakia Motopechota Infantry
+Germany 38 Kavallerie-schutzen Infantry
+Germany 38 Infanterie Infantry
+Germany 40 Grossdeutschland Infantry
+France 37 Infanterie Motorisee Infantry
+Greece Pezomachon Infantry
+Italy 40 Fanteria Motorizzata Infantry
+Croatia H-39 Tank
+Croatia L6/40 Tank
+Yugoslavia Motorizovana Pesadija Infantry
+Netherlands Lichte Infanterie Infantry
+United Kingdom 20mm AB Flak
+Poland 38 Strzelcy Infantry
+Poland 20mm wz.30 SP Flak
+Poland 57mm wz.41 SP Anti Tank
+Poland 75mm wz.38 SP Artillery
+Poland 38 Krakusi Recon
+Poland Mitchell II Tactical Bomber
+Romania 13.2mm M31 Flak
+Romania 40 Vanatori Infantry
+Romania 43 Vanatori Infantry
+Slovakia Rychla Infantry
+Russia 41 Motostrelkovy Infantry
+Russia 43 Motostrelkovy Infantry
+Sweden Bilbataljon Infantry
+Sweden Motorbataljon Infantry
+Turkey Motopiyade Infantry
+Turkey 44 Motopiyade Infantry
+Germany He 111E-4 Level Bomber
+Germany Do 17Z-1 Level Bomber
+Norway Ca.310 Tactical Bomber
+Poland Jeep SP Ground Transport
+Poland 57mm wz.44 SP Anti Tank
+United Kingdom 6pdr AB Anti Tank
+United Kingdom Crusader GT I Ground Transport
+Czechoslovakia Crusader GT I Ground Transport
+USA M39 Ground Transport
+France 43 Infanterie de l'Air Infantry
+Romania BA-6 Recon
+Romania BA-20 Recon
+United Kingdom M3A1 Ground Transport
+Belgium 107mm M mle35 Artillery
+All Countries Zeriba Infantry
+Norway Ski Ground Transport
+Portugal Cavalaria Motorizada Infantry
+Portugal Colonial Infantry
+Portugal 9,4cm M 940 Air Defence
+Portugal 8cm M 936 Artillery
+Portugal 7cm M 906-911 Anti Tank
+Italy 77mm 77/28 Artillery
+Norway Infanteri Infantry
+Norway 7,92mm m/29 Flak
+Belgium Berliet Recon
+Poland 43 Dragoni Infantry
+Hungary Tiger Tank
+All Countries Train Naval Transport
+United Kingdom Seafire IB Fighter Aircraft
+Portugal Ba.65bis Tactical Bomber
+Portugal 5,7cm M 943 Anti Tank
+Portugal 8,8cm M 943 Artillery
+Portugal 15,5cm M 917 Artillery
+Portugal 10,5cm M 941 Artillery
+Portugal 15cm M 941 Artillery
+Portugal 14cm M 943 Artillery
+Portugal 44 Cacadores Infantry
+Portugal 44 Engenharia Infantry
+Russia BM-13-16 Artillery
+Hungary Szekely Infantry
+Hungary Nyilaskeresztes Infantry
+Hungary 44 Hegyivadasz Infantry
+United Kingdom 25mm I Anti Tank
+All Countries Destroyer Naval Transport
+All Countries Ju-52/3m Air Transport
+All Countries C-47 Air Transport
+Portugal V11GB Tactical Bomber
+Turkey V-11GB Tactical Bomber
+Turkey Hawk III Fighter Aircraft
+Turkey Hurricane IIC Fighter Aircraft
+Turkey 25mm M.34 Anti Tank
+Turkey 20mm M.39 Flak
+Italy 41 Paracadutisti Guastatori Infantry
+Italy 81mm 81/14 Para Artillery
+Italy 47mm 47/32 Para Anti Tank
+Norway Linge Infantry
+United Kingdom Wellesley I Tactical Bomber
+All Countries Spot the map Fortification
+Germany 15,5cm K418(f) Artillery
+All Countries 25pdr Artillery
+All Countries Field HQ Infantry
+All Countries Field HQ Infantry
+USA White 6t Ground Transport
+United Kingdom 37mm I Anti Tank
+United Kingdom 2pdr Portee Anti Tank
+Norway Lv101 Ground Transport
+All Countries LRDG Recon
+All Countries Regional GHQ Fortification
+All Countries Field HQ Infantry
+Poland 75mm A Ppanc wz.02/26 Anti Tank
+Poland 155mm A wz.40 Artillery
+Belgium 75mm C mle16 Artillery
+Belgium 105mm C mle16 Artillery
+Yugoslavia 76,5mm M.05/08 Artillery
+Yugoslavia 76,5mm M.28 Artillery
+Germany Diana Anti Tank
+Germany Bf 109F-4/B Tactical Bomber
+Finland 41 Jalkavaki Infantry
+Finland 41 Jaakari Infantry
+Finland 44 Ratsuvaki Infantry
+United Kingdom Stuart VI Recon
+Finland 44 Rajavartio-osasto Infantry
+Russia 36 Strelkovy Infantry
+Poland Stuart VI Recon
+United Kingdom Cromwell V Recon
+United Kingdom Staghound AA Flak
+Russia 44 Gvardeiskaya Infantry
+Sweden Strv m/41-II Recon
+Poland Cromwell V Recon
+United Kingdom 20mm Quad Flak
+All Countries Paramilitary Infantry
+Czechoslovakia Rezerva Infantry
+All Countries Paramilitary Mortar Artillery
+All Countries Paramilitary MG Anti Tank
+Germany 15 sFH auf GWLrS(f) Artillery
+Poland 22 Piechota Infantry
+United Kingdom Priest Artillery
+Italy L5/21 Tank
+France P.40F Fighter Aircraft
+Belgium Chevrolet 1,5ton Ground Transport
+Belgium 81mm mle29 Artillery
+Poland 40 Ckm Pechota Anti Tank
+Russia 12,7mm DShK-38 Flak
+Russia 38 Kavaleria Infantry
+Belgium 37mm mle40 Anti Tank
+Belgium 43 Force Publique Infantry
+Germany 30 Stosstruppen Infantry
+Germany 30 Bruckenpioniere Infantry
+Germany 35 Stosstruppen Infantry
+Germany 38 Bruckenpioniere Infantry
+Germany 38 Pioniere Infantry
+Germany 40 Bruckenpioniere Infantry
+Germany 43 Bruckenpioniere Infantry
+Germany 43 Pioniere Infantry
+Germany 44 Sturmpioniere Infantry
+Germany 43 Jager (L) Infantry
+Germany 38 MG-Schutzen Infantry
+Germany 40 Schutzen Infantry
+Germany 40 Kradschutzen Infantry
+Germany 40 Infanterie (mot) Infantry
+Germany 35 Kradschutzen Infantry
+Germany 42 Grossdeutschland Infantry
+Germany 35 Schutzen Infantry
+Germany 43 Jager Infantry
+Germany 30 Reservisten Infantry
+Germany 38 Schutzen Infantry
+Germany 42 Grenadiere Infantry
+Germany 46 Grenadiere Infantry
+Germany 46 Sturmpioniere Infantry
+Germany 30 Infanterie (mot) Infantry
+Germany 46 Pzgrenadiere (mot) Infantry
+Germany 41 MG-Schutzen Infantry
+Germany 41 Kavallerie Infantry
+Germany 46 Gebirgsjager Infantry
+Germany 36 Gebirgspioniere Infantry
+Germany 46 Gebirgspioniere Infantry
+Germany 30 Gebirgsjager Infantry
+Germany 43 Gebirgsjager Infantry
+Germany 35 Gebirgsjager Infantry
+Germany 40 Gebirgsjager Infantry
+Germany 40 Gebirgspioniere Infantry
+Germany 35 Kavallerie Infantry
+Germany 43 Gebirgspioniere Infantry
+Germany 39 Ebbinghaus Infantry
+Germany 40 Kavallerie Infantry
+Germany 44 Kavallerie Infantry
+Germany 30 Kavallerie Infantry
+Germany 43 Brandenburger Infantry
+Germany 38 Infanterie (mot) Infantry
+Germany 30 Infanterie Infantry
+Germany 40 Luftlande-infanterie Infantry
+Germany 43 Kustenjager Infantry
+Germany 26 SA Infantry
+Germany 43 Fallschirm-pioniere Infantry
+Germany 43 Feldschule Infantry
+Germany 34 SA Infantry
+Germany 43 Polizei-schutzen Infantry
+Germany Selbstschutz Infantry
+Germany Polizei Infantry
+Germany 38 Luftlande-Sturm Infantry
+Germany 38 Fallschirmjager Infantry
+Germany 38 Feldersatz Infantry
+Germany 38 Landwehr Infantry
+Germany 35 Feldersatz Infantry
+Germany 39 Polizei-schutzen Infantry
+Germany 43 Landes-schutzen Infantry
+Germany 35 Landwehr Infantry
+Germany 43 Festungs-grenadiere Infantry
+Germany 40 Feldschule Infantry
+Germany 41 Landes-schutzen Infantry
+Germany 38 Feldschule Infantry
+Germany 35 Grenzschutz Infantry
+Bulgaria 105mm D/28 Artillery
+Germany 41 Kosaken Infantry
+Germany 43 Kosaken Infantry
+Germany 43 Pzgrenadiere (gep) Infantry
+Germany 46 Pzgrenadiere (gep) Infantry
+Germany 44 Pioniere Infantry
+Germany 43 Pzpioniere Infantry
+Germany 44 Pzpioniere Infantry
+Germany 46 Fallschirmjager Infantry
+Germany 38 Aufklarungsinfanterie Recon
+Germany 35 Aufklarungsinfanterie Recon
+Germany 46 Fusiliere Recon
+Germany 30 Spahkavallerie Recon
+Germany 35 Aufklarungskavallerie Recon
+Germany 41 Aufklarungskavallerie Recon
+Germany 38 Aufklarungskavallerie Recon
+Germany 40 Aufklarungskavallerie Recon
+Germany 44 Aufklarungskavallerie Recon
+Germany 30 MG Kavallerie Anti Tank
+Germany 35 MG Infanterie Anti Tank
+Germany 40 MG Infanterie Anti Tank
+Germany 43 MG Infanterie Anti Tank
+Germany 43 FJ MG Anti Tank
+Germany 42 Pzgrenadiere (gep) Infantry
+Germany 38 Gebirgs-aufklarung Recon
+Germany 41 Gebirgs-aufklarung Recon
+Germany 43 Gebirgs-aufklarung Recon
+Germany 40 Fallschirm-aufklarer Recon
+Germany 43 Fallschirm-aufklarer Recon
+Germany 46 Fallschirm-aufklarer Recon
+Germany klFWg Sechszug Ground Transport
+Poland 31 Piechota Infantry
+Poland 24 KOP Infantry
+Poland 31 KOP Infantry
+Poland 36 Obrona Narodowa Infantry
+Poland 40 Piechota Infantry
+United Kingdom 41 MMG Anti Tank
+United Kingdom 43 MMG Anti Tank
+Poland M3A1 Ground Transport
+Poland 22 Saperzy Infantry
+Poland 22 Pionierzy Infantry
+Poland P.11c (2 km) Fighter Aircraft
+Poland S.61/2 Fighter Aircraft
+Poland PWS-A Fighter Aircraft
+Poland Wibault 7 Fighter Aircraft
+Poland PWS 10 Fighter Aircraft
+Poland Potez XV Tactical Bomber
+Poland Potez XXV Tactical Bomber
+Poland Bre.XIX Tactical Bomber
+Poland F.68 Level Bomber
+Poland F.VIIb/3m Level Bomber
+Poland 22 Krakusi Recon
+Poland 31 Krakusi Recon
+Poland 31 Zwiadowcy Rowerowi Recon
+Poland 22 Ckm Piechota Anti Tank
+Poland 31 Ckm Piechota Anti Tank
+Poland 31 Ckm Kawaleria Anti Tank
+Poland 39 Ckm Kawaleria Anti Tank
+Poland 31 Kawaleria Infantry
+Poland 22 Kawaleria Infantry
+Poland 37mm wz.18 Anti Tank
+Poland SamPanc Peugeot Recon
+Poland SamPanc FT-B Recon
+Poland 43 Saperzy Infantry
+Poland 39 Krakusi Recon
+Poland 39 Krakusi Gorska Recon
+Poland 31 Saperzy Infantry
+Poland 31 Pionierzy Infantry
+Poland 31 KOP Gorska Infantry
+Poland 39 Pionierzy Infantry
+Poland 41 Piechota Infantry
+Poland 44 Piechota Infantry
+Poland 40 Saperzy Infantry
+Poland 40 Pionerzy Infantry
+Poland 41 Saperzy Infantry
+Poland 40 Krakusi Recon
+Poland 40 Zwiadowcy Rowerowi Recon
+Poland 42 SP Piechota Infantry
+Poland 41 SP Piechota Infantry
+Poland 43 Pionierzy Infantry
+Poland Taczanka Ground Transport
+Italy 21 Fanteria Infantry
+Italy 21 Alpini Infantry
+Italy 21 Fanteria da Montagna Infantry
+Italy 21 Cavalleria Infantry
+Italy 21 Ascari Infantry
+Italy 21 Ascari Cavalleria Infantry
+Italy 23 MVSN Infantry
+Italy 21 Carabinieri Infantry
+Italy 21 Genio Infantry
+Italy 21 Assolto Infantry
+Italy 21 San Marco Infantry
+Italy 36 Ascari Infantry
+Italy 21 Libici Infantry
+Italy 40 Dubats Infantry
+Italy 32 Dubats Infantry
+Italy 21 Bersaglieri Infantry
+Italy 42 Recon Recon
+Italy 40 Irregulare Recon
+Italy 21 Spahi Recon
+Italy 32 Spahi Recon
+Italy 36 Spahi Recon
+Italy 38 Spahi Recon
+Italy 40 Spahi Recon
+Italy 36 PAI Recon
+Italy 38 PAI Recon
+Italy 40 PAI Recon
+Italy 40 Ascari Infantry
+Italy 21 MG Fanteria Anti Tank
+Italy 36 MG Fanteria Anti Tank
+Italy 38 MG Fanteria Anti Tank
+Italy 40 MG Fanteria Anti Tank
+Italy 42 MG Fanteria Anti Tank
+Italy 32 Libici Infantry
+Italy 32 Fanteria Infantry
+Italy 32 Alpini Infantry
+Italy 32 Fanteria da Montagna Infantry
+Italy 32 Cavalleria Infantry
+Italy 32 Bersaglieri Infantry
+Italy 32 Carabinieri Infantry
+Italy 32 San Marco Infantry
+Italy 32 Genio Infantry
+Italy 32 Assolto Infantry
+Italy 36 Fanteria Infantry
+Italy 36 Alpini Infantry
+Italy 36 Genio Alpini Infantry
+Italy 36 Fanteria da Montagna Infantry
+Italy 36 Cavalleria Infantry
+Italy 36 MVSN Infantry
+Italy 36 Ascari Cavalleria Infantry
+Italy 36 Libici Infantry
+Italy 36 Bersaglieri Infantry
+Italy 36 Carabinieri Infantry
+Italy 36 San Marco Infantry
+Italy 36 Fanteria Motorizzata Infantry
+Italy 36 GAF Infantry
+Italy 36 Genio Infantry
+Italy 36 Assolto Infantry
+Italy 24 Dubats Infantry
+Italy 38 Fanteria Infantry
+Italy 38 Alpini Infantry
+Italy 38 Genio Alpini Infantry
+Italy 38 Fanteria da Montagna Infantry
+Italy 38 Cavalleria Infantry
+Italy L3/35-38 Recon
+Italy L2/29 Tank
+Italy 40 AS Fanteria Infantry
+Italy 38 Ascari Cavalleria Infantry
+Italy 38 Ascari Infantry
+Italy 38 Libici Infantry
+Italy 38 Bersaglieri Infantry
+Italy 38 Carabinieri Infantry
+Italy 38 San Marco Infantry
+Italy 38 MVSN Infantry
+Italy 38 Fanteria Motorizzata Infantry
+Italy 38 GAF Infantry
+Italy 40 GAF Infantry
+Italy 38 Genio Infantry
+Italy 38 Assalto Infantry
+Italy 40 Ascari Cavalleria Infantry
+Italy 40 Paracadutisti Libici Infantry
+Italy 42 Assalto Infantry
+Italy 43 Genio Infantry
+Italy 43 Fanteria Motorizzata Infantry
+Italy 43 Genio Guastatori Infantry
+Italy 43 Paracadutisti Infantry
+Italy 43 Paracadutisti Guastatori Infantry
+Italy 43 Genio Alpini Infantry
+Italy 42 ADRA Infantry
+Italy 42 MVSN Infantry
+Italy 42 Carabinieri Infantry
+Italy 41 Giovani Fascisti Infantry
+Italy 43 San Marco Infantry
+Italy 41 Aliante Infantry
+Italy 105mm 105/32 Artillery
+Italy 152mm 152/13 Artillery
+Italy 149mm 149/19 Artillery
+Italy 120mm 120/25 Artillery
+Germany 42 SS Pzgrenadiere (gep) Infantry
+Germany 7,5 GebK15 Artillery
+Germany 7,5 GebG43 Artillery
+Germany 10,5 GebH40 Artillery
+Poland 43 Ckm Pechota Anti Tank
+Romania 21 Cavalerie Infantry
+Romania 32 Cavalerie Infantry
+Romania 37 Cavalerie Infantry
+Romania 43 Cavalerie Infantry
+Romania 44 Cavalerie Infantry
+Romania 21 Cercetasi Cav Recon
+Romania 21 Infanterie Infantry
+Romania 32 Infanterie Infantry
+Romania 37 Infanterie Infantry
+Romania 42 Infanterie Infantry
+Romania 44 Infanterie Infantry
+Romania 21 Pontonieri Infantry
+Romania 32 Pontonieri Infantry
+Romania 37 Pontonieri Infantry
+Romania 43 Pontoneri Infantry
+Romania 44 Pontonieri Infantry
+Romania 21 Trupe de Asalt Infantry
+Romania 32 Trupe de Asalt Infantry
+Romania 37 Trupe de Asalt Infantry
+Romania 43 Pionieri Infantry
+Romania 44 Pionieri Infantry
+Romania 21 Vanatori de Munte Infantry
+Romania 32 Vanatori de Munte Infantry
+Romania 37 Vanatori de Munte Infantry
+Romania 44 Vanatori de Munte Infantry
+Romania 21 Garda Infantry
+Romania 32 Garda Infantry
+Romania 37 Garda Infantry
+Romania 21 Graniceri Infantry
+Romania 32 Graniceri Infantry
+Romania 37 Graniceri Infantry
+Romania 21 Pionieri de Munte Infantry
+Romania 32 Pionieri de Munte Infantry
+Romania 37 Pionieri de Munte Infantry
+Romania 43 Pionieri de Munte Infantry
+Romania 44 Pionieri de Munte Infantry
+Romania 21 Jandarmi Infantry
+Romania 32 Jandarmi Infantry
+Romania 37 Jandarmi Infantry
+Romania 37 Vanatori Infantry
+Romania 43 Rezervisti Infantry
+Romania 21 Mtr Infanterie Anti Tank
+Romania 32 Mtr Infanterie Anti Tank
+Romania 37 Mtr Infanterie Anti Tank
+Romania 43 Mtr Infanterie Anti Tank
+Romania 44 Mtr Infanterie Anti Tank
+Romania 32 Cercetasi Cav Recon
+Romania 37 Cercetasi Cav Recon
+Romania 43 Cercetasi Cav Recon
+Romania 44 Cercetasi Cav Recon
+Romania 37 Cercetasi Mot Recon
+Romania 40 Cercetasi Mot Recon
+Romania 43 Cercetasi Mot Recon
+Romania Atelaj usor (sase cai) Ground Transport
+Romania 37 Puscasi Marini Infantry
+Romania 43 Puscasi Marini Infantry
+Romania 41 Parasutisti Infantry
+Romania 21 Infanterie Fortificatii Infantry
+Romania 32 Infanterie Fortificatii Infantry
+Romania 37 Infanterie Fortificatii Infantry
+Romania 40 Infanterie Fortificatii Infantry
+Romania 43 Infanterie Fortificatii Infantry
+Romania 100mm M30 Artillery
+Romania 75mm M02/36 Artillery
+Romania 75mm M12 Artillery
+Romania 120mm M78 Artillery
+Romania 105mm M09 Artillery
+Romania 152mm M10/30 Artillery
+Romania 150mm M14 Artillery
+Romania 105mm M18/40 Artillery
+Romania 105mm M39 Artillery
+Russia 25 Strelkovy Infantry
+Russia 25 Kavaleria Infantry
+Russia 25 Sthurmovoi Infantry
+Russia 25 Vnutrennie Voiska NKVD Infantry
+Russia 25 Sapernii Infantry
+Russia 31 Strelkovy Infantry
+Russia 31 Kavaleria Infantry
+Russia 31 Shturmovoi Infantry
+Russia 31 Sapernii Infantry
+Russia 31 Vnutrennie Voiska NKVD Infantry
+Russia 31 Motostrelkovy Infantry
+Russia 31 Parashutisti Infantry
+Russia 34 Prograchnik Infantry
+Russia 36 Kazaki Infantry
+Russia 36 Kavaleria Infantry
+Russia 36 Shturmovoi Infantry
+Russia 36 Sapernii Infantry
+Russia 36 Vnutrennie Voiska NKVD Infantry
+Russia 36 Motostrelkovy Infantry
+Russia 36 Pogranichnik Infantry
+Russia 36 Parashutisti Infantry
+Russia 36 Gornostrelky Infantry
+Russia 36 Gornosaperny Infantry
+Russia 36 Motociklisti Infantry
+Russia 38 Saperno-Shturmovoi Infantry
+Russia 38 Vnutrennie Voiska NKVD Infantry
+Russia 38 Motostrelkovy Infantry
+Russia 38 Pogranichnik Infantry
+Russia 38 Parashutisti Infantry
+Russia 38 Motociklisti Infantry
+Russia 41 Voiska NKVD Infantry
+Russia 41 Novobranets Infantry
+Russia Sixhorse Ground Transport
+Russia 25 Territorialny Infantry
+Russia 41 Kazaki Infantry
+Russia 41 Sapernii Infantry
+Russia 31 Territorialny Infantry
+Russia 41 Gornostrelky Infantry
+Russia 41 Gornosaperny Infantry
+Russia 42 Desantny Infantry
+Russia 42 Morskaya Pehota Infantry
+Russia 43 Morskaya Pehota Infantry
+Russia 43 Voiska NKVD Infantry
+Russia 44 Novobranets Infantry
+Russia 43 Saperno-Shturmovoi Infantry
+Russia 43 Sapernii Infantry
+Germany 33 SS Infanterie Infantry
+Russia 43 Pogranichnik Infantry
+Russia 43 Parashutisti Infantry
+Russia 43 Gornostrelky Infantry
+Russia 43 Gornosaperny Infantry
+Russia 43 Motociklisti Infantry
+Russia 43 Partisani Infantry
+Russia 44 Specnaz Infantry
+Russia 46 Voiska NKVD Infantry
+Russia 46 Strelkovy Infantry
+Russia 46 Kavaleria Infantry
+Russia 46 Saperno-Shturmovoi Infantry
+Russia 46 Sapernii Infantry
+Germany 35 SS Infanterie Infantry
+Russia 46 Motostrelkovy Infantry
+Russia 46 Pogranichnik Infantry
+Russia 46 Parashutisti Infantry
+Russia 46 Gornostrelky Infantry
+Russia 46 Gornosaperny Infantry
+Russia 46 Motociklisti Infantry
+Russia 46 Gvardeskaya Infantry
+Russia 25 Konnaya Razvedka Recon
+Russia 31 Konnaya Razvedka Recon
+Russia 36 Konnaya Razvedka Recon
+Russia 36 Gornaya Kavaleria Infantry
+Russia 36 Mototsikletnaya Razvedka Infantry
+Russia 38 Razvedchiki Recon
+Russia 38 Mototsikletnaya Razvedka Recon
+Russia 38 Konnaya Razvedka Recon
+Russia 38 Gornaya Kavaleria Recon
+Russia 41 Razvedchiki Recon
+Russia 41 Mototsikletnaya Razvedka Recon
+Russia 41 Konnaya Razvedka Recon
+Russia 41 Gornaya Kavaleria Recon
+Russia 43 Razvedchiki Recon
+Russia 43 Mototsikletnaya Razvedka Recon
+Russia 43 Konnaya Razvedka Recon
+Russia 43 Gornaya Kavaleria Recon
+Russia 46 Mototsikletnaya Razvedka Infantry
+Russia 25 Tachanka Infantry
+Russia 25 Pulemetny Infantry
+Russia 31 Tachanka Infantry
+Russia 31 Pulemetny Infantry
+Russia 36 Tachanka Infantry
+Russia 36 Pulemetny Infantry
+Russia 38 Tachanka Anti Tank
+Russia 41 Tachanka Anti Tank
+Russia 41 Pulemetny Anti Tank
+Russia 43 Pulemetny Anti Tank
+Russia 46 Pulemetny Infantry
+Russia 36 Territorialny Infantry
+Russia 38 Territorialny Infantry
+Germany 39 SS Infanterie (mot) Infantry
+Germany 41 SS Infanterie Infantry
+Germany 43 SS Grenadiere Infantry
+Germany 43 SS Gebirgsjager Infantry
+Germany 43 SS Pzgrenadiere (gep) Infantry
+Germany 42 SS Kavallerie Infantry
+Germany 44 SS Kosaken Infantry
+Germany 42 SS Pzgrenadiere (mot) Infantry
+Yugoslavia 37 Constabulary Infantry
+United Kingdom 37 Motor Infantry Infantry
+Allied Yugoslavia 37 Engineers Infantry
+Yugoslavia 37 Bridging Infantry
+United Kingdom 37 Territorial Infantry
+United Kingdom 37 Scots Infantry Infantry
+Allied Yugoslavia 37 Cavalry Infantry
+United Kingdom 37 Royal Marines Infantry
+Yugoslavia 37 Colonial Cavalry Infantry
+Allied Yugoslavia 37 Camel Infantry
+United Kingdom 37 Indian Infantry Infantry
+Allied Yugoslavia 37 Ghurkas Infantry
+United Kingdom 37 Sikhs Infantry
+United Kingdom 37 Indian Constabulary Infantry
+Yugoslavia 37 Arab Legion Infantry
+United Kingdom 40 Home Infantry Infantry
+United Kingdom 40 Motor Infantry Infantry
+United Kingdom 40 Cavalry Infantry
+United Kingdom 40 Constabulary Infantry
+United Kingdom 40 Camel Infantry
+United Kingdom 40 Colonial Cavalry Infantry
+United Kingdom 40 Sikhs Infantry
+United Kingdom 40 Indian Constabulary Infantry
+United Kingdom 40 LDV Infantry
+United Kingdom 41 Light Infantry Infantry
+Allied Yugoslavia 37 Crown Volunteers Infantry
+United Kingdom 42 ME Motor Infantry Infantry
+United Kingdom 41 Motor Infantry Infantry
+United Kingdom 41 Engineers Infantry
+United Kingdom 41 Bridging Infantry
+United Kingdom 41 Scots Infantry Infantry
+United Kingdom 41 Commandos Infantry
+United Kingdom 41 Royal Marines Infantry
+United Kingdom 3.7inch Artillery
+United Kingdom 44 Indian Infantry Infantry
+United Kingdom 44 Ghurka Infantry
+United Kingdom 44 Sikhs Infantry
+United Kingdom 41 Indian Infantry Infantry
+United Kingdom 41 Ghurkas Infantry
+United Kingdom 41 Sikhs Infantry
+United Kingdom 44 Parachute Engineers Infantry
+United Kingdom 41 Arab Legion Infantry
+United Kingdom 41 Home Guard Infantry
+United Kingdom 41 Crown Volunteers Infantry
+United Kingdom 42 Parachute Infantry Infantry
+United Kingdom 43 Light Infantry Infantry
+United Kingdom 43 Chindits Infantry
+United Kingdom 43 Engineers Infantry
+United Kingdom 43 Bridging Infantry
+United Kingdom 43 Commandos Infantry
+United Kingdom 43 Royal Marines Infantry
+United Kingdom 43 Constabulary Infantry
+United Kingdom 43 Colonial Infantry Infantry
+United Kingdom 43 Colonial Cavalry Infantry
+United Kingdom 43 Camel Infantry
+United Kingdom 43 Sikhs Infantry
+United Kingdom 43 Indian Constabulary Infantry
+United Kingdom 43 Arab Legion Infantry
+United Kingdom 43 Home Guard Infantry
+United Kingdom 43 Crown Volunteers Infantry
+United Kingdom 43 Parachute Infantry Infantry
+United Kingdom 43 Air Landing Infantry Infantry
+United Kingdom 44 Armoured Infantry Infantry
+United Kingdom 44 Light Infantry Infantry
+United Kingdom 44 Engineers Infantry
+United Kingdom 44 Bridging Infantry
+United Kingdom 44 Parachute Infantry Infantry
+United Kingdom 44 Motor Infantry Infantry
+United Kingdom 44 Air Landing Infantry Infantry
+United Kingdom 44 Scots Infantry Infantry
+United Kingdom 37 MMG Anti Tank
+Poland 41 Ckm Pechota Anti Tank
+Poland 44 Saperzy Infantry
+United Kingdom 40 Motorcycle Recon
+Romania Ford Rusesc Ground Transport
+USA 40 Motorized Infantry Infantry
+USA 40 Armoured Infantry Infantry
+USA 40 USMC Infantry
+USA 44 Glider Infantry Infantry
+USA 40 Combat Engineers Infantry
+USA 40 Bridging Infantry
+USA 40 Cavalry Infantry
+USA 41 Mountain Infantry
+USA 41 Parachute Infantry Infantry
+USA 41 MP Infantry
+USA 42 Armored Infantry Infantry
+USA 44 Parachute Infantry Infantry
+USA 42 Naval Construction Infantry
+USA 42 Airborne Engineers Infantry
+USA 42 National Guard Infantry
+USA 42 Parachute Infantry Infantry
+USA 42 MP Infantry
+Romania 25mm M37 Anti Tank
+Poland 44 Pionerzy Infantry
+USA 43 Naval Construction Infantry
+USA 43 Combat Engineers Infantry
+USA 43 Bridging Infantry
+USA 43 National Guard Infantry
+USA 43 Glider Infantry Infantry
+USA 43 MP Infantry
+USA 43 Ranger Infantry
+USA 44 Armored Infantry Infantry
+Poland 44 SP Pionerzy Infantry
+Poland 44 SP Piechota Infantry
+Poland 44 Dragoni Infantry
+Poland 42 Komandosi Infantry
+Poland 43 Komandosi Infantry
+France 37 Spahis Motorisee Infantry
+France 37 Chameaux Infantry
+France 37 Tirailleurs Montagnards Infantry
+France 37 Infanterie Levant Infantry
+France 40 Dragons Blindees Infantry
+France 37 GRDChA Recon
+France 40 Infanterie Legere Infantry
+France 37 Circassien Recon
+France 41 FFL Pontonniers Infantry
+France 41 FFL Sapeurs Infantry
+France 43 Tirailleurs Montagnards Infantry
+France 43 Pontonniers Infantry
+France 43 Spahis Infantry
