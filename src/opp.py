@@ -3,13 +3,15 @@
 import openpanzer as op
 import util
 from sparql import SPARQLQuery
+from google import GoogleQuery
 import rdflib
 import sqlite3
 import os, json, codecs, re
 from pprint import pprint
 
-fileDump = False
+fileDump = True
 dbDump = False
+rdfDump = False
 
 eq = {}
 for i, name in enumerate(op.countryNames):
@@ -25,7 +27,7 @@ if fileDump:
     with codecs.open("../data/unit-names.txt", "w", "utf-8") as dump:
         s = ""
         for u in eq:
-            s += eq[u].getCountryName() + " " + eq[u].name + " " + eq[u].getClassName() + "\n"
+            s += str(u) + " : " + eq[u].getFullName() + "\n"
         dump.write(s)
 
 if dbDump:
@@ -46,30 +48,52 @@ if dbDump:
         q = SPARQLQuery()
         r = q.queryText(text)
         try:
-            link = r[0]["unit"]["value"]
+            linkDBpedia = r[0]["unit"]["value"]
         except:
-            link = None
+            linkDBpedia = None
 
-        if link is not None:
-            print "\t%s" % link
+        if linkDBpedia is not None:
+            print "\t%s" % linkDBpedia
         else:
             print "\tNot found"
 
         c.execute("""
         INSERT INTO units(id, name, country, class, link) VALUES (?, ?, ?, ?, ?)
-        """, (unit.id, unit.name, unit.country, unit.unitClass, link))
+        """, (unit.id, unit.name, unit.country, unit.unitClass, linkDBpedia))
         db.commit()
 
 
-unit = eq[135]
+unit = eq[4]
 text = util.unitNameToRegex(unit.name)
-print "Looking up unit %s" % unit.name
+print "Looking up unit %s (%s)" % (unit.name, unit.getFullName())
 q = SPARQLQuery()
-r = q.queryText(text)
-link = r[0]["unit"]["value"]
-g = rdflib.Graph()
-g.parse(link)
+qg = GoogleQuery()
 
-for s, p, o in g:
-    print((s, p, o))
+r = q.queryText(text)
+rg = qg.queryText(unit.name)
+rg2 = qg.queryText(unit.getFullName())
+
+linkDBpedia = None
+linkGoogle = None
+linkGoogleSpecific = None
+
+if len(r) > 0:
+    linkDBpedia = r[0]["unit"]["value"]
+
+if len(rg) > 0:
+    linkGoogle = rg[0]
+
+if len(rg2) > 0:
+    linkGoogleSpecific = rg2[0]
+
+print "DBpedia link: %s" % linkDBpedia
+print "Google suggested link: %s (%s)" % (util.wikiToDBpedia(linkGoogle), linkGoogle)
+print "Google specific suggested link: %s (%s)" % (util.wikiToDBpedia(linkGoogleSpecific), linkGoogleSpecific)
+
+g = rdflib.Graph()
+
+if rdfDump:
+    g.parse(linkDBpedia)
+    for s, p, o in g:
+        print((s, p, o))
 

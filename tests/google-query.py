@@ -3,7 +3,7 @@ import urllib
 
 def showsome(searchfor):
   query = urllib.urlencode({'q': searchfor})
-  url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&%s' % query
+  url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=1&%s site:wikipedia.org' % query
   search_response = urllib.urlopen(url)
   search_results = search_response.read()
   results = json.loads(search_results)
