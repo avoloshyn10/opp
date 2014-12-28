@@ -15,5 +15,12 @@ Packages:
 sudo easy_install RDFLib
 sudo easy_install SPARQLWrapper
 
+MacOS:
+sudo port install db51
+sudo ln -sf /opt/local/include/db51/ /opt/local/lib/db51/include
+sudo ln -sf /opt/local/lib/db51/ /opt/local/lib/db51/lib
+sudo BERKELEYDB_DIR=/opt/local/lib/db51 ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future easy_install bsddb3
+
+
 Introductory presentation at:
 http://www.slideshare.net/nottorp/opp-archi
