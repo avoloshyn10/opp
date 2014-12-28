@@ -86,13 +86,22 @@ if len(rg) > 0:
 if len(rg2) > 0:
     linkGoogleSpecific = rg2[0]
 
-print "DBpedia link: %s" % linkDBpedia
-print "Google suggested link: %s (%s)" % (util.wikiToDBpedia(linkGoogle), linkGoogle)
-print "Google specific suggested link: %s (%s)" % (util.wikiToDBpedia(linkGoogleSpecific), linkGoogleSpecific)
+print "DBpedia link: %s" % linkDBpedia # Won't find
+print "Google suggested link: %s (%s)" % (util.wikiToDBpedia(linkGoogle), linkGoogle) # Finds redirected resource but good one
+print "Google specific suggested link: %s (%s)" % (util.wikiToDBpedia(linkGoogleSpecific), linkGoogleSpecific) # Finds close resource but imo not correct
 
-g = rdflib.Graph()
+realResource = q.getRealUri(util.wikiToDBpedia(linkGoogle))
+
+print "Google suggested link real link: %s" % realResource
+
+data = q.getFromResource(util.wikiToDBpedia(linkGoogleSpecific))
+util.dumpCommonData(data)
+
+data = q.getFromResource(realResource)
+util.dumpCommonData(data)
 
 if rdfDump:
+    g = rdflib.Graph()
     g.parse(linkDBpedia)
     for s, p, o in g:
         print((s, p, o))

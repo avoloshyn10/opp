@@ -1,3 +1,4 @@
+import textwrap
 
 def unitNameToRegex(n):
 	s = n.replace(" ", ".*?")
@@ -5,10 +6,18 @@ def unitNameToRegex(n):
 	s = s.replace(")", "\\\)")
 	return s
 
-
-def wikiToDBpedia(s):
+def wikiToDBpedia(url):
     token = "wiki/"
-    p = s.find(token)
+    p = url.find(token)
     p += len(token)
-    page = s[p:]
-    return "http://dbpedia.org/page/%s" % page
+    page = url[p:]
+    return "http://dbpedia.org/resource/%s" % page
+
+def dumpCommonData(data):
+    width = 120
+    print " ".rjust(width, "-")
+    print data[0]["label"]["value"]
+    print data[0]["thumbnail"]["value"]
+    print "\n"
+    print textwrap.fill(data[0]["abstract"]["value"], 120)
+    print "\n"
