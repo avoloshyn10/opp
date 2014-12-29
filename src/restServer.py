@@ -1,6 +1,7 @@
 from bottle import default_app, install, route, request, redirect, run, template
 from pony.orm.integration.bottle_plugin import PonyPlugin
 from oppSql import *
+import openpanzer as op
 
 install(PonyPlugin())
 
@@ -21,15 +22,21 @@ def all_units():
 def show_unit(id):
 
     u = OPPedia[id]
+    unit = op.Unit(id, name=u.name, country=u.country, unitClass=u.unitClass)
 
     return template('''
     <h1>{{ u.name }}</h1>
-    <p>Country: {{ u.country }}</p>
-    <p>Class: {{ u.unitClass }}</p>
+    <p>Country: {{ u.country }} - {{ unit.getCountryName() }}</p>
+    <p>Class: {{ u.unitClass }} - {{ unit.getClassName() }}</p>
+    <p>RDF Resource: <a href="{{ u.usedResourceSearch.foundResource}}">{{ u.usedResourceSearch.foundResource}}</a></p>
+    <p>RDF Resource found with: {{ u.usedResourceSearch.provider}}</p>
+    <p>Query text:  {{ u.usedResourceSearch.searchString }}</p>
+    <p>Stored RDF label: {{ u.rdfStoredLabel }}</p>
+    <p>Stored RDF resource: {{ u.rdfStoredResource }} </p>
 
     <a href="/units/{{ u.id }}/edit/">Edit unit resource</a>
     <a href="/units/">Return to all units</a>
-    ''', u=u)
+    ''', u=u, unit=unit)
 
 @route('/units/:id/edit/')
 def edit_units(id):
@@ -39,7 +46,7 @@ def edit_units(id):
       <table>
         <tr>
           <td>Unit name:</td>
-          <td>{{ u.name }}">
+          <td>{{ u.name }}</td>
         </tr>
         <tr>
           <td>Force RDF data refresh</td>
@@ -49,7 +56,7 @@ def edit_units(id):
       <input type="submit" value="Save!">
     </form>
     <p><a href="/units/{{ u.id }}/">Discard changes</a>
-    <p><a href="/products/">Return to all units</a>
+    <p><a href="/units/">Return to all units</a>
     ''', u=u)
 
 @route('/units/:id/edit/', method='POST')
@@ -57,6 +64,5 @@ def save_unit(id):
     u = OPPedia[id]
     u.forceRefresh = request.forms.get("forceRefresh")
     redirect("/units/%d/" % u.id)
-
 
 run(debug=True, host='localhost', port=8080, reloader=True)
