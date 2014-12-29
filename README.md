@@ -15,6 +15,8 @@ Optional sistemul va pune la dispozitie o interfata publica pentru a completa sa
 ##Packages:
     sudo easy_install RDFLib
     sudo easy_install SPARQLWrapper
+    sudo easy_install pony
+    sudo easy_install bottle
 
 ##MacOS:
     sudo port install db51

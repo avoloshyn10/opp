@@ -1,0 +1,20 @@
+CREATE TABLE "ResourceSearch" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "provider" INTEGER NOT NULL,
+  "searchString" TEXT NOT NULL,
+  "foundResource" TEXT NOT NULL,
+  "performed" DATETIME
+);
+
+CREATE TABLE "OPPedia" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "name" TEXT NOT NULL,
+  "country" INTEGER NOT NULL,
+  "unitClass" INTEGER NOT NULL,
+  "rdfStoredLabel" TEXT NOT NULL,
+  "rdfStoredResource" TEXT NOT NULL,
+  "forceRefresh" BOOLEAN NOT NULL,
+  "usedResourceSearch" INTEGER REFERENCES "ResourceSearch" ("id")
+);
+
+CREATE INDEX "idx_oppedia__usedresourcesearch" ON "OPPedia" ("usedResourceSearch")

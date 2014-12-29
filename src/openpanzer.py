@@ -1,4 +1,4 @@
-equipmentFolder = "../openpanzer-resources/equipment"
+import os, json
 
 countryNames = [
     "All Countries",
@@ -55,13 +55,34 @@ class Unit:
         return self.getCountryName() + " " + self.name + " " + self.getClassName()
 
 
-def unitConverter(json):
-    unitsDict = {}
-    for u in json["units"]:
-        try:
-            id = int(u)
-            d = json["units"][u]
-            unitsDict[id] = Unit(id, d[21], d[22], d[8])
-        except:
-            pass
-    return unitsDict
+class Equipment:
+    def __init__(self, equipmentFolder = "../openpanzer-resources/equipment" ):
+        self.eq = {}
+        self.equipmentFolder = equipmentFolder
+
+    def loadCountry(self, id):
+        name = countryNames[id]
+        jsonFile = os.path.join(self.equipmentFolder, "equipment-country-" + str(id) + ".json")
+
+        print "Loading %s for country %s (%d)" % (jsonFile, name, id)
+        with open(jsonFile) as jsonData:
+            j = json.load(jsonData)
+            self.eq.update(self.__unitConverter(j))
+
+    def loadAllCountries(self):
+        for id, name in enumerate(countryNames):
+            self.loadCountry(id)
+
+    def getUnit(self, id):
+        return self.eq[id]
+
+    def __unitConverter(self, json):
+        unitsDict = {}
+        for u in json["units"]:
+            try:
+                id = int(u)
+                d = json["units"][u]
+                unitsDict[id] = Unit(id, d[21], d[22], d[8])
+            except:
+                pass
+        return unitsDict
