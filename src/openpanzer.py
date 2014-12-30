@@ -74,7 +74,10 @@ class Equipment:
             self.loadCountry(id)
 
     def getUnit(self, id):
-        return self.eq[id]
+        try:
+            return self.eq[id]
+        except:
+            return None
 
     def __unitConverter(self, json):
         unitsDict = {}

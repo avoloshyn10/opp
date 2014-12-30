@@ -24,6 +24,7 @@ class OppRdf:
         self.g.open(self.dbName, create=True)
 
     def load(self, resource):
+        print "Loading resource %s" % resource
         self.g.load(resource)
 
     def close(self):

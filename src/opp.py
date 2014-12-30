@@ -2,71 +2,137 @@
 
 import openpanzer as op
 from oppSql import *
+from oppRdf import *
 import util
 from dbpedia import DbpediaQuery
 from google import GoogleQuery
 
-import rdflib
 from pprint import pprint
-
-rdfDump = False
 
 eq = op.Equipment()
 eq.loadAllCountries()
 
 print "Loaded %d units" % len(eq.eq)
 
-unit = eq.getUnit(4)
-text = util.unitNameToRegex(unit.name)
-print "Looking up unit %s (%s)" % (unit.name, unit.getFullName())
-q = DbpediaQuery()
-qg = GoogleQuery()
+def getResourcesForUnit(id):
+    unit = eq.getUnit(id)
 
-r = q.queryText(text)
-rg = qg.queryText(unit.name)
-rg2 = qg.queryText(unit.getFullName())
+    if unit is None:
+        return
 
-linkDBpedia = ""
-linkGoogle = None
-linkGoogleSpecific = None
+    print "Looking up unit %s (%s)" % (unit.name, unit.getFullName())
 
-if len(r) > 0:
-    linkDBpedia = r[0]["unit"]["value"]
+    with db_session:
+        o1 = OPPedia[unit.id]
+        if not o1 is None:
+            print "Resource already in DB updating not supported"
+            return
 
-if len(rg) > 0:
-    linkGoogle = rg[0]
+    linkDBpedia = ""  # query will return direct link to dbpedia resource
+    linkGoogle = ""  # query will return a wikipedia link
+    linkGoogleSpecific = ""  # query will return a wikipedia link
 
-if len(rg2) > 0:
-    linkGoogleSpecific = rg2[0]
+    resGoogle = ""
+    resGoogleSpecific = ""
 
-print "DBpedia link: %s" % linkDBpedia # Won't find
-print "Google suggested link: %s (%s)" % (util.wikiToDBpedia(linkGoogle), linkGoogle) # Finds redirected resource but good one
-print "Google specific suggested link: %s (%s)" % (util.wikiToDBpedia(linkGoogleSpecific), linkGoogleSpecific) # Finds close resource but imo not correct
+    # Search strings
+    dbpediaSearchString = util.unitNameToRegex(unit.name)
+    googleSearchString = unit.name
+    googleSpecificSearchString = unit.getFullName()
 
-realResource = q.getRealUri(util.wikiToDBpedia(linkGoogle))
+    q = DbpediaQuery()
+    qg = GoogleQuery()
 
-print "Google suggested link real link: %s" % realResource
+    r = q.queryText(dbpediaSearchString)
+    rg = qg.queryText(googleSearchString)
+    rg2 = qg.queryText(googleSpecificSearchString)
 
-data = q.getFromResource(util.wikiToDBpedia(linkGoogleSpecific))
-util.dumpCommonData(data)
+    if len(r) > 0:
+        linkDBpedia = r[0]["unit"]["value"]
 
-data = q.getFromResource(realResource)
-util.dumpCommonData(data)
+    if len(rg) > 0:
+        linkGoogle = rg[0]
+        resGoogle = util.wikiToDBpedia(linkGoogle)
 
-with db_session:
-    #s1 = ResourceSearch(unitId = unit.id, provider = PROVIDER_DBPEDIA, searchString = text, foundResource = linkDBpedia)
-    #s2 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE, searchString = unit.name, foundResource = util.wikiToDBpedia(linkGoogle))
-    #s3 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE_SPECIFIC, searchString = unit.getFullName(), foundResource = realResource)
-    #o1 = OPPedia(id = unit.id, name = unit.name, country = unit.country, unitClass = unit.unitClass, usedResourceSearch=s3)
-    o1 = OPPedia[4]
-    print o1.name
-    o2 = OPPedia[5]
-    print o2
+    if len(rg2) > 0:
+        linkGoogleSpecific = rg2[0]
+        resGoogleSpecific = util.wikiToDBpedia(linkGoogleSpecific)
+
+    print "DBpedia link: %s" % linkDBpedia # Won't find probably (for id 4 or other strange names)
+    print "Google suggested link: %s (%s)" % (resGoogle, linkGoogle) # Finds redirected resource but good one
+    print "Google specific suggested link: %s (%s)" % (resGoogleSpecific, linkGoogleSpecific) # Finds close resource but imo not correct
+
+    tmp = q.getRealUri(resGoogle) # resolve dbpedia redirect
+    if not tmp is None:
+        resGoogle = tmp
+        print "Google suggested link real link: %s" % resGoogle
 
 
-if rdfDump:
-    g = rdflib.Graph()
-    g.parse(linkDBpedia)
-    for s, p, o in g:
-        print((s, p, o))
+    # resource labels
+    label1 = ""
+    label2 = ""
+    label3 = ""
 
+    rdfdb = OppRdf()
+    rdfdb.init()
+
+    if linkDBpedia != "":
+        data1 = q.getFromResource(linkDBpedia)
+        if len(data1) > 0:
+            #util.dumpCommonData(data1)
+            label1 = data1[0]["label"]["value"]
+            rdfdb.load(linkDBpedia)
+
+    if resGoogle != "":
+        data2 = q.getFromResource(resGoogle)
+        if len(data2) > 0:
+            #util.dumpCommonData(data2)
+            label2 = data2[0]["label"]["value"]
+            rdfdb.load(resGoogle)
+
+    if resGoogleSpecific != "":
+        data3 = q.getFromResource(resGoogleSpecific)
+        if len(data3) > 0:
+            #util.dumpCommonData(data3)
+            label3 = data3[0]["label"]["value"]
+            rdfdb.load(resGoogleSpecific)
+
+
+    bestResource = resGoogleSpecific
+    label = label3
+    provider = PROVIDER_GOOGLE_SPECIFIC
+
+    if bestResource == "":
+        bestResource = resGoogle
+        provider = PROVIDER_GOOGLE
+        label = label2
+
+    if bestResource == "":
+        bestResource = linkDBpedia
+        provider = PROVIDER_DBPEDIA
+        label = label1
+
+
+    with db_session:
+        o1 = OPPedia[unit.id]
+
+        if o1 is None:
+            try:
+                s1 = ResourceSearch(unitId = unit.id, provider = PROVIDER_DBPEDIA, searchString = dbpediaSearchString, foundResource = linkDBpedia)
+                s2 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE, searchString = googleSearchString, foundResource = resGoogle)
+                s3 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE_SPECIFIC, searchString = googleSpecificSearchString, foundResource = resGoogleSpecific)
+                usedResource = s3
+                if provider == PROVIDER_GOOGLE:
+                    usedResource = s2
+                elif provider == PROVIDER_DBPEDIA:
+                    usedResource = s1
+
+                o1 = OPPedia(id = unit.id, name = unit.name, country = unit.country, unitClass = unit.unitClass, usedResourceSearch=usedResource, rdfStoredLabel = label, rdfStoredResource = bestResource)
+            except:
+                print "Cannot save unit to SQL DB"
+
+    rdfdb.close()
+
+
+getResourcesForUnit(2581)
+getResourcesForUnit(2588)

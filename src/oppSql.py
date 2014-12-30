@@ -27,7 +27,7 @@ class OPPedia(db.Entity):
     forceRefresh = Required(bool, default=False)
     usedResourceSearch = Optional(ResourceSearch)
 
-sql_debug(True)
+sql_debug(False)
 
 db.generate_mapping(create_tables=True)
 
