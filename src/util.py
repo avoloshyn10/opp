@@ -1,4 +1,5 @@
 import textwrap
+from urllib import quote, unquote
 
 def unitNameToRegex(n):
 	s = n.replace(" ", ".*?")
@@ -12,6 +13,10 @@ def wikiToDBpedia(url):
     p += len(token)
     page = url[p:]
     return "http://dbpedia.org/resource/%s" % page
+
+def unquoteUrl(url):
+    s = unquote(url.encode('utf-8')) # unquote spaces and other ascii special chars
+    return unquote(s) # convert from utf8 %FF notation to \xff python notation
 
 def dumpCommonData(data):
     width = 120

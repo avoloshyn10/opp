@@ -2,6 +2,7 @@ from bottle import default_app, install, route, request, redirect, run, template
 from pony.orm.integration.bottle_plugin import PonyPlugin
 from oppSql import *
 import openpanzer as op
+from util import *
 
 install(PonyPlugin())
 
@@ -28,7 +29,7 @@ def show_unit(id):
     <h1>{{ u.name }}</h1>
     <p>Country: {{ u.country }} - {{ unit.getCountryName() }}</p>
     <p>Class: {{ u.unitClass }} - {{ unit.getClassName() }}</p>
-    <p>RDF Resource: <a href="{{ u.usedResourceSearch.foundResource}}">{{ u.usedResourceSearch.foundResource}}</a></p>
+    <p>RDF Resource: <a href="{{ unquoteUrl(u.usedResourceSearch.foundResource)}}">{{ unquoteUrl(u.usedResourceSearch.foundResource)}}</a></p>
     <p>RDF Resource found with: {{ u.usedResourceSearch.provider}}</p>
     <p>Query text:  {{ u.usedResourceSearch.searchString }}</p>
     <p>Stored RDF label: {{ u.rdfStoredLabel }}</p>
@@ -36,7 +37,7 @@ def show_unit(id):
 
     <a href="/units/{{ u.id }}/edit/">Edit unit resource</a>
     <a href="/units/">Return to all units</a>
-    ''', u=u, unit=unit)
+    ''', u=u, unit=unit, unquoteUrl=unquoteUrl)
 
 @route('/units/:id/edit/')
 def edit_units(id):

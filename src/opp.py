@@ -47,8 +47,8 @@ def getResourcesForUnit(id):
     rg = qg.queryText(googleSearchString)
     rg2 = qg.queryText(googleSpecificSearchString)
 
-    if len(r) > 0:
-        linkDBpedia = r[0]["unit"]["value"]
+    #if len(r) > 0:
+    #    linkDBpedia = util.unquoteUrl(r[0]["unit"]["value"])
 
     if len(rg) > 0:
         linkGoogle = rg[0]
@@ -58,15 +58,14 @@ def getResourcesForUnit(id):
         linkGoogleSpecific = rg2[0]
         resGoogleSpecific = util.wikiToDBpedia(linkGoogleSpecific)
 
-    print "DBpedia link: %s" % linkDBpedia # Won't find probably (for id 4 or other strange names)
-    print "Google suggested link: %s (%s)" % (resGoogle, linkGoogle) # Finds redirected resource but good one
-    print "Google specific suggested link: %s (%s)" % (resGoogleSpecific, linkGoogleSpecific) # Finds close resource but imo not correct
+    print "\t*DBpedia link: %s" % linkDBpedia # Won't find probably (for id 4 or other strange names)
+    print "\t*Google suggested link: %s (%s)" % (resGoogle, linkGoogle) # Finds redirected resource but good one
+    print "\t*Google specific suggested link: %s (%s)" % (resGoogleSpecific, linkGoogleSpecific) # Finds close resource but imo not correct
 
     tmp = q.getRealUri(resGoogle) # resolve dbpedia redirect
     if not tmp is None:
         resGoogle = tmp
-        print "Google suggested link real link: %s" % resGoogle
-
+        print "\t*Google suggested link real link: %s" % resGoogle
 
     # resource labels
     label1 = ""
@@ -77,23 +76,29 @@ def getResourcesForUnit(id):
     rdfdb.init()
 
     if linkDBpedia != "":
+        print "\t -Retrieve DBpedia link"
         data1 = q.getFromResource(linkDBpedia)
         if len(data1) > 0:
             #util.dumpCommonData(data1)
             label1 = data1[0]["label"]["value"]
+            print "\t >RDF DB Save DBpedia data"
             rdfdb.load(linkDBpedia)
 
     if resGoogle != "":
+        print "\t -Retrieve Google link"
         data2 = q.getFromResource(resGoogle)
         if len(data2) > 0:
             #util.dumpCommonData(data2)
+            print "\t >RDF DB Save Google data"
             label2 = data2[0]["label"]["value"]
             rdfdb.load(resGoogle)
 
     if resGoogleSpecific != "":
+        print "\t -Retrieve Google Specific link"
         data3 = q.getFromResource(resGoogleSpecific)
         if len(data3) > 0:
             #util.dumpCommonData(data3)
+            print "\t >RDF DB Save Google Specific data"
             label3 = data3[0]["label"]["value"]
             rdfdb.load(resGoogleSpecific)
 
@@ -134,5 +139,7 @@ def getResourcesForUnit(id):
     rdfdb.close()
 
 
-getResourcesForUnit(2581)
-getResourcesForUnit(2588)
+getResourcesForUnit(190)
+getResourcesForUnit(119)
+getResourcesForUnit(2404)
+
