@@ -1,5 +1,5 @@
 from src import openpanzer as op
-from src.sparql import SPARQLQuery
+from src.dbpedia import DbpediaQuery
 from src import util
 import sqlite3
 import time
@@ -19,7 +19,7 @@ for u in eq.eq:
     unit = eq.eq[u]
     text = util.unitNameToRegex(unit.name)
     print "Looking up unit %s" % unit.name
-    q = SPARQLQuery()
+    q = DbpediaQuery()
     r = q.queryText(text)
     try:
         linkDBpedia = r[0]["unit"]["value"]

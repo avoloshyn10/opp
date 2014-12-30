@@ -1,6 +1,7 @@
 from rdflib import Graph, Namespace, Literal
 from rdflib.store import NO_STORE, VALID_STORE
 
+
 class OppRdf:
 
     PREFIX = """

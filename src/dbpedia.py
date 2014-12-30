@@ -1,6 +1,6 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 
-class SPARQLQuery:
+class DbpediaQuery:
     def __init__(self):
         self.__sparql = SPARQLWrapper("http://dbpedia.org/sparql")
         self.__sparql.setReturnFormat(JSON)

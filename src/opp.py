@@ -3,7 +3,7 @@
 import openpanzer as op
 from oppSql import *
 import util
-from sparql import SPARQLQuery
+from dbpedia import DbpediaQuery
 from google import GoogleQuery
 
 import rdflib
@@ -19,7 +19,7 @@ print "Loaded %d units" % len(eq.eq)
 unit = eq.getUnit(4)
 text = util.unitNameToRegex(unit.name)
 print "Looking up unit %s (%s)" % (unit.name, unit.getFullName())
-q = SPARQLQuery()
+q = DbpediaQuery()
 qg = GoogleQuery()
 
 r = q.queryText(text)
@@ -54,10 +54,15 @@ data = q.getFromResource(realResource)
 util.dumpCommonData(data)
 
 with db_session:
-    s1 = ResourceSearch(unitId = unit.id, provider = PROVIDER_DBPEDIA, searchString = text, foundResource = linkDBpedia)
-    s2 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE, searchString = unit.name, foundResource = util.wikiToDBpedia(linkGoogle))
-    s3 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE_SPECIFIC, searchString = unit.getFullName(), foundResource = realResource)
-    o1 = OPPedia(id = unit.id, name = unit.name, country = unit.country, unitClass = unit.unitClass, usedResourceSearch=s3)
+    #s1 = ResourceSearch(unitId = unit.id, provider = PROVIDER_DBPEDIA, searchString = text, foundResource = linkDBpedia)
+    #s2 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE, searchString = unit.name, foundResource = util.wikiToDBpedia(linkGoogle))
+    #s3 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE_SPECIFIC, searchString = unit.getFullName(), foundResource = realResource)
+    #o1 = OPPedia(id = unit.id, name = unit.name, country = unit.country, unitClass = unit.unitClass, usedResourceSearch=s3)
+    o1 = OPPedia[4]
+    print o1.name
+    o2 = OPPedia[5]
+    print o2
+
 
 if rdfDump:
     g = rdflib.Graph()
