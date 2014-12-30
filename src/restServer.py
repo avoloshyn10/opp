@@ -23,6 +23,7 @@ def all_units():
 def show_unit(id):
 
     u = OPPedia[id]
+    searches = select( s for s in ResourceSearch if s.unitId == id)
     unit = op.Unit(id, name=u.name, country=u.country, unitClass=u.unitClass)
 
     return template('''
@@ -34,10 +35,19 @@ def show_unit(id):
     <p>Query text:  {{ u.usedResourceSearch.searchString }}</p>
     <p>Stored RDF label: {{ u.rdfStoredLabel }}</p>
     <p>Stored RDF resource: {{ u.rdfStoredResource }} </p>
+    <br>
+    <p>Other queries for this unit:</>
+    <ul>
+        %for s in searches:
+            <li>{{s.searchString }} -  {{ s.provider}} - <a href="{{ s.foundResource}}">{{ s.foundResource}}</a></li>
+        %end
+    </ul>
 
+
+    <br>
     <a href="/units/{{ u.id }}/edit/">Edit unit resource</a>
     <a href="/units/">Return to all units</a>
-    ''', u=u, unit=unit, unquoteUrl=unquoteUrl)
+    ''', u=u, unit=unit, searches=searches, unquoteUrl=unquoteUrl)
 
 @route('/units/:id/edit/')
 def edit_units(id):

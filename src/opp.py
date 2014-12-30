@@ -47,8 +47,8 @@ def getResourcesForUnit(id):
     rg = qg.queryText(googleSearchString)
     rg2 = qg.queryText(googleSpecificSearchString)
 
-    #if len(r) > 0:
-    #    linkDBpedia = util.unquoteUrl(r[0]["unit"]["value"])
+    if len(r) > 0:
+        linkDBpedia = r[0]["unit"]["value"]
 
     if len(rg) > 0:
         linkGoogle = rg[0]
@@ -81,7 +81,7 @@ def getResourcesForUnit(id):
         if len(data1) > 0:
             #util.dumpCommonData(data1)
             label1 = data1[0]["label"]["value"]
-            print "\t >RDF DB Save DBpedia data"
+            print "\t >RDF DB Save DBpedia data",
             rdfdb.load(linkDBpedia)
 
     if resGoogle != "":
@@ -89,7 +89,7 @@ def getResourcesForUnit(id):
         data2 = q.getFromResource(resGoogle)
         if len(data2) > 0:
             #util.dumpCommonData(data2)
-            print "\t >RDF DB Save Google data"
+            print "\t >RDF DB Save Google data",
             label2 = data2[0]["label"]["value"]
             rdfdb.load(resGoogle)
 
@@ -98,7 +98,7 @@ def getResourcesForUnit(id):
         data3 = q.getFromResource(resGoogleSpecific)
         if len(data3) > 0:
             #util.dumpCommonData(data3)
-            print "\t >RDF DB Save Google Specific data"
+            print "\t >RDF DB Save Google Specific data",
             label3 = data3[0]["label"]["value"]
             rdfdb.load(resGoogleSpecific)
 
@@ -139,7 +139,7 @@ def getResourcesForUnit(id):
     rdfdb.close()
 
 
-getResourcesForUnit(190)
-getResourcesForUnit(119)
-getResourcesForUnit(2404)
+getResourcesForUnit(441)
+#getResourcesForUnit(378)
+#getResourcesForUnit(406)
 

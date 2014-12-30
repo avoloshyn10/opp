@@ -24,8 +24,14 @@ class OppRdf:
         self.g.open(self.dbName, create=True)
 
     def load(self, resource):
-        print "Loading resource %s" % resource
-        self.g.load(resource)
+        try:
+            self.g.load(resource)
+            print "... OK"
+        except Exception, e:
+            print "... FAILED " + resource + "  " + str(e)
+            return False
+
+        return True
 
     def close(self):
         self.g.close()
