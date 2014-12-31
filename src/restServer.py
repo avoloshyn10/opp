@@ -3,6 +3,10 @@ from pony.orm.integration.bottle_plugin import PonyPlugin
 from oppSql import *
 import openpanzer as op
 from util import *
+from src.oppRdf import *
+
+rdfdb = OppRdf()
+rdfdb.init()
 
 install(PonyPlugin())
 
@@ -25,6 +29,13 @@ def show_unit(id):
     u = OPPedia[id]
     searches = select( s for s in ResourceSearch if s.unitId == id)
     unit = op.Unit(id, name=u.name, country=u.country, unitClass=u.unitClass)
+    rdfdata = rdfdb.getFromResource(u.usedResourceSearch.foundResource)
+    try:
+        thumbnail = rdfdata["results"]["bindings"][0]["thumbnail"]["value"]
+        abstract = rdfdata["results"]["bindings"][0]["abstract"]["value"]
+    except:
+        thumbnail = ""
+        abstract = "Not found on RDF DB"
 
     return template('''
     <h1>{{ u.name }}</h1>
@@ -32,6 +43,8 @@ def show_unit(id):
     <p>Class: {{ u.unitClass }} - {{ unit.getClassName() }}</p>
     <p>RDF Resource: <a href="{{ unquoteUrl(u.usedResourceSearch.foundResource)}}">{{ unquoteUrl(u.usedResourceSearch.foundResource)}}</a></p>
     <p>RDF Resource found with: {{ u.usedResourceSearch.provider}}</p>
+    <img src='{{ thumbnail }}'>
+    <p>Abstract: {{ abstract }}
     <p>Query text:  {{ u.usedResourceSearch.searchString }}</p>
     <p>Stored RDF label: {{ u.rdfStoredLabel }}</p>
     <p>Stored RDF resource: {{ u.rdfStoredResource }} </p>
@@ -47,7 +60,7 @@ def show_unit(id):
     <br>
     <a href="/units/{{ u.id }}/edit/">Edit unit resource</a>
     <a href="/units/">Return to all units</a>
-    ''', u=u, unit=unit, searches=searches, unquoteUrl=unquoteUrl)
+    ''', u=u, unit=unit, searches=searches, unquoteUrl=unquoteUrl, thumbnail=thumbnail, abstract=abstract)
 
 @route('/units/:id/edit/')
 def edit_units(id):
@@ -77,3 +90,4 @@ def save_unit(id):
     redirect("/units/%d/" % u.id)
 
 run(debug=True, host='localhost', port=8080, reloader=True)
+rdfdb.close()
