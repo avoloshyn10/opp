@@ -21,7 +21,15 @@ class OppRdf:
         self.dbName = rdfFolder
 
     def init(self):
-        self.g.open(self.dbName, create=True)
+        ret = self.g.open(self.dbName, create=False)
+
+        if ret == NO_STORE:
+            print "No existing database detected, creating..."
+            self.g.open(self.dbName, create=True)
+        else:
+            assert ret == VALID_STORE, 'The underlying store is corrupt'
+
+        print 'Triples in graph: ', len(self.g)
 
     def load(self, resource):
         try:
@@ -34,5 +42,5 @@ class OppRdf:
         return True
 
     def close(self):
-        self.g.close()
+        self.g.close(commit_pending_transaction=True)
 
