@@ -48,7 +48,7 @@ def getResourcesForUnit(id):
     rg2 = qg.queryText(googleSpecificSearchString)
 
     if len(r) > 0:
-        linkDBpedia = r[0]["unit"]["value"]
+        linkDBpedia = r[0]
 
     if len(rg) > 0:
         linkGoogle = rg[0]
@@ -139,7 +139,10 @@ def getResourcesForUnit(id):
     rdfdb.close()
 
 
-getResourcesForUnit(441)
+#getResourcesForUnit(484)
 #getResourcesForUnit(378)
 #getResourcesForUnit(406)
-
+#getResourcesForUnit(515)
+#getResourcesForUnit(521)
+#getResourcesForUnit(137)
+getResourcesForUnit(138)

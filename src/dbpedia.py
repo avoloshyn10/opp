@@ -1,15 +1,20 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 class DbpediaQuery:
+
+    PREFIX = """
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbpprop: <http://dbpedia.org/property/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    """
     def __init__(self):
         self.__sparql = SPARQLWrapper("http://dbpedia.org/sparql")
         self.__sparql.setReturnFormat(JSON)
 
     def queryText(self, queryString):
-        self.__sparql.setQuery("""
-        PREFIX dbprop: <http://dbpedia.org/property/>
-        PREFIX dbpont: <http://dbpedia.org/ontology/>
-
+        urls = []
+        self.__sparql.setQuery(DbpediaQuery.PREFIX + """
         SELECT DISTINCT  ?unit
         WHERE{
             ?unit a <http://dbpedia.org/ontology/Weapon>.
@@ -20,10 +25,14 @@ class DbpediaQuery:
         }
         """ % queryString)
         results = self.__sparql.query().convert()
-        return results["results"]["bindings"]
+        hits = results["results"]["bindings"]
+        for h in hits:
+            urls.append(h['unit']['value'])
+
+        return urls
 
     def getRealUri(self, resource):
-        self.__sparql.setQuery("""
+        self.__sparql.setQuery(DbpediaQuery.PREFIX + """
         SELECT ?redirect
         WHERE {
             <%s> dbpedia-owl:wikiPageRedirects ?redirect.
@@ -39,11 +48,7 @@ class DbpediaQuery:
         return uri
 
     def getFromResource(self, resource):
-        self.__sparql.setQuery("""
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX dbo: <http://dbpedia.org/ontology/>
-        PREFIX dbpprop: <http://dbpedia.org/property/>
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        self.__sparql.setQuery(DbpediaQuery.PREFIX + """
         SELECT DISTINCT ?label ?abstract ?thumbnail
         WHERE {
             <%s> rdfs:label ?label ;

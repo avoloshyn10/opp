@@ -1,6 +1,6 @@
 from rdflib import Graph, Namespace, Literal
 from rdflib.store import NO_STORE, VALID_STORE
-
+import json
 
 class OppRdf:
 
@@ -29,8 +29,6 @@ class OppRdf:
         else:
             assert ret == VALID_STORE, 'The underlying store is corrupt'
 
-        print 'Triples in graph: ', len(self.g)
-
     def load(self, resource):
         try:
             self.g.load(resource)
@@ -40,6 +38,23 @@ class OppRdf:
             return False
 
         return True
+
+    def getFromResource(self, resource, lang="en"):
+        r = self.g.query(OppRdf.PREFIX + """
+        SELECT DISTINCT ?label ?abstract ?thumbnail
+        WHERE {
+            <%s> rdfs:label ?label ;
+            dbo:abstract ?abstract.
+            OPTIONAL {
+                <%s>  dbo:thumbnail ?thumbnail .
+            }
+            FILTER (LANG(?label) = '%s')
+            FILTER (LANG(?abstract) = '%s')
+        }
+        LIMIT 1
+        """ % (resource, resource, lang, lang))
+        return json.loads(r.serialize(format="json"))
+
 
     def close(self):
         self.g.close(commit_pending_transaction=True)
