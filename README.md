@@ -42,3 +42,9 @@ text below table of content which isn't scraped by dbpedia. Beside that building
 - RDFLib has an issue when retrieving all results from a resource stored locally, filtered by language
 - Unicode issues when passing links from google results to dbpedia sparql queries
 
+
+##Running
+    cd src
+    python ./restServer.py &
+    python ./opp.py
+
