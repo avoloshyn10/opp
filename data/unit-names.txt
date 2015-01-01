@@ -151,7 +151,7 @@
 151 : Germany Pz IVH Tank
 152 : Germany Pz IVJ Tank
 153 : Germany Pz VI Tiger Tank
-154 : Germany Pz VIB Tiger II Tank
+154 : Germany Pz VI B Tiger II Tank
 155 : Germany SdKfz 250/1 Recon
 156 : Germany SdKfz 251/1 Ground Transport
 157 : Germany Opel Blitz Ground Transport

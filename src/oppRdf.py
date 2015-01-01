@@ -1,4 +1,4 @@
-from rdflib import Graph, Namespace, Literal
+from rdflib import *
 from rdflib.store import NO_STORE, VALID_STORE
 import json
 
@@ -39,6 +39,13 @@ class OppRdf:
 
         return True
 
+    def isWeapon(self, resource):
+        uri = URIRef(resource)
+        weapon = URIRef('http://dbpedia.org/ontology/Weapon')
+        ret = self.g.query("ASK {?uri a ?weapon}", initBindings={'uri': uri, 'weapon': weapon})
+        print uri, "is a weapon?", ret.askAnswer
+        return ret.askAnswer
+
     def getFromResource(self, resource, lang="en"):
         r = self.g.query(OppRdf.PREFIX + """
         SELECT DISTINCT ?label ?abstract ?thumbnail
@@ -53,6 +60,16 @@ class OppRdf:
         }
         LIMIT 1
         """ % (resource, resource, lang, lang))
+        return json.loads(r.serialize(format="json")) #TODO: Maybe serialize('python')
+
+    def getAllFromResource(self, resource, lang="en"): #TODO: Needs rewrite as it doesn't list properties that don't have a label language like sameAs
+        r = self.g.query(OppRdf.PREFIX + """
+        SELECT ?p ?o
+        WHERE {
+            <%s> ?p ?o .
+        }
+        """ % (resource))
+        #FILTER(langMatches(lang(?o), "en") or LANG(?o) = "") #TODO: Filter breaks rdflib parsing
         return json.loads(r.serialize(format="json"))
 
 

@@ -1,5 +1,5 @@
 from src.oppRdf import *
-
+import rdflib
 #rdfdb = OppRdf("db")
 rdfdb = OppRdf()
 rdfdb.init()
@@ -19,11 +19,17 @@ print 'Triples in graph: ', len(rdfdb.g)
 #rdfdb.load("http://dbpedia.org/resource/M3_Stuart")
 
 resource = "http://dbpedia.org/resource/M4_Sherman"
-j = rdfdb.getFromResource(resource)
+subject = rdflib.term.URIRef(resource)
 
-print j["results"]["bindings"][0]["abstract"]["value"]
+#j = rdfdb.getAllFromResource(resource)
+#print j["results"]["bindings"]
+rdfdb.isWeapon(resource)
+
+#rdfdb.g.preferredLabel(subject=subject, lang='en')
+#for triple in rdfdb.g.triples((subject, None, None)):
+#    print triple
+
 exit()
-
 print "Existing data:"
 
 query = """SELECT ?x ?label ?abstract
