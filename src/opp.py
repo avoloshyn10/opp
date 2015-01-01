@@ -10,7 +10,8 @@ from google import GoogleQuery
 from pprint import pprint
 
 eq = op.Equipment()
-eq.loadAllCountries()
+#eq.loadAllCountries()
+eq.loadCountry(8) # Germany
 
 print "Loaded %d units" % len(eq.eq)
 
@@ -37,7 +38,7 @@ def getResourcesForUnit(id):
 
     # Search strings
     dbpediaSearchString = util.unitNameToRegex(unit.name)
-    googleSearchString = unit.name
+    googleSearchString = unit.name + " " + unit.getClassName()
     googleSpecificSearchString = unit.getFullName()
 
     q = DbpediaQuery()
@@ -83,6 +84,9 @@ def getResourcesForUnit(id):
             label1 = data1[0]["label"]["value"]
             print "\t >RDF DB Save DBpedia data",
             rdfdb.load(linkDBpedia)
+        else:
+            linkDBpedia = ""
+            print "\t  ?Non-existing DBpedia page skiping"
 
     if resGoogle != "":
         print "\t -Retrieve Google link"
@@ -92,6 +96,9 @@ def getResourcesForUnit(id):
             print "\t >RDF DB Save Google data",
             label2 = data2[0]["label"]["value"]
             rdfdb.load(resGoogle)
+        else:
+            resGoogle = ""
+            print "\t  ?Non-existing DBpedia page skiping"
 
     if resGoogleSpecific != "":
         print "\t -Retrieve Google Specific link"
@@ -101,22 +108,28 @@ def getResourcesForUnit(id):
             print "\t >RDF DB Save Google Specific data",
             label3 = data3[0]["label"]["value"]
             rdfdb.load(resGoogleSpecific)
+        else:
+            resGoogleSpecific = ""
+            print "\t  ?Non-existing DBpedia page skiping"
 
 
-    bestResource = resGoogleSpecific
-    label = label3
-    provider = PROVIDER_GOOGLE_SPECIFIC
+    bestResource = resGoogle
+    label = label2
+    provider = PROVIDER_GOOGLE
 
     if bestResource == "":
-        bestResource = resGoogle
-        provider = PROVIDER_GOOGLE
-        label = label2
+        bestResource = resGoogleSpecific
+        provider = PROVIDER_GOOGLE_SPECIFIC
+        label = label3
 
     if bestResource == "":
         bestResource = linkDBpedia
         provider = PROVIDER_DBPEDIA
         label = label1
 
+    if bestResource == "":
+        print "Not found on DBpedia !"
+        return
 
     with db_session:
         o1 = OPPedia[unit.id]
@@ -126,9 +139,9 @@ def getResourcesForUnit(id):
                 s1 = ResourceSearch(unitId = unit.id, provider = PROVIDER_DBPEDIA, searchString = dbpediaSearchString, foundResource = linkDBpedia)
                 s2 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE, searchString = googleSearchString, foundResource = resGoogle)
                 s3 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE_SPECIFIC, searchString = googleSpecificSearchString, foundResource = resGoogleSpecific)
-                usedResource = s3
-                if provider == PROVIDER_GOOGLE:
-                    usedResource = s2
+                usedResource = s2
+                if provider == PROVIDER_GOOGLE_SPECIFIC:
+                    usedResource = s3
                 elif provider == PROVIDER_DBPEDIA:
                     usedResource = s1
 
@@ -150,4 +163,7 @@ def getResourcesForUnit(id):
 #getResourcesForUnit(536)
 #getResourcesForUnit(1769)
 #getResourcesForUnit(1860)
-getResourcesForUnit(154)
+#getResourcesForUnit(154)
+
+for id in eq.eq:
+    getResourcesForUnit(id)

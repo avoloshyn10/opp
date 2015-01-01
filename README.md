@@ -27,3 +27,18 @@ Optional sistemul va pune la dispozitie o interfata publica pentru a completa sa
 
 ##Introductory presentation at:
 [SlideShare] (http://www.slideshare.net/nottorp/opp-archi)
+
+##Current issues:
+- Looking for units with DBpedia queries doesn't work very well as most of the unit name/designations are found in wikipedia
+text below table of content which isn't scraped by dbpedia. Beside that building a better text regex it's limited by SPARQL functionality
+
+- The workaround for DBpedia queries is to use Google search and extract wikipedia.org pages. This still needs improvement for text searched ex:
+    - Some artillery pieces will benefit from expanding 100mm M10/42 to 100mm M10 1942
+    - Some Flak pieces will benefit from expanding FlaKPz to Flak Panzer and in general Pz to be expanded to Panzer
+    - Infantry like 40 Infantry will benefit from removing the year number in front
+    - Some of the wikipedia pages found by Google aren't found in dbpedia.org
+    - Google queries results are limited
+
+- RDFLib has an issue when retrieving all results from a resource stored locally, filtered by language
+- Unicode issues when passing links from google results to dbpedia sparql queries
+

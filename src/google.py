@@ -1,5 +1,6 @@
 import json
 import urllib
+import util
 
 class GoogleQuery:
     def __init__(self):
@@ -17,12 +18,14 @@ class GoogleQuery:
             hits = data['results']
             for h in hits:
                 urls.append(h['url'])
-        except:
-            print "No response from Google"
+        except Exception, e:
+            print "Invalid response from Google must wait ?"
+            raise
 
         return urls
 
     def __buildUrl(self, queryString):
+        queryString = unicode(queryString).encode('utf-8')
         query = urllib.urlencode({'q': queryString})
         site = ""
         if not self.restrictSite is None or self.restrictSite != "":
