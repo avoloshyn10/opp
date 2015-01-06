@@ -8,6 +8,9 @@ from dbpedia import DbpediaQuery
 from google import GoogleQuery
 
 from pprint import pprint
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 eq = op.Equipment()
 #eq.loadAllCountries()
@@ -21,7 +24,7 @@ def getResourcesForUnit(id):
     if unit is None:
         return
 
-    print "Looking up unit %s (%s)" % (unit.name, unit.getFullName())
+    print "Looking up unit %d : %s (%s)" % (unit.id, unit.name, unit.getFullName())
 
     with db_session:
         o1 = OPPedia[unit.id]
@@ -163,7 +166,7 @@ def getResourcesForUnit(id):
 #getResourcesForUnit(536)
 #getResourcesForUnit(1769)
 #getResourcesForUnit(1860)
-#getResourcesForUnit(154)
+getResourcesForUnit(90)
 
-for id in eq.eq:
-    getResourcesForUnit(id)
+#for id in eq.eq:
+#    getResourcesForUnit(id)

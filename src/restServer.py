@@ -3,7 +3,7 @@ from pony.orm.integration.bottle_plugin import PonyPlugin
 from oppSql import *
 import openpanzer as op
 from util import *
-from src.oppRdf import *
+from oppRdf import *
 
 rdfdb = OppRdf()
 rdfdb.init()

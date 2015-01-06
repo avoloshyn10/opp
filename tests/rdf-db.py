@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
 from src.oppRdf import *
+from urllib import quote, unquote
+
 import rdflib
-#rdfdb = OppRdf("db")
-rdfdb = OppRdf()
+rdfdb = OppRdf("db")
+#rdfdb = OppRdf()
 rdfdb.init()
 print 'Triples in graph: ', len(rdfdb.g)
 
@@ -18,18 +21,22 @@ print 'Triples in graph: ', len(rdfdb.g)
 #print "Loading DBpedia M3_Stuart"
 #rdfdb.load("http://dbpedia.org/resource/M3_Stuart")
 
-resource = "http://dbpedia.org/resource/M4_Sherman"
-subject = rdflib.term.URIRef(resource)
+#resource = "http://dbpedia.org/resource/M4_Sherman"
+resource = "http://dbpedia.org/resource/Sturmgesch%25C3%25BCtz_III"
+resource = unquote(resource)
+#resource = u"http://dbpedia.org/resource/Sturmgeschütz_III"
+rdfdb.load(resource)
+
 
 #j = rdfdb.getAllFromResource(resource)
 #print j["results"]["bindings"]
 rdfdb.isWeapon(resource)
 
+#subject = rdflib.term.URIRef(resource)
 #rdfdb.g.preferredLabel(subject=subject, lang='en')
 #for triple in rdfdb.g.triples((subject, None, None)):
 #    print triple
 
-exit()
 print "Existing data:"
 
 query = """SELECT ?x ?label ?abstract
