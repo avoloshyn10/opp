@@ -1,6 +1,7 @@
 from rdflib import *
 from rdflib.store import NO_STORE, VALID_STORE
 import json
+from urllib import quote, unquote
 
 class OppRdf:
 
@@ -31,7 +32,7 @@ class OppRdf:
 
     def load(self, resource):
         try:
-            self.g.load(resource)
+            self.g.load(unquote(resource))
             print "... OK"
         except Exception, e:
             print "... FAILED " + resource + "  " + str(e)

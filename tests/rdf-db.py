@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 from src.oppRdf import *
 from urllib import quote, unquote
-
 import rdflib
+
+
+dumpData = False
+
 rdfdb = OppRdf("db")
 #rdfdb = OppRdf()
 rdfdb.init()
@@ -19,36 +22,55 @@ print 'Triples in graph: ', len(rdfdb.g)
 # print "Loading DBpedia Bishop artillery"
 # rdfdb.load("http://dbpedia.org/resource/Bishop_(artillery)")
 #print "Loading DBpedia M3_Stuart"
-#rdfdb.load("http://dbpedia.org/resource/M3_Stuart")
+resource = "http://dbpedia.org/resource/M3_Stuart"
 
 #resource = "http://dbpedia.org/resource/M4_Sherman"
-resource = "http://dbpedia.org/resource/Sturmgesch%25C3%25BCtz_III"
-resource = unquote(resource)
+#resource = "http://dbpedia.org/resource/Sturmgesch%25C3%25BCtz_III"
+#resource = unquote(resource)
 #resource = u"http://dbpedia.org/resource/Sturmgeschütz_III"
-rdfdb.load(resource)
+#rdfdb.load(resource)
 
 
 #j = rdfdb.getAllFromResource(resource)
 #print j["results"]["bindings"]
 rdfdb.isWeapon(resource)
 
+u = URIRef(resource)
+r = rdfdb.g.resource(u)
+
+for p, o in r.predicate_objects():
+    try:
+        print p,
+        print ".....",
+        if type(o) == rdflib.term.Literal:
+            if o.language is None or o.language == "en" or o.language == "":
+                print o
+            else:
+                print "lang = " + o.language
+        else:
+            print o
+    except Exception, e:
+        print "Error " + str(e)
+        pass
+
 #subject = rdflib.term.URIRef(resource)
 #rdfdb.g.preferredLabel(subject=subject, lang='en')
 #for triple in rdfdb.g.triples((subject, None, None)):
 #    print triple
 
-print "Existing data:"
+if dumpData:
+    print "Existing data:"
 
-query = """SELECT ?x ?label ?abstract
-    WHERE {
-        ?x dbo:abstract ?abstract;
-        rdfs:label ?label .
-        FILTER (LANG(?label) = 'en')
-        FILTER (LANG(?abstract) = 'en')
-    }"""
+    query = """SELECT ?x ?label ?abstract
+        WHERE {
+            ?x dbo:abstract ?abstract;
+            rdfs:label ?label .
+            FILTER (LANG(?label) = 'en')
+            FILTER (LANG(?abstract) = 'en')
+        }"""
 
-for x in list(rdfdb.g.query(OppRdf.PREFIX + query)):
-    print x
+    for x in list(rdfdb.g.query(OppRdf.PREFIX + query)):
+        print x
 
-print "Closing RDF DB"
+    print "Closing RDF DB"
 rdfdb.close()
