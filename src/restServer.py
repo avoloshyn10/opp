@@ -58,12 +58,57 @@ def show_unit(id):
 
 
     <br>
-    <a href="/units/{{ u.id }}/details/">Unit RDF details</a><br>
+    <a href="/units/{{ u.id }}/details/">Unit Details</a><br>
+    <a href="/units/{{ u.id }}/rdf/">Entire Unit RDF data</a><br>
     <a href="/units/{{ u.id }}/edit/">Edit unit resource</a><br>
     <a href="/units/">Return to all units</a><br>
     ''', u=u, unit=unit, searches=searches, unquoteUrl=unquoteUrl, thumbnail=thumbnail, abstract=abstract)
 
 @route('/units/:id/details/')
+def show_unit_details(id):
+
+    u = OPPedia[id]
+    unit = op.Unit(id, name=u.name, country=u.country, unitClass=u.unitClass)
+    rdfdata = json.dumps(rdfdb.getUnitDataFromResource(u.usedResourceSearch.foundResource), ensure_ascii=True)
+
+    return template('''
+    <script language="javascript">
+
+    function printUnitData(parsedJson, tableId, tableClassName, linkText)
+    {
+        var container = document.createElement('div');
+        for (var key in parsedJson)
+        {
+            var info = parsedJson[key];
+
+            console.log(key);
+
+            var name = info["name"];
+            var value = info["values"];
+
+            var news = document.getElementsByClassName("news-story")[0];
+
+            var div = document.createElement("div");
+            div.innerHTML = "<b>" + name + "</b> : " + value;
+            container.appendChild(div);
+        }
+
+        document.body.appendChild(container);
+    }
+    </script>
+    <h1>{{ u.name }}</h1>
+    <p>Country: {{ u.country }} - {{ unit.getCountryName() }}</p>
+    <p>Class: {{ u.unitClass }} - {{ unit.getClassName() }}</p>
+    <p>RDF Resource: <a href="{{ unquoteUrl(u.usedResourceSearch.foundResource)}}">{{ unquoteUrl(u.usedResourceSearch.foundResource)}}</a></p>
+    <p>RDF Resource found with: {{ u.usedResourceSearch.provider}}</p>
+    <script>printUnitData({{!rdfdata}}, "unitDataTable", null, "Link")</script>
+
+    <br>
+    <a href="/units/{{ u.id }}/edit/">Edit unit resource</a><br>
+    <a href="/units/">Return to all units</a><br>
+    ''', u=u, unit=unit,  unquoteUrl=unquoteUrl, rdfdata=rdfdata)
+
+@route('/units/:id/rdf/')
 def show_unit_details(id):
 
     u = OPPedia[id]

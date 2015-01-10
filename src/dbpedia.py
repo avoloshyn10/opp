@@ -1,4 +1,5 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
+from urllib import quote, unquote
 
 class DbpediaQuery:
 

@@ -1,5 +1,6 @@
 from rdflib import *
 from rdflib.store import NO_STORE, VALID_STORE
+from rdflib.resource import Resource
 import json
 from urllib import quote, unquote
 
@@ -40,12 +41,22 @@ class OppRdf:
 
         return True
 
+    def isResource(self, o):
+        return isinstance(o, Resource)
+
+    def isLiteral(self, o):
+        return isinstance(o, Literal)
+
     def isWeapon(self, resource):
         uri = URIRef(resource)
         weapon = URIRef('http://dbpedia.org/ontology/Weapon')
         ret = self.g.query("ASK {?uri a ?weapon}", initBindings={'uri': uri, 'weapon': weapon})
         print uri, "is a weapon?", ret.askAnswer
         return ret.askAnswer
+
+    def hasResource(self, resource):
+        uri = URIRef(resource)
+        return (uri, None, None) in self.g
 
     def getFromResource(self, resource, lang="en"):
         r = self.g.query(OppRdf.PREFIX + """
@@ -72,6 +83,52 @@ class OppRdf:
         """ % (resource))
         #FILTER(langMatches(lang(?o), "en") or LANG(?o) = "") #TODO: Filter breaks rdflib parsing
         return json.loads(r.serialize(format="json"))
+
+    def getUnitDataFromResource(self, resource, lang="en"):
+        u = URIRef(unquote(resource))
+        r = self.g.resource(u)
+
+        oppUnitData = {}
+
+        for p, o in r.predicate_objects():
+            try:
+                keyName = p.qname().split(":")[1]
+                name = keyName
+                value = None
+                if keyName == "sameAs" or keyName == "comment" or keyName == "type" or "wiki" in keyName:
+                        continue
+
+                if self.isResource(p) and self.hasResource(p):
+                    rr = self.g.resource(p)
+                    #name = p.value(RDFS.label) # There are multiple lables might return some other language
+                    name = self.g.preferredLabel(subject=URIRef(p), lang='en')[0][1].toPython()
+
+                if self.isLiteral(o):
+                    if o.language is None or o.language == "en" or o.language == "":
+                        value = o.toPython()
+                    #else:
+                    #    print "lang = " + o.language
+                elif self.isResource(o):
+                    value = URIRef(o).toPython()
+                else:
+                    value = o.qname()
+
+                if value is not None and keyName is not None:
+                    tmp = oppUnitData.get(keyName, None)
+                    if tmp is not None:
+                        tmp["values"].append(value)
+                    else:
+                        tmp = {}
+                        tmp["name"] = name
+                        tmp["values"] = [value]
+
+                    oppUnitData[keyName] = tmp
+
+            except Exception, e:
+                print "Error " + str(e)
+                pass
+
+        return oppUnitData
 
 
     def close(self):

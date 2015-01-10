@@ -6,7 +6,7 @@ from oppRdf import *
 import util
 from dbpedia import DbpediaQuery
 from google import GoogleQuery
-
+from urllib import quote, unquote
 from pprint import pprint
 import sys
 reload(sys)
@@ -52,15 +52,15 @@ def getResourcesForUnit(id):
     rg2 = qg.queryText(googleSpecificSearchString)
 
     if len(r) > 0:
-        linkDBpedia = r[0]
+        linkDBpedia = unquote(r[0])
 
     if len(rg) > 0:
         linkGoogle = rg[0]
-        resGoogle = util.wikiToDBpedia(linkGoogle)
+        resGoogle = unquote(util.wikiToDBpedia(linkGoogle))
 
     if len(rg2) > 0:
         linkGoogleSpecific = rg2[0]
-        resGoogleSpecific = util.wikiToDBpedia(linkGoogleSpecific)
+        resGoogleSpecific = unquote(util.wikiToDBpedia(linkGoogleSpecific))
 
     print "\t*DBpedia link: %s" % linkDBpedia # Won't find probably (for id 4 or other strange names)
     print "\t*Google suggested link: %s (%s)" % (resGoogle, linkGoogle) # Finds redirected resource but good one
@@ -166,7 +166,7 @@ def getResourcesForUnit(id):
 #getResourcesForUnit(536)
 #getResourcesForUnit(1769)
 #getResourcesForUnit(1860)
-getResourcesForUnit(90)
+#getResourcesForUnit(90)
 
-#for id in eq.eq:
-#    getResourcesForUnit(id)
+for id in eq.eq:
+    getResourcesForUnit(id)
