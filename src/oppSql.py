@@ -18,7 +18,7 @@ class ResourceSearch(db.Entity):
     oppediaUnit = Optional("OPPedia")
 
 class OPPedia(db.Entity):
-    id = PrimaryKey(int, auto=True)
+    id = PrimaryKey(int, auto=True) #TODO we actually want unit id from openpanzer unit json "db"
     name = Required(unicode)
     country = Required(int)
     unitClass = Required(int)
