@@ -15,6 +15,10 @@ class GoogleQuery:
             results = response.read()
             jsonData = json.loads(results)
             data = jsonData['responseData']
+
+            #if data is None:
+            #    return []
+
             hits = data['results']
             for h in hits:
                 urls.append(h['url'])

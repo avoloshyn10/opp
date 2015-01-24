@@ -43,8 +43,8 @@ def getResourcesForUnit(id):
     resGoogleSpecific = ""
 
     # Search strings
-    dbpediaSearchString = util.unitNameToRegex(unit.name)
-    googleSearchString = unit.name + " " + unit.getClassName()
+    dbpediaSearchString = util.unitNameToRegex(unit.getNicerName())
+    googleSearchString = unit.getNicerName() + " " + unit.getClassName()
     googleSpecificSearchString = unit.getFullName()
 
     q = DbpediaQuery()
@@ -162,16 +162,14 @@ def generateOfflineJSON(id, rdfdb, lang="en"):
 
     u = OPPedia[id]
     if u is None:
-        print "Resource not found in DB"
+        print "Unit %d not found in DB" % id
         return False
 
     rdfResource = u.usedResourceSearch.foundResource
 
     if rdfResource is None:
-        print "Resource not found in RDF DB"
+        print "Resource for unit %d not found in RDF DB" % id
         return False
-    else:
-        print "RDF Resource: %s" % rdfResource
 
     path = os.path.join(OFFLINE_JSON_DIR, str(u.country), str(u.unitClass))
 
@@ -198,6 +196,14 @@ def generateOfflineJSON(id, rdfdb, lang="en"):
 
     return True
 
+@db_session
+def offlineExportAll(rdfdb, lang="en"):
+     ids = select(u.id for u in OPPedia)[:]
+     for id in ids:
+         generateOfflineJSON(id, rdfdb, lang)
+
+
+
 #getResourcesForUnit(484)
 #getResourcesForUnit(378)
 #getResourcesForUnit(406)
@@ -214,8 +220,8 @@ def generateOfflineJSON(id, rdfdb, lang="en"):
 #for id in eq.eq:
 #    getResourcesForUnit(id)
 
-
 rdfdb = OppRdf()
 rdfdb.init()
-generateOfflineJSON(79, rdfdb)
+#generateOfflineJSON(79, rdfdb)
+offlineExportAll(rdfdb)
 rdfdb.close()

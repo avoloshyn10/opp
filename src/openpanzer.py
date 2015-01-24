@@ -1,4 +1,4 @@
-import os, json
+import os, json, re
 
 countryNames = [
     "All Countries",
@@ -53,6 +53,15 @@ class Unit:
 
     def getFullName(self):
         return self.getCountryName() + " " + self.name + " " + self.getClassName()
+
+    def getNicerName(self):
+        # Rule 1 replace Pz with Panzer
+        name = self.name.replace("Pz", "Panzer ")
+
+        # Rule 2 if class is infantry remove the year written in front of name
+        name = re.sub(r'^([0-9]{2}).*? ', '', name)
+
+        return name
 
 
 class Equipment:
