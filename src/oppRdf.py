@@ -95,8 +95,12 @@ class OppRdf:
                 keyName = p.qname().split(":")[1]
                 name = keyName
                 value = None
+                #TODO move to a dictionary
                 if keyName == "sameAs" or keyName == "comment" or keyName == "type" or "wiki" in keyName:
-                        continue
+                    continue
+
+                if keyName == "wasDerivedFrom" or keyName == "hasPhotoCollection" or keyName == "caption" or keyName == "depiction":
+                    continue
 
                 if self.isResource(p) and self.hasResource(p):
                     rr = self.g.resource(p)
@@ -129,7 +133,6 @@ class OppRdf:
                 pass
 
         return oppUnitData
-
 
     def close(self):
         self.g.close(commit_pending_transaction=True)
