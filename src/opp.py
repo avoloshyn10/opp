@@ -187,9 +187,15 @@ def generateOfflineJSON(id, rdfdb, lang="en"):
 
     jsonFileName = os.path.join(path, str(u.id) + ".json")
     print "Exporting to %s " % jsonFileName
+
+    # Fix export errors because it can't convert datatime
+    def customHandler(o):
+        return o.isoformat() if hasattr(o, 'isoformat') else o
+
     try:
         with open(jsonFileName, "w") as jsonFile:
-            json.dump(rdfData, jsonFile, sort_keys=True, ensure_ascii=True, indent=4)
+            json.dump(rdfData, jsonFile, sort_keys=True, ensure_ascii=True, indent=4, default=customHandler)
+
     except Exception, e:
         print "Cannot generate json %s" % str(e)
         return False
