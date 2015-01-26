@@ -25,6 +25,11 @@ Optional sistemul va pune la dispozitie o interfata publica pentru a completa sa
     sudo ln -sf /opt/local/lib/db51/ /opt/local/lib/db51/lib
     sudo BERKELEYDB_DIR=/opt/local/lib/db51 ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future easy_install bsddb3
 
+##Fix BerkeleyDB out of lock entries
+eureka3511:oppedia-rdf torp$ db51_verify __db.001 
+db51_verify: Lock table is out of available locker entries
+Segmentation fault: 11
+This crashes, but it does indeed lose all the locks :)
 
 ##Introductory presentation at:
 [SlideShare] (http://www.slideshare.net/nottorp/opp-archi)
