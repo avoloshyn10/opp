@@ -8,6 +8,7 @@ from dbpedia import DbpediaQuery
 from google import GoogleQuery
 from urllib import quote, unquote
 from pprint import pprint
+import time
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -46,6 +47,7 @@ def getResourcesForUnit(id):
 
     q = DbpediaQuery()
     qg = GoogleQuery()
+    # qg.asBrowser = True
 
     r = q.queryText(dbpediaSearchString)
     rg = qg.queryText(googleSearchString)
@@ -153,6 +155,9 @@ def getResourcesForUnit(id):
                 print "Cannot save unit to SQL DB"
 
     rdfdb.close()
+
+    print "Sleeping 10 seconds to not upset google"
+    time.sleep(10)
 
 
 #getResourcesForUnit(484)

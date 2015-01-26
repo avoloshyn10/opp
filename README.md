@@ -17,6 +17,7 @@ Optional sistemul va pune la dispozitie o interfata publica pentru a completa sa
     sudo easy_install SPARQLWrapper
     sudo easy_install pony
     sudo easy_install bottle
+    sudo easy_install beautifulsoup
 
 ##MacOS:
     sudo port install db51
