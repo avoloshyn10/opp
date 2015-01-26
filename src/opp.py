@@ -78,11 +78,10 @@ def createSqlUnit(unit, rdfdb):
         googleResult = searchRdfResource(googleSearch, provider=PROVIDER_GOOGLE)
     except:
         print "No google results and we want them. Aborting unit creation"
-        return False
+        return True
 
-    s1 = None
-    s2 = None
-
+    chosenResource = None
+    chosenResult = None
 
     if dbpediaResult is not None:
         url = dbpediaResult["resource"]
@@ -92,7 +91,6 @@ def createSqlUnit(unit, rdfdb):
             chosenResource = s1
         else:
             print "Cannot save RDF resource %s to DB" % url
-
 
     if googleResult is not None:
         url = googleResult["resource"]
@@ -140,7 +138,7 @@ def updateUnit(id, rdfdb):
 
     print "Unit %d already in DB" % id
 
-    return True
+    return False
 
 
 @db_session
@@ -199,8 +197,8 @@ rdfdb = OppRdf()
 rdfdb.init()
 
 for id in eq.eq:
-    updateUnit(id, rdfdb)
-    time.sleep(10)
+    if updateUnit(id, rdfdb):
+        time.sleep(10)
 
 
 #generateOfflineJSON(79, rdfdb)
