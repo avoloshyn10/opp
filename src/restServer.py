@@ -16,8 +16,6 @@ eq.loadCountry(8) # Germany
 
 gameUnits = eq.eq
 
-
-
 @route('/static/<filename:path>')
 def send_static(filename):
     return static_file(filename, root='../restclient/')
@@ -179,6 +177,10 @@ def show_unit_details(id):
 def show_unit_rdf(id):
 
     u = OPPedia[id]
+
+    if u is None:
+        return edit_unit(id)
+
     unit = op.Unit(id, name=u.name, country=u.country, unitClass=u.unitClass)
     rdfdata = json.dumps(rdfdb.getAllFromResource(u.usedResourceSearch.foundResource), ensure_ascii=True)
 
@@ -232,8 +234,12 @@ def show_unit_rdf(id):
     ''', u=u, unit=unit,  unquoteUrl=unquoteUrl, rdfdata=rdfdata)
 
 @route('/units/:id/edit/')
-def edit_units(id):
+def edit_unit(id):
     u = OPPedia[id]
+
+    if u is None:
+        u = gameUnits[int(id)]
+
     searches = select( s for s in ResourceSearch if s.unitId == id)
     return template('''
     <html>

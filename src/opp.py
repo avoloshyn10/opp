@@ -8,10 +8,12 @@ from dbpedia import DbpediaQuery
 from google import GoogleQuery
 from urllib import quote, unquote
 from pprint import pprint
-import time
-import sys
+import time,os, sys, errno
+
 reload(sys)
 sys.setdefaultencoding("utf-8")
+
+OFFLINE_JSON_DIR = "../oppedia-offline"
 
 eq = op.Equipment()
 #eq.loadAllCountries()
@@ -41,8 +43,8 @@ def getResourcesForUnit(id):
     resGoogleSpecific = ""
 
     # Search strings
-    dbpediaSearchString = util.unitNameToRegex(unit.name)
-    googleSearchString = unit.name + " " + unit.getClassName()
+    dbpediaSearchString = util.unitNameToRegex(unit.getNicerName())
+    googleSearchString = unit.getNicerName() + " " + unit.getClassName()
     googleSpecificSearchString = unit.getFullName()
 
     q = DbpediaQuery()
@@ -155,10 +157,60 @@ def getResourcesForUnit(id):
                 print "Cannot save unit to SQL DB"
 
     rdfdb.close()
-
     print "Sleeping 10 seconds to not upset google"
     time.sleep(10)
 
+
+@db_session
+def generateOfflineJSON(id, rdfdb, lang="en"):
+
+    u = OPPedia[id]
+    if u is None:
+        print "Unit %d not found in DB" % id
+        return False
+
+    rdfResource = u.usedResourceSearch.foundResource
+
+    if rdfResource is None:
+        print "Resource for unit %d not found in RDF DB" % id
+        return False
+
+    path = os.path.join(OFFLINE_JSON_DIR, str(u.country), str(u.unitClass))
+
+    try:
+        os.makedirs(path)
+    except os.error, e:
+        if e.errno == errno.EEXIST and os.path.isdir(path):
+            pass
+        else:
+            print "Cannot create complete path %s" % path
+            return False
+
+
+    rdfData = rdfdb.getUnitDataFromResource(rdfResource, lang)
+
+    jsonFileName = os.path.join(path, str(u.id) + ".json")
+    print "Exporting to %s " % jsonFileName
+
+    # Fix export errors because it can't convert datatime
+    def customHandler(o):
+        return o.isoformat() if hasattr(o, 'isoformat') else o
+
+    try:
+        with open(jsonFileName, "w") as jsonFile:
+            json.dump(rdfData, jsonFile, sort_keys=True, ensure_ascii=True, indent=4, default=customHandler)
+
+    except Exception, e:
+        print "Cannot generate json %s" % str(e)
+        return False
+
+    return True
+
+@db_session
+def offlineExportAll(rdfdb, lang="en"):
+     ids = select(u.id for u in OPPedia)[:]
+     for id in ids:
+         generateOfflineJSON(id, rdfdb, lang)
 
 #getResourcesForUnit(484)
 #getResourcesForUnit(378)
@@ -173,5 +225,11 @@ def getResourcesForUnit(id):
 #getResourcesForUnit(1860)
 #getResourcesForUnit(90)
 
-for id in eq.eq:
-    getResourcesForUnit(id)
+#for id in eq.eq:
+#    getResourcesForUnit(id)
+
+rdfdb = OppRdf()
+rdfdb.init()
+#generateOfflineJSON(79, rdfdb)
+offlineExportAll(rdfdb)
+rdfdb.close()
