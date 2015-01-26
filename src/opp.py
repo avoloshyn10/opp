@@ -88,6 +88,8 @@ def createSqlUnit(unit, rdfdb):
         url = dbpediaResult["resource"]
         if rdfdb.load(url):
             s1 = ResourceSearch(unitId = unit.id, provider = PROVIDER_DBPEDIA, searchString = dbpediaSearch, foundResource = url)
+            chosenResult = dbpediaResult
+            chosenResource = s1
         else:
             print "Cannot save RDF resource %s to DB" % url
 
@@ -96,15 +98,14 @@ def createSqlUnit(unit, rdfdb):
         url = googleResult["resource"]
         if rdfdb.load(url):
             s2 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE, searchString = googleSearch, foundResource = url)
+            chosenResult = googleResult
+            chosenResource = s2
         else:
             print "Cannot save RDF resource %s to DB" % url
 
-    chosenResult = googleResult
-    chosenResource = s2
-
-    if s2 is None:
-        chosenResult = dbpediaResult
-        chosenResource = s1
+    if chosenResource is None:
+        print "No resource saved to DB. Aborting unit creation"
+        return False
 
     try:
         u = OPPedia(id = unit.id, name = unit.name, country = unit.country, unitClass = unit.unitClass,
@@ -199,6 +200,7 @@ rdfdb.init()
 
 for id in eq.eq:
     updateUnit(id, rdfdb)
+    time.sleep(10)
 
 
 #generateOfflineJSON(79, rdfdb)
