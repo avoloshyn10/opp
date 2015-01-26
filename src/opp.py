@@ -68,7 +68,7 @@ def searchRdfResource(searchString, provider=PROVIDER_DBPEDIA):
 @db_session
 def createSqlUnit(unit, rdfdb):
 
-    print "Creating Unit %d" % unit.id
+    print "Creating Unit %s (%d)" % (unit.getFullName(), unit.id)
 
     dbpediaSearch = util.unitNameToRegex(unit.getNicerName())
     dbpediaResult = searchRdfResource(dbpediaSearch)
