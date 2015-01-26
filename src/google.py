@@ -21,7 +21,7 @@ class GoogleQuery:
             data = jsonData['responseData']
 
             #if data is None:
-            #    return []
+            #e    return []
 
             hits = data['results']
             for h in hits:

@@ -7,6 +7,7 @@ db = Database("sqlite", "../data/oppedia.sqlite", create_db=True)
 PROVIDER_DBPEDIA = "DBPEDIA"
 PROVIDER_GOOGLE = "GOOGLE"
 PROVIDER_GOOGLE_SPECIFIC = "GOOGLE SPECIFIC"
+PROVIDER_CUSTOM = "CUSTOM"
 
 class ResourceSearch(db.Entity):
     id = PrimaryKey(int, auto=True)
