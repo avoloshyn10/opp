@@ -17,6 +17,7 @@ class OppRdf:
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX dbo: <http://dbpedia.org/ontology/>
 """
+    ONTOLOGY = "http://dbpedia.org/ontology/"
 
     def __init__(self, rdfFolder = "../data/oppedia-rdf"):
         self.g = Graph("Sleepycat",  identifier="openpanzer")
@@ -30,6 +31,11 @@ class OppRdf:
             self.g.open(self.dbName, create=True)
         else:
             assert ret == VALID_STORE, 'The underlying store is corrupt'
+
+        if not self.hasResource(OppRdf.ONTOLOGY):
+            print "OppRdf: Ontology not found loading"
+            if not self.load(OppRdf.ONTOLOGY):
+                print "OppRdf: Failed to load Ontology"
 
     def load(self, resource):
         try:

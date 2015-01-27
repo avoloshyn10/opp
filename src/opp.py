@@ -5,7 +5,7 @@ from oppSql import *
 from oppRdf import *
 import util
 from dbpedia import DbpediaQuery
-from google import GoogleQuery
+from websearch import GoogleQuery, BingQuery
 from urllib import quote, unquote
 from pprint import pprint
 import time,os, sys, errno
@@ -21,144 +21,178 @@ eq.loadCountry(8) # Germany
 
 print "Loaded %d units" % len(eq.eq)
 
-def getResourcesForUnit(id):
+# Finds a RDF resource URL based on a search string and a search provider
+def searchRdfResource(searchString, provider=PROVIDER_DBPEDIA):
+
+    qdbpedia = DbpediaQuery()
+    qsearch = qdbpedia
+
+    if provider == PROVIDER_GOOGLE or provider == PROVIDER_GOOGLE_SPECIFIC:
+        qsearch = GoogleQuery()
+
+    if provider == PROVIDER_BING:
+        qsearch = BingQuery()
+
+    r = qsearch.queryText(searchString)
+
+    if len(r) == 0:
+        print "Query %s with provider %s returned no results" % (searchString, provider)
+        return None
+
+    if provider == PROVIDER_DBPEDIA:
+        rdfResource = unquote(r[0])
+    else:
+        rdfResource = util.wikiToDBpedia(r[0])
+
+    # Web search returned resource might be a DBpedia redirect
+    if provider != PROVIDER_DBPEDIA:
+        tmp = qdbpedia.getRealUri(rdfResource) # resolve dbpedia redirect
+        if tmp is not None:
+            rdfResource = tmp
+            print "Resolved resource redirect to %s" % rdfResource
+
+    if rdfResource == "":
+        print "Empty resource returned"
+        return None
+
+    rdfData = qdbpedia.getFromResource(rdfResource)
+
+    if len(rdfData) == 0:
+        print "No DBpedia data for %s resource" % rdfResource
+        return None
+
+    label = rdfData[0]["label"]["value"]
+    print "Provider %s found label %s for resource %s" % (provider, label, rdfResource)
+
+    return { "label": label, "resource": rdfResource }
+
+@db_session
+def createSqlResourceSearch(unitId, searchString, rdfdb, provider=PROVIDER_DBPEDIA):
+
+    s = None
+
+    result = searchRdfResource(searchString, provider)
+    if result is not None:
+        url = result["resource"]
+        if rdfdb.load(url):
+            s = ResourceSearch(unitId = unitId, provider = provider, searchString = searchString, foundResource = url)
+            commit()
+            if s is None:
+                return None
+        else:
+            print "Cannot save RDF resource %s to DB" % url
+            return None
+
+        return { "sqlResource": s, "searchResult": result }
+
+    return None
+
+
+@db_session
+def createSqlUnit(unit, rdfdb):
+
+    print "Creating Unit %s (%d)" % (unit.getFullName(), unit.id)
+
+    dbpediaSearch = util.unitNameToRegex(unit.getNicerName())
+    webSearch = unit.getNicerName() + " " + unit.getClassName()
+
+    dbpediaResult = createSqlResourceSearch(unit.id, dbpediaSearch, rdfdb, provider=PROVIDER_DBPEDIA)
+
+    try:
+        webResult = createSqlResourceSearch(unit.id, webSearch, rdfdb, provider=PROVIDER_GOOGLE)
+    except:
+        print "No Google results, trying Bing"
+        try:
+            webResult = createSqlResourceSearch(unit.id, webSearch, rdfdb, provider=PROVIDER_BING)
+        except:
+            print "No Web search results. Aborting unit creation"
+            return True
+
+    chosenResource = None
+    chosenResult = None
+
+    if dbpediaResult is not None:
+        chosenResult = dbpediaResult["searchResult"]
+        chosenResource = dbpediaResult["sqlResource"]
+
+    # Prefer google result
+    if webResult is not None:
+        chosenResult = webResult["searchResult"]
+        chosenResource = webResult["sqlResource"]
+
+    if chosenResource is None:
+        print "No resource saved to DB. Aborting unit creation"
+        return False
+
+    try:
+        u = OPPedia(id = unit.id, name = unit.name, country = unit.country, unitClass = unit.unitClass,
+                    usedResourceSearch=chosenResource,
+                    rdfStoredLabel = chosenResult["label"],
+                    rdfStoredResource = chosenResult["resource"])
+        commit()
+
+    except:
+        print "Cannot save unit to SQL DB"
+        return False
+
+    return True
+
+
+@db_session
+def updateUnit(id, rdfdb):
     unit = eq.getUnit(id)
 
     if unit is None:
-        return
+        print "Unit %d not found in game db" % id
+        return False
 
-    print "Looking up unit %d : %s (%s)" % (unit.id, unit.name, unit.getFullName())
+    sqlUnit = OPPedia[id]
 
-    with db_session:
-        o1 = OPPedia[unit.id]
-        if not o1 is None:
-            print "Resource already in DB updating not supported"
-            return
+    if sqlUnit is None:
+        return createSqlUnit(unit, rdfdb)
 
-    linkDBpedia = ""  # query will return direct link to dbpedia resource
-    linkGoogle = ""  # query will return a wikipedia link
-    linkGoogleSpecific = ""  # query will return a wikipedia link
+    print "Updating Unit %s (%d)" % (unit.getFullName(), unit.id)
 
-    resGoogle = ""
-    resGoogleSpecific = ""
+    sqlRes = sqlUnit.usedResourceSearch
+    foundRes = None
 
-    # Search strings
-    dbpediaSearchString = util.unitNameToRegex(unit.getNicerName())
-    googleSearchString = unit.getNicerName() + " " + unit.getClassName()
-    googleSpecificSearchString = unit.getFullName()
+    if  sqlRes is not None:
+        foundRes = sqlUnit.usedResourceSearch.foundResource
 
-    q = DbpediaQuery()
-    qg = GoogleQuery()
-    # qg.asBrowser = True
+    if sqlUnit.forceRefresh:
+        # This means that user set a custom resource URL to be loaded
+        if sqlUnit.rdfStoredResource is not None and sqlUnit.rdfStoredResource != foundRes:
+            print "Unit %s (%d) forced refresh" % (unit.getFullName(), id)
+            if rdfdb.load(sqlUnit.rdfStoredResource):
+                s = ResourceSearch(unitId = unit.id, provider = PROVIDER_CUSTOM, searchString = unit.getNicerName(), foundResource = sqlUnit.rdfStoredResource)
+                sqlUnit.usedResourceSearch = s
+                sqlUnit.forceRefresh = False
+            else:
+                print "Cannot refresh PROVIDER_CUSTOM resource %s" % sqlUnit.rdfStoredResource
+                return False
 
-    r = q.queryText(dbpediaSearchString)
-    rg = qg.queryText(googleSearchString)
-    rg2 = qg.queryText(googleSpecificSearchString)
-
-    if len(r) > 0:
-        linkDBpedia = unquote(r[0])
-
-    if len(rg) > 0:
-        linkGoogle = rg[0]
-        resGoogle = unquote(util.wikiToDBpedia(linkGoogle))
-
-    if len(rg2) > 0:
-        linkGoogleSpecific = rg2[0]
-        resGoogleSpecific = unquote(util.wikiToDBpedia(linkGoogleSpecific))
-
-    print "\t*DBpedia link: %s" % linkDBpedia # Won't find probably (for id 4 or other strange names)
-    print "\t*Google suggested link: %s (%s)" % (resGoogle, linkGoogle) # Finds redirected resource but good one
-    print "\t*Google specific suggested link: %s (%s)" % (resGoogleSpecific, linkGoogleSpecific) # Finds close resource but imo not correct
-
-    tmp = q.getRealUri(resGoogle) # resolve dbpedia redirect
-    if not tmp is None:
-        resGoogle = tmp
-        print "\t*Google suggested link real link: %s" % resGoogle
-
-    # resource labels
-    label1 = ""
-    label2 = ""
-    label3 = ""
-
-    rdfdb = OppRdf()
-    rdfdb.init()
-
-    if linkDBpedia != "":
-        print "\t -Retrieve DBpedia link"
-        data1 = q.getFromResource(linkDBpedia)
-        if len(data1) > 0:
-            #util.dumpCommonData(data1)
-            label1 = data1[0]["label"]["value"]
-            print "\t >RDF DB Save DBpedia data",
-            rdfdb.load(linkDBpedia)
+    # No found resource retry search and update unit if possible
+    if foundRes is None and sqlRes is not None:
+        print "Unit %s (%d) has a resource without search results, refreshing" % (unit.getFullName(), id)
+        result = createSqlResourceSearch(id, sqlRes.searchString, rdfdb, sqlRes.provider)
+        if result is not None:
+            sqlUnit.rdfStoredResource = result["searchResult"]["resource"]
+            sqlUnit.rdfStoredLabel = result["searchResult"]["label"]
+            sqlUnit.usedResourceSearch = result["sqlResource"]
         else:
-            linkDBpedia = ""
-            print "\t  ?Non-existing DBpedia page skiping"
+            print "Cannot refresh unit search"
+            return False
 
-    if resGoogle != "":
-        print "\t -Retrieve Google link"
-        data2 = q.getFromResource(resGoogle)
-        if len(data2) > 0:
-            #util.dumpCommonData(data2)
-            print "\t >RDF DB Save Google data",
-            label2 = data2[0]["label"]["value"]
-            rdfdb.load(resGoogle)
-        else:
-            resGoogle = ""
-            print "\t  ?Non-existing DBpedia page skiping"
+    # TODO the case when unit has no google search results (to retry google)
 
-    if resGoogleSpecific != "":
-        print "\t -Retrieve Google Specific link"
-        data3 = q.getFromResource(resGoogleSpecific)
-        if len(data3) > 0:
-            #util.dumpCommonData(data3)
-            print "\t >RDF DB Save Google Specific data",
-            label3 = data3[0]["label"]["value"]
-            rdfdb.load(resGoogleSpecific)
-        else:
-            resGoogleSpecific = ""
-            print "\t  ?Non-existing DBpedia page skiping"
+    # Has a resource but does it have RDF data ?
+    if foundRes is not None:
+        if not rdfdb.hasResource(foundRes):
+            print "Unit %s (%d) has a resource without rdf data, refreshing" % (unit.getFullName(), id)
+            if not rdfdb.load(foundRes):
+                return False
 
-
-    bestResource = resGoogle
-    label = label2
-    provider = PROVIDER_GOOGLE
-
-    if bestResource == "":
-        bestResource = resGoogleSpecific
-        provider = PROVIDER_GOOGLE_SPECIFIC
-        label = label3
-
-    if bestResource == "":
-        bestResource = linkDBpedia
-        provider = PROVIDER_DBPEDIA
-        label = label1
-
-    if bestResource == "":
-        print "Not found on DBpedia !"
-        return
-
-    with db_session:
-        o1 = OPPedia[unit.id]
-
-        if o1 is None:
-            try:
-                s1 = ResourceSearch(unitId = unit.id, provider = PROVIDER_DBPEDIA, searchString = dbpediaSearchString, foundResource = linkDBpedia)
-                s2 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE, searchString = googleSearchString, foundResource = resGoogle)
-                s3 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE_SPECIFIC, searchString = googleSpecificSearchString, foundResource = resGoogleSpecific)
-                usedResource = s2
-                if provider == PROVIDER_GOOGLE_SPECIFIC:
-                    usedResource = s3
-                elif provider == PROVIDER_DBPEDIA:
-                    usedResource = s1
-
-                o1 = OPPedia(id = unit.id, name = unit.name, country = unit.country, unitClass = unit.unitClass, usedResourceSearch=usedResource, rdfStoredLabel = label, rdfStoredResource = bestResource)
-            except:
-                print "Cannot save unit to SQL DB"
-
-    rdfdb.close()
-    print "Sleeping 10 seconds to not upset google"
-    time.sleep(10)
+    return True
 
 
 @db_session
@@ -212,24 +246,14 @@ def offlineExportAll(rdfdb, lang="en"):
      for id in ids:
          generateOfflineJSON(id, rdfdb, lang)
 
-#getResourcesForUnit(484)
-#getResourcesForUnit(378)
-#getResourcesForUnit(406)
-#getResourcesForUnit(515)
-#getResourcesForUnit(521)
-#getResourcesForUnit(137)
-#getResourcesForUnit(138)
-#getResourcesForUnit(525)
-#getResourcesForUnit(536)
-#getResourcesForUnit(1769)
-#getResourcesForUnit(1860)
-#getResourcesForUnit(90)
-
-#for id in eq.eq:
-#    getResourcesForUnit(id)
 
 rdfdb = OppRdf()
 rdfdb.init()
+
+for id in eq.eq:
+    if updateUnit(id, rdfdb):
+        time.sleep(1)
+
 #generateOfflineJSON(79, rdfdb)
 offlineExportAll(rdfdb)
 rdfdb.close()
