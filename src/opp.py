@@ -5,7 +5,7 @@ from oppSql import *
 from oppRdf import *
 import util
 from dbpedia import DbpediaQuery
-from google import GoogleQuery
+from websearch import GoogleQuery, BingQuery
 from urllib import quote, unquote
 from pprint import pprint
 import time,os, sys, errno
@@ -43,7 +43,7 @@ def searchRdfResource(searchString, provider=PROVIDER_DBPEDIA):
     else:
         rdfResource = util.wikiToDBpedia(r[0])
 
-    # Google returned resource might be a DBpedia redirect
+    # Web search returned resource might be a DBpedia redirect
     if provider != PROVIDER_DBPEDIA:
         tmp = qdbpedia.getRealUri(rdfResource) # resolve dbpedia redirect
         if tmp is not None:
@@ -93,15 +93,19 @@ def createSqlUnit(unit, rdfdb):
     print "Creating Unit %s (%d)" % (unit.getFullName(), unit.id)
 
     dbpediaSearch = util.unitNameToRegex(unit.getNicerName())
-    googleSearch = unit.getNicerName() + " " + unit.getClassName()
+    webSearch = unit.getNicerName() + " " + unit.getClassName()
 
     dbpediaResult = createSqlResourceSearch(unit.id, dbpediaSearch, rdfdb, provider=PROVIDER_DBPEDIA)
 
     try:
-        googleResult = createSqlResourceSearch(unit.id, googleSearch, rdfdb, provider=PROVIDER_GOOGLE)
+        webResult = createSqlResourceSearch(unit.id, webSearch, rdfdb, provider=PROVIDER_GOOGLE)
     except:
-        print "No google results and we want them. Aborting unit creation"
-        return True
+        print "No Google results, trying Bing"
+        try:
+            webResult = createSqlResourceSearch(unit.id, webSearch, rdfdb, provider=PROVIDER_BING)
+        except:
+            print "No Web search results. Aborting unit creation"
+            return True
 
     chosenResource = None
     chosenResult = None
@@ -111,9 +115,9 @@ def createSqlUnit(unit, rdfdb):
         chosenResource = dbpediaResult["sqlResource"]
 
     # Prefer google result
-    if googleResult is not None:
-        chosenResult = googleResult["searchResult"]
-        chosenResource = googleResult["sqlResource"]
+    if webResult is not None:
+        chosenResult = webResult["searchResult"]
+        chosenResource = webResult["sqlResource"]
 
     if chosenResource is None:
         print "No resource saved to DB. Aborting unit creation"
@@ -145,6 +149,8 @@ def updateUnit(id, rdfdb):
 
     if sqlUnit is None:
         return createSqlUnit(unit, rdfdb)
+
+    print "Updating Unit %s (%d)" % (unit.getFullName(), unit.id)
 
     sqlRes = sqlUnit.usedResourceSearch
     foundRes = None
@@ -244,7 +250,7 @@ rdfdb.init()
 
 for id in eq.eq:
     if updateUnit(id, rdfdb):
-        time.sleep(10)
+        time.sleep(1)
 
 
 #generateOfflineJSON(79, rdfdb)
