@@ -108,6 +108,9 @@ class OppRdf:
                 if keyName == "wasDerivedFrom" or keyName == "hasPhotoCollection" or keyName == "caption" or keyName == "depiction":
                     continue
 
+                if keyName == "wordnet_type" or keyName == "isPrimaryTopicOf" or keyName == "subject":
+                    continue
+
                 if self.isResource(p) and self.hasResource(p):
                     rr = self.g.resource(p)
                     #name = p.value(RDFS.label) # There are multiple lables might return some other language
