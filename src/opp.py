@@ -166,6 +166,7 @@ def updateUnit(id, rdfdb):
             if rdfdb.load(sqlUnit.rdfStoredResource):
                 s = ResourceSearch(unitId = unit.id, provider = PROVIDER_CUSTOM, searchString = unit.getNicerName(), foundResource = sqlUnit.rdfStoredResource)
                 sqlUnit.usedResourceSearch = s
+                sqlUnit.forceRefresh = False
             else:
                 print "Cannot refresh PROVIDER_CUSTOM resource %s" % sqlUnit.rdfStoredResource
                 return False
@@ -253,7 +254,6 @@ for id in eq.eq:
     if updateUnit(id, rdfdb):
         time.sleep(1)
 
-
 #generateOfflineJSON(79, rdfdb)
-#offlineExportAll(rdfdb)
+offlineExportAll(rdfdb)
 rdfdb.close()
