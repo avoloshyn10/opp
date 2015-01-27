@@ -25,12 +25,13 @@ print "Loaded %d units" % len(eq.eq)
 def searchRdfResource(searchString, provider=PROVIDER_DBPEDIA):
 
     qdbpedia = DbpediaQuery()
-    qgoogle = GoogleQuery()
-
     qsearch = qdbpedia
 
-    if provider != PROVIDER_DBPEDIA:
-        qsearch = qgoogle
+    if provider == PROVIDER_GOOGLE or provider == PROVIDER_GOOGLE_SPECIFIC:
+        qsearch = GoogleQuery()
+
+    if provider == PROVIDER_BING:
+        qsearch = BingQuery()
 
     r = qsearch.queryText(searchString)
 
