@@ -4,6 +4,8 @@ from oppSql import *
 import openpanzer as op
 from util import *
 from oppRdf import *
+from threading import Thread
+from rest_work_thread import reqs, work
 
 rdfdb = OppRdf()
 rdfdb.init()
@@ -254,14 +256,14 @@ def edit_unit(id):
         <label for="unitName">Unit Name</label>
         <input id="unitName" class="form-control" type="text" value="{{u.name}}" disabled>
         <label for="querySelect">Select Existing Query</label><br>
-        <select id="querySelect">
+        <select id="querySelect" name="querySelect">
             %for s in searches:
                 <option value="{{s.id}}">{{ s.foundResource}}</option>
             %end
         </select>
         <br><b>or</b><br>
         <label for="resourceCreate">Add and Select a new resource</label>
-        <input id="resourceCreate" class="form-control" type="text" placeHolder="dbpedia.org url">
+        <input id="resourceCreate" name="resourceCreate" class="form-control" type="text" placeHolder="dbpedia.org url">
         <p class="help-block">If filled it will set the unit resource to corresponding URL and retrieve new RDF data </p>
 
         <label><input type="checkbox" name="forceRefresh" id="forceRefresh" checked> Force RDF data refresh</label>
@@ -277,9 +279,35 @@ def edit_unit(id):
 
 @route('/units/:id/edit/', method='POST')
 def save_unit(id):
+    modified = False
     u = OPPedia[id]
-    u.forceRefresh = request.forms.get("forceRefresh") or False
+    forceRefresh = request.forms.get('forceRefresh') or False
+    if forceRefresh:
+        modified = True
+        u.forceRefresh = forceRefresh
+    rdfStoredResource = request.forms.get('resourceCreate')
+    if len(rdfStoredResource) > 0 and u.rdfStoredResource != rdfStoredResource:
+        modified = True
+        u.rdfStoredResource = rdfStoredResource
+        u.forceRefresh = True
+    querySelect = int(request.forms.get('querySelect'))
+    if querySelect != u.usedResourceSearch.id:
+        modified = True
+        u.usedResourceSearch = get(s for s in ResourceSearch if s.unitId == id and s.id == querySelect)
+    # if u.forceRefresh:
+        # TODO pass to http thread
     redirect("/units/%d/" % u.id)
 
-run(debug=True, host='localhost', port=8080, reloader=True)
+@route('/test/addtoqueue', method='GET')
+def add_to_queue():
+    reqs.put("A request")
+    return """
+        <html><body>Cucu</body></html>
+    """
+
+worker = Thread(None, work, (), {})
+worker.daemon = True # Die with main thread
+worker.start()
+
+run(debug=True, host='localhost', port=8080, reloader=False)
 rdfdb.close()
