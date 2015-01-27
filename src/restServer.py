@@ -21,6 +21,10 @@ eq.loadCountry(8) # Germany
 
 gameUnits = eq.eq
 
+# Fix export errors because it can't convert datatime
+def customHandler(o):
+    return o.isoformat() if hasattr(o, 'isoformat') else o
+
 @route('/static/<filename:path>')
 def send_static(filename):
     return static_file(filename, root='../restclient/')
@@ -136,7 +140,7 @@ def show_unit_details(id):
 
     u = OPPedia[id]
     unit = op.Unit(id, name=u.name, country=u.country, unitClass=u.unitClass)
-    rdfdata = json.dumps(rdfdb.getUnitDataFromResource(u.usedResourceSearch.foundResource), ensure_ascii=True)
+    rdfdata = json.dumps(rdfdb.getUnitDataFromResource(u.usedResourceSearch.foundResource), ensure_ascii=True, default=customHandler)
 
     return template('''
     <html>
@@ -187,7 +191,7 @@ def show_unit_rdf(id):
         return edit_unit(id)
 
     unit = op.Unit(id, name=u.name, country=u.country, unitClass=u.unitClass)
-    rdfdata = json.dumps(rdfdb.getAllFromResource(u.usedResourceSearch.foundResource), ensure_ascii=True)
+    rdfdata = json.dumps(rdfdb.getAllFromResource(u.usedResourceSearch.foundResource), ensure_ascii=True, default=customHandler)
 
     return template('''
     <html>
