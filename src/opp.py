@@ -33,6 +33,7 @@ def searchRdfResource(searchString, provider=PROVIDER_DBPEDIA):
     if provider == PROVIDER_BING:
         qsearch = BingQuery()
 
+    print "Searching %s with provider %s" % (searchString, provider)
     r = qsearch.queryText(searchString)
 
     if len(r) == 0:
@@ -91,22 +92,32 @@ def createSqlResourceSearch(unitId, searchString, rdfdb, provider=PROVIDER_DBPED
 @db_session
 def createSqlUnit(unit, rdfdb):
 
-    print "Creating Unit %s (%d)" % (unit.getFullName(), unit.id)
+    print "* Creating Unit %s (%d)" % (unit.getFullName(), unit.id)
 
     dbpediaSearch = util.unitNameToRegex(unit.getNicerName())
     webSearch = unit.getNicerName() + " " + unit.getClassName()
+    webFound = False
 
     dbpediaResult = createSqlResourceSearch(unit.id, dbpediaSearch, rdfdb, provider=PROVIDER_DBPEDIA)
 
     try:
         webResult = createSqlResourceSearch(unit.id, webSearch, rdfdb, provider=PROVIDER_GOOGLE)
+        webFound = webResult is not None
     except:
-        print "No Google results, trying Bing"
+        print "Google error ! Trying Bing"
+
+    if not webFound:
         try:
             webResult = createSqlResourceSearch(unit.id, webSearch, rdfdb, provider=PROVIDER_BING)
+            webFound = webResult is not None
         except:
-            print "No Web search results. Aborting unit creation"
-            return True
+            print "Bing error ! No Web search results. Aborting unit creation"
+            return False
+
+    if not webFound:
+        print "No Web search results. Aborting unit creation"
+        return False
+
 
     chosenResource = None
     chosenResult = None
@@ -151,7 +162,7 @@ def updateUnit(id, rdfdb):
     if sqlUnit is None:
         return createSqlUnit(unit, rdfdb)
 
-    print "Updating Unit %s (%d)" % (unit.getFullName(), unit.id)
+    print "* Updating Unit %s (%d)" % (unit.getFullName(), unit.id)
 
     sqlRes = sqlUnit.usedResourceSearch
     foundRes = None
@@ -167,6 +178,7 @@ def updateUnit(id, rdfdb):
                 s = ResourceSearch(unitId = unit.id, provider = PROVIDER_CUSTOM, searchString = unit.getNicerName(), foundResource = sqlUnit.rdfStoredResource)
                 sqlUnit.usedResourceSearch = s
                 sqlUnit.forceRefresh = False
+                commit()
             else:
                 print "Cannot refresh PROVIDER_CUSTOM resource %s" % sqlUnit.rdfStoredResource
                 return False
@@ -179,6 +191,7 @@ def updateUnit(id, rdfdb):
             sqlUnit.rdfStoredResource = result["searchResult"]["resource"]
             sqlUnit.rdfStoredLabel = result["searchResult"]["label"]
             sqlUnit.usedResourceSearch = result["sqlResource"]
+            commit()
         else:
             print "Cannot refresh unit search"
             return False
