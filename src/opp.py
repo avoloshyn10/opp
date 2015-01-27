@@ -66,16 +66,39 @@ def searchRdfResource(searchString, provider=PROVIDER_DBPEDIA):
     return { "label": label, "resource": rdfResource }
 
 @db_session
+def createSqlResourceSearch(unitId, searchString, rdfdb, provider=PROVIDER_DBPEDIA):
+
+    s = None
+
+    result = searchRdfResource(searchString, provider)
+    if result is not None:
+        url = result["resource"]
+        if rdfdb.load(url):
+            s = ResourceSearch(unitId = unitId, provider = provider, searchString = searchString, foundResource = url)
+            commit()
+            if s is None:
+                return None
+        else:
+            print "Cannot save RDF resource %s to DB" % url
+            return None
+
+        return { "sqlResource": s, "searchResult": result }
+
+    return None
+
+
+@db_session
 def createSqlUnit(unit, rdfdb):
 
     print "Creating Unit %s (%d)" % (unit.getFullName(), unit.id)
 
     dbpediaSearch = util.unitNameToRegex(unit.getNicerName())
-    dbpediaResult = searchRdfResource(dbpediaSearch)
-
     googleSearch = unit.getNicerName() + " " + unit.getClassName()
+
+    dbpediaResult = createSqlResourceSearch(unit.id, dbpediaSearch, rdfdb, provider=PROVIDER_DBPEDIA)
+
     try:
-        googleResult = searchRdfResource(googleSearch, provider=PROVIDER_GOOGLE)
+        googleResult = createSqlResourceSearch(unit.id, googleSearch, rdfdb, provider=PROVIDER_GOOGLE)
     except:
         print "No google results and we want them. Aborting unit creation"
         return True
@@ -84,22 +107,13 @@ def createSqlUnit(unit, rdfdb):
     chosenResult = None
 
     if dbpediaResult is not None:
-        url = dbpediaResult["resource"]
-        if rdfdb.load(url):
-            s1 = ResourceSearch(unitId = unit.id, provider = PROVIDER_DBPEDIA, searchString = dbpediaSearch, foundResource = url)
-            chosenResult = dbpediaResult
-            chosenResource = s1
-        else:
-            print "Cannot save RDF resource %s to DB" % url
+        chosenResult = dbpediaResult["searchResult"]
+        chosenResource = dbpediaResult["sqlResource"]
 
+    # Prefer google result
     if googleResult is not None:
-        url = googleResult["resource"]
-        if rdfdb.load(url):
-            s2 = ResourceSearch(unitId = unit.id, provider = PROVIDER_GOOGLE, searchString = googleSearch, foundResource = url)
-            chosenResult = googleResult
-            chosenResource = s2
-        else:
-            print "Cannot save RDF resource %s to DB" % url
+        chosenResult = googleResult["searchResult"]
+        chosenResource = googleResult["sqlResource"]
 
     if chosenResource is None:
         print "No resource saved to DB. Aborting unit creation"
@@ -110,22 +124,18 @@ def createSqlUnit(unit, rdfdb):
                     usedResourceSearch=chosenResource,
                     rdfStoredLabel = chosenResult["label"],
                     rdfStoredResource = chosenResult["resource"])
-
         commit()
 
     except:
         print "Cannot save unit to SQL DB"
         return False
 
-
     return True
-
 
 
 @db_session
 def updateUnit(id, rdfdb):
     unit = eq.getUnit(id)
-
 
     if unit is None:
         print "Unit %d not found in game db" % id
@@ -136,9 +146,45 @@ def updateUnit(id, rdfdb):
     if sqlUnit is None:
         return createSqlUnit(unit, rdfdb)
 
-    print "Unit %d already in DB" % id
+    sqlRes = sqlUnit.usedResourceSearch
+    foundRes = None
 
-    return False
+    if  sqlRes is not None:
+        foundRes = sqlUnit.usedResourceSearch.foundResource
+
+    if sqlUnit.forceRefresh:
+        # This means that user set a custom resource URL to be loaded
+        if sqlUnit.rdfStoredResource is not None and sqlUnit.rdfStoredResource != foundRes:
+            print "Unit %s (%d) forced refresh" % (unit.getFullName(), id)
+            if rdfdb.load(sqlUnit.rdfStoredResource):
+                s = ResourceSearch(unitId = unit.id, provider = PROVIDER_CUSTOM, searchString = unit.getNicerName(), foundResource = sqlUnit.rdfStoredResource)
+                sqlUnit.usedResourceSearch = s
+            else:
+                print "Cannot refresh PROVIDER_CUSTOM resource %s" % sqlUnit.rdfStoredResource
+                return False
+
+    # No found resource retry search and update unit if possible
+    if foundRes is None and sqlRes is not None:
+        print "Unit %s (%d) has a resource without search results, refreshing" % (unit.getFullName(), id)
+        result = createSqlResourceSearch(id, sqlRes.searchString, rdfdb, sqlRes.provider)
+        if result is not None:
+            sqlUnit.rdfStoredResource = result["searchResult"]["resource"]
+            sqlUnit.rdfStoredLabel = result["searchResult"]["label"]
+            sqlUnit.usedResourceSearch = result["sqlResource"]
+        else:
+            print "Cannot refresh unit search"
+            return False
+
+    # TODO the case when unit has no google search results (to retry google)
+
+    # Has a resource but does it have RDF data ?
+    if foundRes is not None:
+        if not rdfdb.hasResource(foundRes):
+            print "Unit %s (%d) has a resource without rdf data, refreshing" % (unit.getFullName(), id)
+            if not rdfdb.load(foundRes):
+                return False
+
+    return True
 
 
 @db_session
