@@ -5,7 +5,8 @@ import openpanzer as op
 from util import *
 from oppRdf import *
 from threading import Thread
-from rest_work_thread import reqs, work
+import rest_work_thread as wt
+
 
 rdfdb = OppRdf()
 rdfdb.init()
@@ -14,6 +15,8 @@ install(PonyPlugin())
 
 eq = op.Equipment()
 #eq.loadAllCountries()
+
+
 eq.loadCountry(8) # Germany
 
 gameUnits = eq.eq
@@ -294,18 +297,18 @@ def save_unit(id):
     if querySelect != u.usedResourceSearch.id:
         modified = True
         u.usedResourceSearch = get(s for s in ResourceSearch if s.unitId == id and s.id == querySelect)
-    # if u.forceRefresh:
-        # TODO pass to http thread
+    if u.forceRefresh:
+        wt.reqs.put((wt.REQ_UPDATE_UNIT, u, rdfdb, eq)) # TUPLE!
     redirect("/units/%d/" % u.id)
 
 @route('/test/addtoqueue', method='GET')
 def add_to_queue():
-    reqs.put("A request")
+    wt.reqs.put((wt.REQ_NONE, None, None, None))
     return """
         <html><body>Cucu</body></html>
     """
 
-worker = Thread(None, work, (), {})
+worker = Thread(None, wt.work, (), {})
 worker.daemon = True # Die with main thread
 worker.start()
 

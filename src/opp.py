@@ -15,11 +15,13 @@ sys.setdefaultencoding("utf-8")
 
 OFFLINE_JSON_DIR = "../oppedia-offline"
 
-eq = op.Equipment()
-#eq.loadAllCountries()
-eq.loadCountry(8) # Germany
-
-print "Loaded %d units" % len(eq.eq)
+if __name__ == "__main__":
+    
+    eq = op.Equipment()
+    #eq.loadAllCountries()
+    eq.loadCountry(8) # Germany
+    
+    print "Loaded %d units" % len(eq.eq)
 
 # Finds a RDF resource URL based on a search string and a search provider
 def searchRdfResource(searchString, provider=PROVIDER_DBPEDIA):
@@ -150,8 +152,11 @@ def createSqlUnit(unit, rdfdb):
 
 
 @db_session
-def updateUnit(id, rdfdb):
-    unit = eq.getUnit(id)
+def updateUnit(id, rdfdb, eqlist = None):
+    if eqlist != None:
+        unit = eqlist.getUnit(id)
+    else:            
+        unit = eq.getUnit(id)
 
     if unit is None:
         print "Unit %d not found in game db" % id
@@ -260,13 +265,15 @@ def offlineExportAll(rdfdb, lang="en"):
          generateOfflineJSON(id, rdfdb, lang)
 
 
-rdfdb = OppRdf()
-rdfdb.init()
-
-for id in eq.eq:
-    if updateUnit(id, rdfdb):
-        time.sleep(1)
-
-#generateOfflineJSON(79, rdfdb)
-offlineExportAll(rdfdb)
-rdfdb.close()
+if __name__ == "__main__":
+    
+    rdfdb = OppRdf()
+    rdfdb.init()
+    
+    for id in eq.eq:
+        if updateUnit(id, rdfdb):
+            time.sleep(1)
+    
+    #generateOfflineJSON(79, rdfdb)
+    offlineExportAll(rdfdb)
+    rdfdb.close()
