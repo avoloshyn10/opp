@@ -111,6 +111,9 @@ class OppRdf:
                 if keyName == "wordnet_type" or keyName == "isPrimaryTopicOf" or keyName == "subject":
                     continue
 
+                if keyName == "video" or keyName == "ref" or keyName == "lists":
+                    continue
+
                 if self.isResource(p) and self.hasResource(p):
                     rr = self.g.resource(p)
                     #name = p.value(RDFS.label) # There are multiple lables might return some other language
