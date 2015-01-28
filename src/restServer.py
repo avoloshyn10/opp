@@ -5,7 +5,7 @@ import openpanzer as op
 from util import *
 from oppRdf import *
 from threading import Thread
-import rest_work_thread as wt
+import restWorkThread as wt
 
 
 rdfdb = OppRdf()
@@ -293,10 +293,13 @@ def save_unit(id):
         modified = True
         u.rdfStoredResource = rdfStoredResource
         u.forceRefresh = True
+    else:
+        rdfStoredResource = None # unitUpdate tests for None
     querySelect = int(request.forms.get('querySelect'))
     if querySelect != u.usedResourceSearch.id:
         modified = True
         u.usedResourceSearch = get(s for s in ResourceSearch if s.unitId == id and s.id == querySelect)
+        commit()
     if u.forceRefresh:
         wt.reqs.put((wt.REQ_UPDATE_UNIT, u, rdfdb, eq)) # TUPLE!
     redirect("/units/%d/" % u.id)

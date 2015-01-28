@@ -168,6 +168,7 @@ def updateUnit(id, rdfdb, eqlist = None):
         return createSqlUnit(unit, rdfdb)
 
     print "* Updating Unit %s (%d)" % (unit.getFullName(), unit.id)
+    print "forceRefresh=", sqlUnit.forceRefresh
 
     sqlRes = sqlUnit.usedResourceSearch
     foundRes = None
@@ -189,13 +190,21 @@ def updateUnit(id, rdfdb, eqlist = None):
                 return False
 
     # No found resource retry search and update unit if possible
-    if foundRes is None and sqlRes is not None:
-        print "Unit %s (%d) has a resource without search results, refreshing" % (unit.getFullName(), id)
+    if sqlUnit.forceRefresh or (foundRes is None and sqlRes is not None):
+        if sqlUnit.forceRefresh:
+            # Delete old searches
+            searches = select( s for s in ResourceSearch if s.unitId == id)
+            print "Unit %s (%d) doing forced refresh of search results" % (unit.getFullName(), id)
+            for s in searches:
+                s.delete()
+        else:
+            print "Unit %s (%d) has a resource without search results, refreshing" % (unit.getFullName(), id)
         result = createSqlResourceSearch(id, sqlRes.searchString, rdfdb, sqlRes.provider)
         if result is not None:
             sqlUnit.rdfStoredResource = result["searchResult"]["resource"]
             sqlUnit.rdfStoredLabel = result["searchResult"]["label"]
             sqlUnit.usedResourceSearch = result["sqlResource"]
+            sqlUnit.forceRefresh = False
             commit()
         else:
             print "Cannot refresh unit search"
