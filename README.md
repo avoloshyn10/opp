@@ -38,6 +38,7 @@ With enough time at hand:
 
 ##Introductory presentation at:
 [SlideShare] (http://www.slideshare.net/nottorp/opp-archi)
+[Video] (https://www.youtube.com/watch?v=idAuOLPRvMs)
 
 ##Current issues:
 - Looking for units with DBpedia queries doesn't work very well as most of the unit name/designations are found in wikipedia
