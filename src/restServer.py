@@ -6,7 +6,7 @@ from util import *
 from oppRdf import *
 from threading import Thread
 import restWorkThread as wt
-
+import opp
 
 rdfdb = OppRdf()
 rdfdb.init()
@@ -305,17 +305,18 @@ def save_unit(id):
         u.usedResourceSearch = get(s for s in ResourceSearch if s.unitId == id and s.id == querySelect)
         commit()
     if u.forceRefresh:
-        wt.reqs.put((wt.REQ_UPDATE_UNIT, u, rdfdb, eq)) # TUPLE!
+        wt.reqs.put((opp.updateUnit, (u.id, rdfdb), {'eqlist': eq}))
     redirect("/units/%d/" % u.id)
 
 @route('/test/addtoqueue', method='GET')
 def add_to_queue():
+    # This doesn't work any more
     wt.reqs.put((wt.REQ_NONE, None, None, None))
     return """
         <html><body>Cucu</body></html>
     """
 
-worker = Thread(None, wt.work, (), {})
+worker = Thread(name = "spider thread", target = wt.work, args = (eq, rdfdb))
 worker.daemon = True # Die with main thread
 worker.start()
 
