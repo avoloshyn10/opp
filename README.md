@@ -8,6 +8,10 @@ The game features over 5000 military units that took part in World War II, divid
 
 The system provides a simple REST interface with a built in human usable client to improve the automatically scraped information.
 
+## Technical details
+We are using the full DBpedia ontology and pulling RDF resources that match our crieria (mainly the rdf:type dbpedia-owl:Weapon flag) in our internal database.
+The RDF is parsed and unrelated triplets are not exported, while the relevant information is exported as static JSON for use in the openpanzer game.
+
 
 ##Packages:
     sudo easy_install RDFLib
