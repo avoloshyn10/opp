@@ -2,15 +2,12 @@
 Project for InfoIasi Master Studies @ [WADE] (http://thor.info.uaic.ro/~busaco/teach/courses/wade/)
 
 ##Description
-Realizarea unei platforme care, pe baza informatiilor din DBpedia, wikipedia, forumuri de specialitate, sa modeleze si sa exploateze cunostiintele referitoare la unitatile militare,
-arme si tehnologii folosite in jocul [OpenPanzer] (http://openpanzer.net), generand o enciclopedie cu informatii detaliate.
+Building a platform that will pull military unit, weapon and technology information out of DBPedia, wikipedia and specific forums for use as an informative encyclopedia inside the [OpenPanzer] (http://openpanzer.net) game.
 
-In joc exista peste 5000 de unitati militare, repartizate in 21 de categorii pentru cele 30 de tari disponibile in joc, participante in al doilea razboi mondial.
-Ele sunt prezentate in jargon militar (eg [PSW 222] (http://dbpedia.org/c/8IXQNV), [Pz 35(t)] (http://dbpedia.org/c/8FJO57) )  ceea ce, pentru utilizatorul obisnuit,
-nu ofera nici o informatie istorica reala, diminuand contextul istoric al jocului.
-Cu ajutorul informatiilor din dbpedia si alte surse putem oferi jucatorului suficienta informatie pentru a intelege mai bine capacitatile unitatilor.
+The game features over 5000 military units that took part in World War II, divided in 21 categories over the 30 countries available in the game. They are identified by their military name (eg [PSW 222] (http://dbpedia.org/c/8IXQNV), [Pz 35(t)] (http://dbpedia.org/c/8FJO57) ). For the average player, this offers no real information, diminishing the historical context of the game. Using the information pulled from dbpedia and other sources we can provide the player with enough information to understand the unit abilities better.
 
-Optional sistemul va pune la dispozitie o interfata publica pentru a completa sau adauga informatii despre unitatile existente.
+The system provides a simple REST interface with a built in human usable client to improve the automatically scraped information.
+
 
 ##Packages:
     sudo easy_install RDFLib
@@ -26,11 +23,6 @@ Optional sistemul va pune la dispozitie o interfata publica pentru a completa sa
     sudo BERKELEYDB_DIR=/opt/local/lib/db51 ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future easy_install bsddb3
 
 ##Fix BerkeleyDB out of lock entries
-    eureka3511:oppedia-rdf torp$ db51_verify __db.001 
-    db51_verify: Lock table is out of available locker entries
-    Segmentation fault: 11
-
-This crashes, but it does indeed lose all the locks :) 
 With enough time at hand:
 
     db5.3_deadlock -a m -t 1
