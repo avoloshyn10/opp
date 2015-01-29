@@ -36,9 +36,12 @@ With enough time at hand:
     db5.3_deadlock -a m -t 1
 
 
-##Introductory presentation at:
-[SlideShare] (http://www.slideshare.net/nottorp/opp-archi)
+##Documentation:
+[Rest Client Guide] (http://nicupavel.github.io/opp/)
+
 [Video] (https://www.youtube.com/watch?v=idAuOLPRvMs)
+
+[SlideShare] (http://www.slideshare.net/nottorp/opp-archi)
 
 ##Current issues:
 - Looking for units with DBpedia queries doesn't work very well as most of the unit name/designations are found in wikipedia
