@@ -28,7 +28,7 @@ class GoogleQuery:
             for h in hits:
                 urls.append(h['url'])
         except Exception, e:
-            print "Invalid response from Google. Must wait ?"
+            print "Invalid response from Google. Must wait ?  (%s)" % str(e)
             raise
 
         return urls
@@ -84,7 +84,7 @@ class BingQuery:
                 urls.append(h['Url'])
 
         except Exception, e:
-            print "Invalid response from Bing. Must wait ?"
+            print "Invalid response from Bing. Must wait ? (%s)" % str(e)
             raise
 
         return urls

@@ -190,7 +190,7 @@ def updateUnit(id, rdfdb, eqlist = None):
         return createSqlUnit(unit, rdfdb)
 
     print "* Updating Unit %s (%d)" % (unit.getFullName(), unit.id)
-    print "forceRefresh=", sqlUnit.forceRefresh
+    #print "forceRefresh=", sqlUnit.forceRefresh
 
     sqlRes = sqlUnit.usedResourceSearch
     foundRes = None
@@ -301,13 +301,13 @@ if __name__ == "__main__":
     rdfdb = OppRdf()
     rdfdb.init()
     
-    #for id in eq.eq:
-    #    if updateUnit(id, rdfdb):
-    #        time.sleep(1)
+    for id in eq.eq:
+        if updateUnit(id, rdfdb):
+            time.sleep(1)
     
     #generateOfflineJSON(79, rdfdb)
     #offlineExportAll(rdfdb)
-    unit = eq.getUnit(111)
-    createSqlUnitWithSpecifiedResource(unit, "http://dbpedia.org/resource/Pioneer_(military)", rdfdb)
+    #unit = eq.getUnit(111)
+    #createSqlUnitWithSpecifiedResource(unit, "http://dbpedia.org/resource/Pioneer_(military)", rdfdb)
 
     rdfdb.close()
