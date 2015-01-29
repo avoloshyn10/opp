@@ -69,6 +69,7 @@ def searchRdfResource(searchString, provider=PROVIDER_DBPEDIA):
 
     return { "label": label, "resource": rdfResource }
 
+
 @db_session
 def createSqlResourceSearch(unitId, searchString, rdfdb, provider=PROVIDER_DBPEDIA):
 
@@ -89,6 +90,27 @@ def createSqlResourceSearch(unitId, searchString, rdfdb, provider=PROVIDER_DBPED
         return { "sqlResource": s, "searchResult": result }
 
     return None
+
+@db_session
+def createSqlUnitWithSpecifiedResource(unit, resource, rdfdb):
+    print "* Creating Unit %s (%d) with resource %s" % (unit.getFullName(), unit.id, resource)
+
+    if rdfdb.load(resource):
+        s = ResourceSearch(unitId = unit.id, provider = PROVIDER_CUSTOM, searchString = unit.getFullName(), foundResource = resource)
+    else:
+        return False
+    try:
+        u = OPPedia(id = unit.id, name = unit.name, country = unit.country, unitClass = unit.unitClass,
+                    usedResourceSearch = s,
+                    rdfStoredLabel = "",
+                    rdfStoredResource = resource)
+        commit()
+
+    except:
+        print "Cannot save unit to SQL DB"
+        return False
+
+    return True
 
 
 @db_session
@@ -279,10 +301,13 @@ if __name__ == "__main__":
     rdfdb = OppRdf()
     rdfdb.init()
     
-    for id in eq.eq:
-        if updateUnit(id, rdfdb):
-            time.sleep(1)
+    #for id in eq.eq:
+    #    if updateUnit(id, rdfdb):
+    #        time.sleep(1)
     
     #generateOfflineJSON(79, rdfdb)
-    offlineExportAll(rdfdb)
+    #offlineExportAll(rdfdb)
+    unit = eq.getUnit(111)
+    createSqlUnitWithSpecifiedResource(unit, "http://dbpedia.org/resource/Pioneer_(military)", rdfdb)
+
     rdfdb.close()

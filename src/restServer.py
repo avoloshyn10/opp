@@ -1,5 +1,5 @@
 
-from bottle import default_app, install, route, request, redirect, run, template, static_file, view, TEMPLATE_PATH
+from bottle import default_app, install, route, request, redirect, abort, run, template, static_file, view, TEMPLATE_PATH
 from pony.orm.integration.bottle_plugin import PonyPlugin
 from oppSql import *
 import openpanzer as op
@@ -101,19 +101,36 @@ def edit_unit(id):
 
 @route('/units/:id/edit/', method='POST')
 def save_unit(id):
+    try:
+        id = int(id)
+    except:
+        abort(401, "Non integer id received")
+
     modified = False
-    u = OPPedia[id]
+    rdfStoredResource = request.forms.get('resourceCreate')
     forceRefresh = request.forms.get('forceRefresh') or False
+    print "Saving for id %d" % id
+    u = OPPedia[id]
+
+    # This unit hasn't yet been queried so we will have to create it using the custom resource provided
+    if u is None and len(rdfStoredResource) > 0:
+        unit = eq.getUnit(id)
+        if unit is None:
+            abort(401, "Specified unit id doesn't exist in game db")
+        wt.reqs.put((opp.createSqlUnitWithSpecifiedResource, (unit, rdfStoredResource, rdfdb), {}))
+        redirect("/")
+
     if forceRefresh:
         modified = True
         u.forceRefresh = forceRefresh
-    rdfStoredResource = request.forms.get('resourceCreate')
+
     if len(rdfStoredResource) > 0 and u.rdfStoredResource != rdfStoredResource:
         modified = True
         u.rdfStoredResource = rdfStoredResource
         u.forceRefresh = True
     else:
         rdfStoredResource = None # unitUpdate tests for None
+
     querySelect = int(request.forms.get('querySelect'))
     if querySelect != u.usedResourceSearch.id:
         modified = True

@@ -16,7 +16,7 @@ def work(eq, rdfdb):
         if reqs.empty():
             dummy = 1
         else:
-            (func, args, kwargs) = reqs.get()
+            func, args, kwargs = reqs.get()
             print "REQ:", func.__name__
             func(*args, **kwargs)
             print "END REQ:", func.__name__
